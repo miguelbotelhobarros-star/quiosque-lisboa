@@ -691,7 +691,7 @@ await w(700);await inn(&#x27;✅ Usaste &lt;b&gt;3,40&amp;nbsp;€&lt;/b&gt; de 
 cap(&#x27;DESCONTAR SALDO&#x27;,&#x27;Feito em &lt;b&gt;&#x27;+Math.round((Date.now()-T0)/1000)+&#x27; s&lt;/b&gt; · só a dona do número&#x27;);
 await w(Math.max(0,24000-(Date.now()-T0)));run()}
 run();&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
-<aside>Pedido do João: o cliente identifica-se dizendo o número de telemóvel ao funcionário, sem QR. À esquerda, acumular: o funcionário escreve o número na caixa, aparece o nome abreviado e o nível para confirmar, e o cashback é creditado. A cliente recebe logo a mensagem no WhatsApp; se alguém der o número errado, a dona do número vê e pode responder “não fui eu”. À direita, descontar: aqui é preciso uma proteção, porque qualquer pessoa pode dizer um número que não é o seu. O sistema envia um código novo de 4 dígitos para o WhatsApp da cliente, válido 2 minutos e de uso único; o funcionário escreve-o e o desconto fica feito. O ecrã mostra só os 3 últimos dígitos do número. O QR do WhatsApp (como na Quinta da Abelheira) pode ficar como opção para quem preferir, mas não é preciso. Podemos pôr limites diários por cliente e por funcionário e alertas para usos fora do normal. As regras do saldo (valor mínimo, validade, uso parcial) decide-as o João.</aside>
+<aside>Pedido do João: o cliente identifica-se dizendo o número de telemóvel ao funcionário, sem QR. À esquerda, acumular: o funcionário escreve o número na caixa (na fase 1 é o telemóvel do quiosque; a ligação ao Sage 100c fica para a fase 2), aparece o nome abreviado e o nível para confirmar, e o cashback é creditado. A cliente recebe logo a mensagem no WhatsApp; se alguém der o número errado, a dona do número vê e pode responder “não fui eu”. À direita, descontar: aqui é preciso uma proteção, porque qualquer pessoa pode dizer um número que não é o seu. O sistema envia um código novo de 4 dígitos para o WhatsApp da cliente, válido 2 minutos e de uso único; o funcionário escreve-o e o desconto fica feito. O ecrã mostra só os 3 últimos dígitos do número. O QR do WhatsApp (como na Quinta da Abelheira) pode ficar como opção para quem preferir, mas não é preciso. Podemos pôr limites diários por cliente e por funcionário e alertas para usos fora do normal. As regras do saldo (valor mínimo, validade, uso parcial) decide-as o João.</aside>
 </section>
 
 <section id="jornada" class="dark">
@@ -942,13 +942,13 @@ run();
 <h2>Começar pequeno e decidir com números</h2>
 </div>
 <div class="steps">
-<div class="step rise" style="--i:0"><p class="n">Semana 1</p><p class="txt">2 quiosques (Saldanha e Príncipe Real) e 1 Hambúrgueres Santos. Número, QR codes, oferta de boas-vindas e ligação ao Sage 100c.</p></div>
+<div class="step rise" style="--i:0"><p class="n">Semana 1</p><p class="txt">2 quiosques (Saldanha e Príncipe Real) e 1 Hambúrgueres Santos. Número, QR codes, oferta de boas-vindas e formação da equipa.</p></div>
 <div class="step rise" style="--i:1"><p class="n">Semana 2</p><p class="txt">Cashback ligado e primeiro pack de bebidas à venda. Os canais anunciam a mudança.</p></div>
 <div class="step rise" style="--i:2"><p class="n">Semana 3</p><p class="txt">Primeira campanha segmentada, num jogo grande, e burger do mês em pré-venda.</p></div>
 <div class="step rise" style="--i:3"><p class="n">Semana 4</p><p class="txt">Relatório: inscritos, clientes que voltaram, packs vendidos e receita das campanhas.</p></div>
 </div>
 <p class="lead">No fim, o Grupo QL decide se alarga aos restantes quiosques e restaurantes.</p>
-<aside>Saldanha pelo futebol, Príncipe Real pelo turismo. Ajustar à escolha do João.</aside>
+<aside>Saldanha pelo futebol, Príncipe Real pelo turismo. Ajustar à escolha do João. O piloto corre sem integração com o Sage 100c: o funcionário regista o telemóvel e o valor no telemóvel do quiosque. A integração com o Sage fica para uma fase 2, opcional.</aside>
 </section>
 
 <section id="pontos">
@@ -1061,7 +1061,7 @@ run();
 <section id="comercial" class="accent">
 <div class="head"><p class="eyebrow">Proposta comercial</p><h2>Plataforma Chatomate para o Grupo QL</h2></div>
 <div class="cards">
-<div class="card"><p class="num">1.900 €</p><h3>Setup, uma vez</h3><p class="txt" style="font-size:24px">Número WhatsApp único, migração dos 9 canais, fluxos de registo, cashback e QR, modelos de mensagens e ligação ao Sage 100c.</p></div>
+<div class="card"><p class="num">1.900 €</p><h3>Setup, uma vez</h3><p class="txt" style="font-size:24px">Número WhatsApp único, migração dos 9 canais, fluxos de registo e cashback, modelos de mensagens e formação das equipas.</p></div>
 <div class="card"><p class="num">240 €<span style="font-size:36px">/mês</span></p><h3>Plataforma Chatomate</h3><p class="txt" style="font-size:24px">Back-office, painel, ficha de cliente, campanhas, construtor de fluxos e relatórios.</p></div>
 <div class="card"><p class="num">≈ 850 €<span style="font-size:36px">/mês</span></p><h3>Taxas da Meta, à parte</h3><p class="txt" style="font-size:24px">Pagas por mensagem, conforme o uso. Estimativa do slide de custos.</p></div>
 </div>
@@ -1072,18 +1072,19 @@ run();
 <p class="op">=</p>
 <div class="box res"><p class="v">≈ 15.000 €</p><p class="l">1.º ano, contra ≈ 43.200 € de vendas a mais</p></div>
 </div>
-<aside>Setup 1.900 € e mensalidade 240 € pela plataforma Chatomate. As taxas da Meta são pagas à parte e dependem do uso; o valor é a estimativa do slide de custos (cerca de 850 €/mês). O retorno é o do slide da conta simples: 3.600 € por mês de vendas a mais × 12 = 43.200 € no primeiro ano. São vendas, não margem, e não incluem o custo do cashback. Confirmar se os valores levam IVA.</aside>
+<p style="margin:28px 0 0; font-size:24px; color:inherit; opacity:.85"><b>Fase 2, opcional:</b> integração com o Sage 100c. Valor a definir após confirmar as APIs do Sage 100c.</p>
+<aside>Setup 1.900 € e mensalidade 240 € pela plataforma Chatomate. As taxas da Meta são pagas à parte e dependem do uso; o valor é a estimativa do slide de custos (cerca de 850 €/mês). O retorno é o do slide da conta simples: 3.600 € por mês de vendas a mais × 12 = 43.200 € no primeiro ano. São vendas, não margem, e não incluem o custo do cashback. A integração com o Sage 100c não está incluída no setup: fica para uma fase 2, opcional, com valor a definir depois de confirmarmos as APIs do Sage 100c. Na fase 1 o funcionário regista o número e o valor no telemóvel do quiosque, sem tocar no Sage. Confirmar se os valores levam IVA.</aside>
 </section>
 
 <section id="fecho" class="accent" style="justify-content:center">
 <p class="eyebrow">Próximos passos</p>
 <h1>Escolher os 3 locais e arrancar o piloto</h1>
 <div class="cards">
-<div class="card"><h3>Do vosso lado</h3><p class="txt">Seguidores dos canais, clientes registados com NIF e contacto do parceiro Sage 100c.</p></div>
-<div class="card"><h3>Do nosso lado</h3><p class="txt">Configuração, ligação ao Sage 100c, QR codes, campanhas e relatório semanal.</p></div>
-<div class="card"><h3>Investimento</h3><p class="txt">Setup de 1.900 € e 240 €/mês pela plataforma Chatomate. Taxas da Meta à parte.</p></div>
+<div class="card"><h3>Do vosso lado</h3><p class="txt">Seguidores dos canais, clientes registados com NIF e escolha dos 3 locais do piloto.</p></div>
+<div class="card"><h3>Do nosso lado</h3><p class="txt">Configuração, QR codes, formação da equipa, campanhas e relatório semanal.</p></div>
+<div class="card"><h3>Investimento</h3><p class="txt">Setup de 1.900 € e 240 €/mês pela plataforma Chatomate. Taxas da Meta à parte. Integração com o Sage 100c em fase 2, valor a definir.</p></div>
 </div>
-<aside>Fechar com uma data: “Podemos arrancar na semana de [data]?” Confirmar quem decide no Grupo QL, já que o João é um dos sócios.</aside>
+<aside>Fechar com uma data: “Podemos arrancar na semana de [data]?” Confirmar quem decide no Grupo QL, já que o João é um dos sócios. Pedir o contacto do parceiro Sage 100c para confirmarmos as APIs da fase 2.</aside>
 </section>
 
 </div><div id="notes"></div><div id="ui"><button id="pv" aria-label="Anterior">‹</button><span id="ct"></span><button id="nx" aria-label="Seguinte">›</button><button id="nt">Notas (N)</button><button id="fs">Ecrã inteiro (F)</button></div><script>const st=document.getElementById('stage'),S=[...st.children];let cur=0;
