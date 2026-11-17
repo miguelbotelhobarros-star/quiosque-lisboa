@@ -1,0 +1,1061 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Um só WhatsApp para o Quiosque Lisboa</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap"><style>*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:#0B1612;overflow:hidden}
+:root {
+  --green: #17322A;
+  --green2: #22463B;
+  --cream: #F6F1E7;
+  --paper: #FFFCF5;
+  --mustard: #E9B44C;
+  --ink: #17322A;
+  --body: #3E4A44;
+  --mist: #CFE0D6;
+  --line: #DDD3C0;
+}
+body { font-family: 'DM Sans', Arial, sans-serif; }
+section { padding: 128px; background: var(--cream); color: var(--body); display: flex; flex-direction: column; gap: 56px; counter-increment: page; }
+section.dark { background: var(--green); color: var(--mist); }
+section.accent { background: var(--mustard); color: var(--green); }
+section.foot { padding: 128px 128px 160px; }
+
+h1 { font-family: 'Oswald', Arial, sans-serif; font-size: 120px; font-weight: 600; line-height: 1.05; color: var(--green); }
+h2 { font-family: 'Oswald', Arial, sans-serif; font-size: 72px; font-weight: 600; line-height: 1.1; color: var(--green); }
+h3 { font-family: 'Oswald', Arial, sans-serif; font-size: 40px; font-weight: 500; line-height: 1.15; color: var(--green); }
+.dark h1, .dark h2, .dark h3 { color: var(--cream); }
+.accent h1, .accent h2 { color: var(--green); }
+
+.eyebrow { font-size: 24px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #8A6417; }
+.dark .eyebrow { color: var(--mustard); }
+.accent .eyebrow { color: var(--green); }
+.lead { font-size: 36px; line-height: 1.4; max-width: 1300px; }
+.small { font-size: 28px; line-height: 1.4; }
+
+.head { display: flex; flex-direction: column; gap: 16px; }
+
+.cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+.cards.two { grid-template-columns: 1fr 1fr; }
+.cards.four { grid-template-columns: 1fr 1fr 1fr 1fr; }
+.cards.five { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 24px; }
+.card { background: var(--paper); border-radius: 16px; padding: 48px 44px; display: flex; flex-direction: column; gap: 16px; border-top: 8px solid var(--mustard); }
+.dark .card { background: var(--green2); border-top: 8px solid var(--mustard); }
+.card .txt { font-size: 30px; line-height: 1.4; }
+.card .num { font-family: 'Oswald', Arial, sans-serif; font-size: 72px; font-weight: 600; color: #8A6417; line-height: 1; }
+.dark .card .num { color: var(--mustard); }
+
+.big { font-family: 'Oswald', Arial, sans-serif; font-size: 240px; font-weight: 600; line-height: 1; color: var(--mustard); }
+
+.pills { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; width: 760px; }
+.pill { background: var(--paper); border: 2px solid var(--line); border-radius: 12px; padding: 18px 12px; font-size: 24px; font-weight: 600; text-align: center; color: var(--green); }
+
+.hub { background: var(--green); border-radius: 24px; padding: 48px; display: flex; flex-direction: column; gap: 20px; width: 620px; }
+.hub h3 { color: var(--cream); }
+.hub ul { font-size: 28px; line-height: 1.5; color: var(--mist); padding-left: 32px; }
+
+.cmp { font-size: 32px; color: var(--body); width: 1664px; }
+
+.steps { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 24px; }
+.step { display: flex; flex-direction: column; gap: 16px; padding-top: 24px; border-top: 6px solid var(--green); }
+.dark .step { border-top: 6px solid var(--mustard); }
+.step .n { font-family: 'Oswald', Arial, sans-serif; font-size: 40px; font-weight: 600; color: #8A6417; }
+.dark .step .n { color: var(--mustard); }
+.step .txt { font-size: 30px; line-height: 1.4; }
+
+.calc { display: flex; gap: 24px; align-items: center; }
+.calc .box { background: var(--paper); border-radius: 16px; padding: 32px 36px; display: flex; flex-direction: column; gap: 8px; }
+.calc .v { font-family: 'Oswald', Arial, sans-serif; font-size: 72px; font-weight: 600; color: var(--green); line-height: 1; }
+.calc .l { font-size: 24px; color: var(--body); }
+.calc .op { font-family: 'Oswald', Arial, sans-serif; font-size: 72px; color: var(--green); }
+.calc .res { background: var(--green); }
+.calc .res .v { color: var(--mustard); }
+.calc .res .l { color: var(--mist); }
+
+.footer { position: absolute; left: 128px; bottom: 64px; width: 1664px; font-size: 24px; color: #6B6457; }
+.dark .footer { color: var(--mist); }
+
+.rise { animation: rise 600ms ease-out both; animation-delay: calc(var(--i, 0) * 120ms); }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px}
+#stage>section{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;visibility:hidden;opacity:0;transition:opacity .35s}
+#stage>section.cur{visibility:visible;opacity:1}
+aside{display:none}
+.cmp{border-collapse:collapse}.cmp th,.cmp td{text-align:left;padding:18px 20px;border-bottom:2px solid var(--line);vertical-align:top}.cmp th{font-weight:700;color:var(--green)}.cmp td:first-child{font-weight:700;color:var(--green)}
+#ui{position:fixed;right:16px;bottom:12px;display:flex;gap:8px;align-items:center;font:600 14px 'DM Sans',Arial,sans-serif;color:#CFE0D6;opacity:.3;transition:opacity .2s;z-index:9}
+#ui:hover{opacity:1}#ui button{background:#22463B;color:#F6F1E7;border:0;border-radius:8px;padding:8px 12px;font:inherit;cursor:pointer}
+#notes{position:fixed;left:0;right:0;bottom:0;max-height:38%;overflow:auto;background:rgba(10,20,16,.94);color:#F6F1E7;font:20px/1.45 'DM Sans',Arial,sans-serif;padding:18px 24px 60px;display:none;z-index:8}
+#notes.on{display:block}</style></head><body><div id="stage">
+<section id="cover" class="dark" data-transition="fade" style="justify-content:center">
+<img src="assets/4dd565af2f27533ce442d7714463cbd5.jpg" alt="Quiosque Lisboa do Largo da Sé, amarelo, com clientes ao balcão" style="position:absolute; left:1040px; top:0px; width:880px; height:1080px; object-fit:cover; background:#22463B">
+<p class="eyebrow" style="width:860px">Proposta para o Grupo QL · 17 de novembro de 2026</p>
+<h1 style="width:860px">Um só WhatsApp<br>para o Quiosque Lisboa</h1>
+<p class="lead" style="width:820px">Juntar os 9 canais num único WhatsApp que conhece cada cliente, o faz voltar e vende.</p>
+<aside>Foto: Quiosque Largo da Sé, do Instagram @quiosque_lisboa_oficial (trocar pela do Saldanha quando houver). Agradecer o tempo. Objetivo da reunião: mostrar como os canais que já têm podem passar a gerar vendas e fidelização, e acordar um piloto de 30 dias.</aside>
+</section>
+
+<section id="hoje">
+<div class="head">
+<p class="eyebrow">Onde estamos hoje</p>
+<h2>O Quiosque Lisboa já tem a base certa</h2>
+</div>
+<div style="display:flex; gap:64px; align-items:center">
+<div style="display:flex; flex-direction:column; gap:8px; width:420px">
+<p class="big">9</p>
+<p class="lead">WhatsApps: 8 canais, um por quiosque, e 1 número de contacto</p>
+</div>
+<div class="cards" style="flex:1">
+<div class="card rise" style="--i:0"><h3>Canais por quiosque</h3><p class="txt">O cliente escolhe um quiosque para seguir e recebe novidades, eventos e ofertas.</p></div>
+<div class="card rise" style="--i:1"><h3>Desconto com NIF</h3><p class="txt">Até 60% para quem se regista uma vez e diz o NIF ao balcão.</p></div>
+<div class="card rise" style="--i:2"><h3>Cartões digitais</h3><p class="txt">Comprados no site e válidos em qualquer quiosque.</p></div>
+</div>
+</div>
+<p class="small">Há audiência, há clientes registados e há hábito de comprar antecipado. Falta ligar tudo.</p>
+<aside>No portal de cliente, o separador Canais lista 8 canais e o cliente tem de escolher qual seguir; o número +351 934 991 465 é o nono contacto, para conversas. Começar pelo elogio: já fizeram o mais difícil, que é ter gente a seguir. Perguntar quantas pessoas seguem os canais e quantas estão registadas com NIF.</aside>
+</section>
+
+<section id="balcao" class="dark">
+<div class="head">
+<p class="eyebrow">Todos os dias, em 8 quiosques</p>
+<h2>O cliente já está ao balcão. Hoje, sai sem deixar contacto</h2>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:24px">
+<img class="rise" src="assets/b3943bf909b1aafcc9b7511e54bf0b8b.jpg" alt="Noite cheia no Quiosque Cais do Sodré, pessoas com cervejas na mão" style="--i:0; width:398px; height:540px; object-fit:cover; border-radius:16px">
+<img class="rise" src="assets/2f019edb55488fc6588ab9489b90c7e4.jpg" alt="Cliente de mochila a pedir ao balcão do Quiosque Largo da Sé" style="--i:1; width:398px; height:540px; object-fit:cover; border-radius:16px">
+<img class="rise" src="assets/190158b4004f1425cbafcfddf05e809a.jpg" alt="Cliente sorridente ao balcão do Quiosque Cais do Sodré" style="--i:2; width:398px; height:540px; object-fit:cover; border-radius:16px">
+<img class="rise" src="assets/37286f9cc79bf9b0eda54510f96dc6b9.jpg" alt="Dois clientes ao balcão do Quiosque Camões à noite" style="--i:3; width:398px; height:540px; object-fit:cover; border-radius:16px">
+</div>
+<aside>Fotos do Instagram @quiosque_lisboa_oficial: Cais do Sodré, Largo da Sé, Cais do Sodré e Camões. A ideia: o movimento já existe e é muito. O que falta é transformar cada pessoa ao balcão num contacto que volta.</aside>
+</section>
+
+<section id="megafone" class="dark">
+<div class="head">
+<p class="eyebrow">O limite dos canais</p>
+<h2>Um canal WhatsApp é um megafone: só fala para fora</h2>
+</div>
+<div class="cards four">
+<div class="card rise" style="--i:0"><h3>Não sabe quem lê</h3><p class="txt">Os seguidores são anónimos. Não há nomes nem contactos.</p></div>
+<div class="card rise" style="--i:1"><h3>Não sabe quem compra</h3><p class="txt">Nenhuma ligação entre a mensagem e a venda ao balcão.</p></div>
+<div class="card rise" style="--i:2"><h3>Não vende</h3><p class="txt">O cliente não pode responder, encomendar nem pagar.</p></div>
+<div class="card rise" style="--i:3"><h3>Não fideliza</h3><p class="txt">Não há saldo, pontos nem níveis que façam voltar.</p></div>
+</div>
+<p class="lead">E com 9 canais, tudo isto se multiplica por 9: 9 audiências pequenas, 9 sítios para publicar.</p>
+<aside>Este é o ponto central. O canal é ótimo para anunciar, mas não deixa construir relação nem vender. Com 9 canais separados, o cliente do Saldanha nunca ouve falar da Sé.</aside>
+</section>
+
+<section id="proposta">
+<div class="head">
+<p class="eyebrow">A proposta</p>
+<h2>Juntar os 9 canais num só WhatsApp</h2>
+</div>
+<div style="display:flex; align-items:center; gap:48px">
+<div class="pills">
+<p class="pill">Saldanha</p><p class="pill">Camões</p><p class="pill">Príncipe Real</p>
+<p class="pill">Flores</p><p class="pill">São Paulo</p><p class="pill">Sé</p>
+<p class="pill">Cais do Sodré</p><p class="pill">Campolide</p><p class="pill">N.º de contacto</p>
+</div>
+<x-shape kind="arrow-right" style="background:#E9B44C; width:140px; height:70px"></x-shape>
+<div class="hub rise">
+<h3>WhatsApp Quiosque Lisboa</h3>
+<ul>
+<li>Um número, uma marca</li>
+<li>Cada cliente com nome e histórico</li>
+<li>Cashback válido em todos os quiosques</li>
+<li>Packs, reservas e pagamento na conversa</li>
+<li>Mensagens para todos ou só para um quiosque</li>
+</ul>
+</div>
+</div>
+<aside>Não se perde nada da comunicação local: cada cliente fica marcado com o quiosque preferido e recebe as novidades desse quiosque. Mas passa a ser uma só base, uma só marca, e passa a ser possível vender.</aside>
+</section>
+
+<section id="comparacao">
+<div class="head">
+<p class="eyebrow">Antes e depois</p>
+<h2>O que muda com um só WhatsApp</h2>
+</div>
+<table class="cmp">
+<tr><th style="width:20%"></th><th style="width:38%">Hoje: 9 canais</th><th style="width:42%">Com um só WhatsApp</th></tr>
+<tr><td>Audiência</td><td>Partida em 9 bases pequenas</td><td>Uma base única, com todos os clientes</td></tr>
+<tr><td>Trabalho</td><td>9 canais para publicar e manter</td><td>Um sítio para gerir, mensagens por quiosque</td></tr>
+<tr><td>Cliente</td><td>Anónimo</td><td>Nome, quiosque preferido e histórico</td></tr>
+<tr><td>Vendas</td><td>O canal só publica</td><td>Packs, cartões, reservas e pagamento</td></tr>
+<tr><td>Fidelização</td><td>Desconto fixo com NIF</td><td>Cashback e níveis em todos os quiosques</td></tr>
+<tr><td>Turistas</td><td>Ficam de fora sem NIF</td><td>Basta um número de telemóvel</td></tr>
+</table>
+<aside>Sublinhar a linha dos turistas: o desconto só com NIF já foi notícia na Lisboa Para Pessoas, em outubro, com um advogado a dizer que pode contornar a lei. Um programa por número de telemóvel resolve isso.</aside>
+</section>
+
+<section id="talao" style="flex-direction:row; gap:96px; align-items:center">
+<img src="assets/cf8c7be3979a2eadd8edc1cd17a0d4ed.jpg" alt="Talão do Quiosque Saldanha de 15 de outubro de 2026: duas Pedras Salgadas, total 4,90 €, desconto 0,00 €, com QR code para quiosquelisboa.pt/cliente" style="width:306px; height:824px; object-fit:cover; border-radius:16px">
+<div style="display:flex; flex-direction:column; gap:40px; flex:1">
+<div class="head">
+<p class="eyebrow">Um talão real · Quiosque Saldanha</p>
+<h2>Cada talão já é um convite. Hoje leva a uma landing page</h2>
+</div>
+<div class="cards two">
+<div class="card rise" style="--i:0"><h3>Hoje</h3><p class="txt">2 Pedras, 4,90 €, sem NIF e com 0,00 € de desconto. O QR “Seja Cliente” abre uma landing page com 7 campos, incluindo NIF e password, e validação até 1 dia útil. Esta venda ficou anónima.</p></div>
+<div class="card rise" style="--i:1; background:#17322A"><h3 style="color:#F6F1E7">Com um só WhatsApp</h3><p class="txt" style="color:#CFE0D6">O QR abre o WhatsApp com o número do talão já escrito. Uma mensagem e está inscrito. O QR fiscal do talão valida a compra e o cashback entra na hora: +0,25 € neste talão.</p></div>
+</div>
+</div>
+<aside>Este talão é real, do Quiosque Saldanha, a 15 de outubro. Repara: sem NIF, desconto zero, e o convite “Seja Cliente” leva a uma landing page de registo (quiosquelisboa.pt/cliente) com nome, data de nascimento, NIF, email, telemóvel, password e quiosque favorito, e a validação demora até 1 dia útil. Quase ninguém faz isto à mesa. A página já envia uma mensagem de boas-vindas por WhatsApp a quem aceita: o WhatsApp já está no processo, só falta passá-lo para a frente. O QR de cima é o fiscal da AT: já traz a fatura, a data e o total, e é isso que nos permite validar a compra e dar o cashback automaticamente. A proposta usa o mesmo espaço no talão para um QR que abre o WhatsApp. O cliente envia uma mensagem e fica inscrito, já com o cashback desta compra. A seguir, a demonstração mostra exatamente isto.</aside>
+</section>
+
+<section id="duelo" class="dark">
+<div class="head" style="width:560px">
+<p class="eyebrow">Simulação lado a lado</p>
+<h2>Tornar-se cliente: hoje e com o WhatsApp</h2>
+</div>
+<p class="lead" style="width:560px">O mesmo talão, a mesma cliente. As duas simulações começam ao mesmo tempo.</p>
+<iframe class="emb" style="position:absolute; left:780px; top:80px; width:400px; height:910px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.ph{width:400px;height:780px;border-radius:60px;background:#1C1C1E;padding:12px;box-shadow:0 0 0 2px #3A3A3C,0 24px 50px rgba(0,0,0,.45)}
+.sc{width:100%;height:100%;border-radius:49px;overflow:hidden;background:#fff;position:relative;display:flex;flex-direction:column}
+.isl{position:absolute;left:50%;top:10px;width:110px;height:32px;margin-left:-55px;background:#000;border-radius:18px;z-index:20}
+.sb{height:50px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px 0 34px;font-weight:600;font-size:15px;color:#111;background:#fff;position:relative;z-index:6}
+.bat{width:24px;height:11px;border:1.5px solid #111;border-radius:4px;padding:1px;display:inline-block;vertical-align:middle}.bat i{display:block;height:100%;width:80%;background:#111;border-radius:2px}
+.vw{flex:1;overflow:hidden;position:relative}
+.pg{transition:transform .45s ease}
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #E5E5E5}.lg{font-family:&quot;Arial Narrow&quot;,&quot;Helvetica Neue&quot;,Arial,sans-serif;font-stretch:condensed;font-weight:800;font-size:19px;color:#111;line-height:1;text-align:center;letter-spacing:-.3px}.lg small{display:block;font-size:10px;letter-spacing:1px;margin-top:3px}.lng{font-size:12px;font-weight:800;color:#111}.ttl{font-weight:900;font-size:30px;color:#111;padding:14px 16px 0;letter-spacing:.5px}.sub2{font-size:12px;color:#666;padding:2px 16px 0}
+.fm{padding:12px 16px;display:flex;flex-direction:column;gap:9px}
+.f label{display:block;font-size:11.5px;color:#111;font-weight:700;margin-bottom:3px}
+.bx{height:36px;border:1px solid #D6D6D6;border-radius:12px;padding:0 10px;display:flex;align-items:center;font-size:14.5px;color:#111;white-space:nowrap;overflow:hidden}
+.act .bx{border-color:#0A84FF;box-shadow:0 0 0 3px rgba(10,132,255,.18)}
+.act .bx:after{content:&#x27;&#x27;;width:1.5px;height:17px;background:#0A84FF;margin-left:1px;animation:bl 1s steps(1) infinite}
+.ck{display:flex;gap:8px;font-size:12px;color:#333;align-items:center;margin-top:2px}
+.cb{width:18px;height:18px;border:1.5px solid #999;border-radius:4px;flex:none;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.cb.on{background:#0A84FF;border-color:#0A84FF}
+.btn{height:42px;border-radius:12px;background:#141414;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;font-size:15px;margin-top:4px;transition:opacity .2s}
+.btn.on{opacity:.55}
+.url{flex:none;background:#fff;padding:2px 14px 8px;position:relative;z-index:6}
+.url div{background:#EDEDF0;border-radius:14px;height:36px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#111}
+.kb{position:absolute;left:0;right:0;bottom:0;height:236px;background:#D1D3D9;padding:10px 3px 34px;transform:translateY(100%);transition:transform .3s;display:flex;flex-direction:column;gap:10px;z-index:8}
+.kb.up{transform:none}
+.kr{display:flex;gap:5px;justify-content:center}.kr i{width:30px;height:38px;background:#fff;border-radius:5px;box-shadow:0 1px 0 #898A8D}.kr i.sp{width:190px}
+.ov{position:absolute;left:0;right:0;top:50px;bottom:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:30px;z-index:10;animation:fi .35s ease}
+.ov.on{display:flex}
+#ok{background:#fff}#ok .ic{width:64px;height:64px;border-radius:50%;background:#E8F5EC;color:#0A8F4A;font-size:34px;display:flex;align-items:center;justify-content:center}
+#ok h2{font-size:20px;color:#111}#ok p{font-size:15px;color:#555;line-height:1.4}
+#wt{background:#17322A;color:#F6F1E7}#wt .e{font-size:56px}#wt h2{font-size:24px}#wt p{font-size:14px;color:#CFE0D6}
+#wa{background:#EFE7DE;justify-content:flex-start;align-items:stretch;padding:0;gap:0}
+.hd{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:8px 14px 10px;border-bottom:1px solid #DDD;text-align:left}
+.av{width:36px;height:36px;border-radius:50%;background:#17322A;color:#E9B44C;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.nm{font-weight:600;font-size:15px;color:#111}.sub{font-size:11.5px;color:#667781}
+.ch{padding:12px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.m{max-width:86%;padding:7px 9px 6px;border-radius:9px;border-top-left-radius:0;font-size:15px;line-height:1.32;color:#111B21;background:#fff;box-shadow:0 1px .5px rgba(11,20,26,.13);animation:fi .3s ease}
+.t{float:right;margin:7px 0 -5px 10px;font-size:11px;color:#667781}
+.s{align-self:center;background:#FFF3D6;color:#7A5410;font-size:12.5px;padding:6px 10px;border-radius:8px;animation:fi .3s ease}
+.hb{position:absolute;bottom:7px;left:50%;width:130px;height:5px;margin-left:-65px;border-radius:3px;background:#111;z-index:21}
+.cap{width:400px;margin-top:16px;text-align:center;color:#CFE0D6;font-size:24px;line-height:1.35}
+.cap b{color:#E9B44C}.cap .h{font-size:26px;font-weight:700;color:#F6F1E7;letter-spacing:.5px}
+@keyframes bl{50%{opacity:0}}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;ph&quot;&gt;&lt;div class=&quot;sc&quot;&gt;
+&lt;div class=&quot;isl&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;sb&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span style=&quot;font-size:13px&quot;&gt;5G &lt;span class=&quot;bat&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;url&quot;&gt;&lt;div&gt;quiosquelisboa.pt/cliente&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;vw&quot;&gt;&lt;div class=&quot;pg&quot; id=&quot;pg&quot;&gt;
+&lt;div class=&quot;hdr&quot;&gt;&lt;div class=&quot;lg&quot;&gt;QUIOSQUE LISBOA&lt;small&gt;• CAFÉ | BAR •&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;lng&quot;&gt;PT | &lt;span style=&quot;color:#999&quot;&gt;EN&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ttl&quot;&gt;REGISTO&lt;/div&gt;&lt;div class=&quot;sub2&quot;&gt;Até 60% de desconto em todos os quiosques&lt;/div&gt;
+&lt;div class=&quot;fm&quot; id=&quot;fm&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;kb&quot; id=&quot;kb&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ov&quot; id=&quot;ok&quot;&gt;&lt;div class=&quot;ic&quot;&gt;✓&lt;/div&gt;&lt;h2&gt;Registo recebido&lt;/h2&gt;&lt;p&gt;A validação pode demorar&lt;br&gt;até 1 dia útil.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ov&quot; id=&quot;wt&quot;&gt;&lt;div class=&quot;e&quot;&gt;⏳&lt;/div&gt;&lt;h2&gt;1 dia útil depois…&lt;/h2&gt;&lt;p&gt;A cliente já saiu do quiosque.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ov&quot; id=&quot;wa&quot;&gt;&lt;div class=&quot;hd&quot;&gt;&lt;div class=&quot;av&quot;&gt;QL&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;nm&quot;&gt;Quiosque Lisboa&lt;/div&gt;&lt;div class=&quot;sub&quot;&gt;Conta comercial&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ch&quot; id=&quot;ch&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;hb&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;cap&quot; id=&quot;cap&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+const $=i=&gt;document.getElementById(i),w=ms=&gt;new Promise(r=&gt;setTimeout(r,ms));
+const F=[[&#x27;Nome&#x27;,&#x27;Ana Ribeiro&#x27;,8],[&#x27;Data de nascimento&#x27;,&#x27;12/03/1994&#x27;,8],[&#x27;NIF&#x27;,&#x27;123 456 789&#x27;,10],[&#x27;Email&#x27;,&#x27;ana.ribeiro@email.pt&#x27;,12],[&#x27;Telemóvel&#x27;,&#x27;912 345 678&#x27;,8],[&#x27;Password&#x27;,&#x27;••••••••&#x27;,10],[&#x27;Quiosque favorito&#x27;,&#x27;Saldanha&#x27;,6]];
+$(&#x27;kb&#x27;).innerHTML=[10,9,7].map(n=&gt;&#x27;&lt;div class=&quot;kr&quot;&gt;&#x27;+&#x27;&lt;i&gt;&lt;/i&gt;&#x27;.repeat(n)+&#x27;&lt;/div&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;div class=&quot;kr&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i class=&quot;sp&quot;&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;&#x27;;
+let sim=0;const fmt=s=&gt;Math.floor(s/60)+&#x27; min &#x27;+String(Math.floor(s%60)).padStart(2,&#x27;0&#x27;)+&#x27; s&#x27;;
+function cap(x){$(&#x27;cap&#x27;).innerHTML=&#x27;&lt;div class=&quot;h&quot;&gt;HOJE&lt;/div&gt;&#x27;+x}
+async function run(){const T0=Date.now();sim=0;
+$(&#x27;fm&#x27;).innerHTML=F.map((f,i)=&gt;&#x27;&lt;div class=&quot;f&quot; id=&quot;f&#x27;+i+&#x27;&quot;&gt;&lt;label&gt;&#x27;+f[0]+&#x27;&lt;/label&gt;&lt;div class=&quot;bx&quot;&gt;&lt;span id=&quot;v&#x27;+i+&#x27;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;div class=&quot;ck&quot;&gt;&lt;div class=&quot;cb&quot; id=&quot;cb&quot;&gt;&lt;/div&gt;Aceito receber novidades por WhatsApp&lt;/div&gt;&lt;div class=&quot;btn&quot; id=&quot;bt&quot;&gt;Registar&lt;/div&gt;&#x27;;
+[&#x27;ok&#x27;,&#x27;wt&#x27;,&#x27;wa&#x27;].forEach(i=&gt;$(i).classList.remove(&#x27;on&#x27;));$(&#x27;ch&#x27;).innerHTML=&#x27;&#x27;;$(&#x27;pg&#x27;).style.transform=&#x27;none&#x27;;
+cap(&#x27;A preencher o registo: &lt;b&gt;&#x27;+fmt(0)+&#x27;&lt;/b&gt;&#x27;);await w(900);$(&#x27;kb&#x27;).classList.add(&#x27;up&#x27;);
+for(let i=0;i&lt;F.length;i++){const f=$(&#x27;f&#x27;+i),v=$(&#x27;v&#x27;+i),[l,t,s]=F[i];f.classList.add(&#x27;act&#x27;);
+$(&#x27;pg&#x27;).style.transform=&#x27;translateY(-&#x27;+Math.max(0,f.offsetTop-120)+&#x27;px)&#x27;;await w(300);
+for(const c of t){v.textContent+=c;sim+=s/t.length;cap(&#x27;A preencher o registo: &lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt;&#x27;);await w(60)}
+await w(250);f.classList.remove(&#x27;act&#x27;)}
+$(&#x27;kb&#x27;).classList.remove(&#x27;up&#x27;);$(&#x27;pg&#x27;).style.transform=&#x27;translateY(-&#x27;+Math.max(0,$(&#x27;bt&#x27;).offsetTop-380)+&#x27;px)&#x27;;await w(500);
+$(&#x27;cb&#x27;).classList.add(&#x27;on&#x27;);$(&#x27;cb&#x27;).textContent=&#x27;✓&#x27;;sim+=3;await w(500);$(&#x27;bt&#x27;).classList.add(&#x27;on&#x27;);$(&#x27;bt&#x27;).textContent=&#x27;A enviar…&#x27;;sim+=4;
+cap(&#x27;A preencher o registo: &lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt;&#x27;);await w(1200);
+$(&#x27;ok&#x27;).classList.add(&#x27;on&#x27;);cap(&#x27;Registo enviado em &lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt;&lt;br&gt;À espera de validação&#x27;);await w(2400);
+$(&#x27;wt&#x27;).classList.add(&#x27;on&#x27;);cap(&#x27;&lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt; + &lt;b&gt;1 dia útil&lt;/b&gt; à espera&#x27;);await w(2400);
+$(&#x27;wa&#x27;).classList.add(&#x27;on&#x27;);await w(700);
+$(&#x27;ch&#x27;).innerHTML=&#x27;&lt;div class=&quot;m&quot;&gt;Olá! O seu registo no Quiosque Lisboa foi validado. 🎉 Indique o seu NIF no quiosque para ter desconto.&lt;span class=&quot;t&quot;&gt;10:12&lt;/span&gt;&lt;/div&gt;&#x27;;await w(900);
+$(&#x27;ch&#x27;).insertAdjacentHTML(&#x27;beforeend&#x27;,&#x27;&lt;div class=&quot;s&quot;&gt;A compra de 4,90&amp;nbsp;€ de ontem não conta&lt;/div&gt;&#x27;);
+cap(&#x27;&lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt; + &lt;b&gt;1 dia útil&lt;/b&gt;&lt;br&gt;7 campos · &lt;b&gt;0&amp;nbsp;€&lt;/b&gt; de cashback&#x27;);
+await w(Math.max(0,32000-(Date.now()-T0)));run()}
+run();
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe>
+<iframe class="emb" style="position:absolute; left:1320px; top:80px; width:400px; height:910px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.ph{width:400px;height:780px;border-radius:60px;background:#1C1C1E;padding:12px;box-shadow:0 0 0 2px #3A3A3C,0 24px 50px rgba(0,0,0,.45)}
+.sc{width:100%;height:100%;border-radius:49px;overflow:hidden;background:#EFE7DE;position:relative;display:flex;flex-direction:column}
+.isl{position:absolute;left:50%;top:10px;width:110px;height:32px;margin-left:-55px;background:#000;border-radius:18px;z-index:20}
+.sb{height:50px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px 0 34px;font-weight:600;font-size:15px;color:#111;background:#F6F5F3}
+.bat{width:24px;height:11px;border:1.5px solid #111;border-radius:4px;padding:1px;display:inline-block;vertical-align:middle}.bat i{display:block;height:100%;width:80%;background:#111;border-radius:2px}
+.hd{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:6px 14px 10px;border-bottom:1px solid #DDD}
+.bk{font-size:32px;line-height:20px;color:#111;font-weight:300;margin-top:-4px}
+.av{width:36px;height:36px;border-radius:50%;background:#17322A;color:#E9B44C;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.nm{font-weight:600;font-size:15px;color:#111;display:flex;align-items:center;gap:5px}
+.vf{width:14px;height:14px;border-radius:50%;background:#25D366;color:#fff;font-size:9px;display:inline-flex;align-items:center;justify-content:center}
+.sub{font-size:11.5px;color:#667781}
+#c{flex:1;overflow-y:auto;scrollbar-width:none;padding:12px;display:flex;flex-direction:column;gap:7px;background-image:radial-gradient(#E2D8CC 1px,transparent 1px);background-size:18px 18px}
+.m{max-width:84%;padding:7px 9px 6px;border-radius:9px;font-size:15px;line-height:1.32;color:#111B21;box-shadow:0 1px .5px rgba(11,20,26,.13);animation:fi .28s ease-out}
+.i{align-self:flex-start;background:#fff;border-top-left-radius:0}.o{align-self:flex-end;background:#D9FDD3;border-top-right-radius:0}
+.t{float:right;margin:7px 0 -5px 10px;font-size:11px;color:#667781;display:inline-flex;gap:3px;align-items:center}
+.s{align-self:center;background:#fff;color:#54656F;font-size:12px;padding:5px 10px;border-radius:8px;animation:fi .28s}
+.g{color:#0A8F4A}
+.bt{clear:both;margin:8px -9px -6px;border-top:1px solid #E9EDEF;padding:9px;text-align:center;color:#027EB5;font-weight:500;font-size:14.5px;transition:background .2s}.bt.on{background:#E9EDEF}.lk{color:#027EB5;text-decoration:underline}
+.card{background:#17322A;border-radius:10px;padding:12px 14px;color:#CFE0D6;margin-bottom:4px;min-width:210px}
+.ct{font-size:10.5px;letter-spacing:1.5px;color:#E9B44C;font-weight:700}.cv{font-size:28px;font-weight:700;color:#F6F1E7;margin-top:4px}.cl{font-size:11.5px}
+.dots{display:inline-flex;gap:4px;padding:4px 2px}.dots b{width:7px;height:7px;border-radius:50%;background:#9AA5AB;animation:d 1s infinite}.dots b:nth-child(2){animation-delay:.15s}.dots b:nth-child(3){animation-delay:.3s}
+.ft{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:8px 12px 26px}
+.pl{font-size:26px;color:#111;font-weight:300}
+.in{flex:1;min-height:36px;border-radius:18px;background:#fff;border:1px solid #E1E1E1;padding:7px 14px;font-size:15px;color:#9AA0A6}
+.in.on{color:#111}
+.snd{width:36px;height:36px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;transition:transform .15s}
+.snd.p{transform:scale(.85)}
+#cam{position:absolute;inset:0;background:#0E0E10;z-index:15;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px}
+#cam.off{display:none}
+.fr{width:230px;height:230px;position:relative;display:flex;align-items:center;justify-content:center;background:#F4F1EA;border-radius:6px}
+.fr:before,.fr:after{content:&#x27;&#x27;;position:absolute;inset:-14px;border:4px solid #E9B44C;border-radius:18px;clip-path:polygon(0 0,30% 0,30% 100%,0 100%,0 0,100% 0,100% 30%,0 30%)}
+.fr:after{transform:rotate(180deg)}
+.qr{display:grid;grid-template-columns:repeat(11,13px);gap:1px}.qr i{width:13px;height:13px}.qr i.k{background:#111}
+.ln{position:absolute;left:8px;right:8px;height:3px;background:#E9B44C;box-shadow:0 0 12px #E9B44C;animation:sc 1.4s ease-in-out infinite}
+.ctx{color:#fff;font-size:15px}
+.fl{position:absolute;inset:0;background:#fff;opacity:0;z-index:16;pointer-events:none}
+.fl.go{animation:fl .4s}
+.hb{position:absolute;bottom:7px;left:50%;width:130px;height:5px;margin-left:-65px;border-radius:3px;background:#111;z-index:21}
+.cap{width:400px;margin-top:16px;text-align:center;color:#CFE0D6;font-size:24px;line-height:1.35}
+.cap b{color:#E9B44C}.cap .h{font-size:26px;font-weight:700;color:#F6F1E7;letter-spacing:.5px}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes d{0%,60%,100%{opacity:.35}30%{opacity:1}}
+@keyframes sc{0%,100%{top:12px}50%{top:214px}}
+@keyframes fl{0%{opacity:0}30%{opacity:.9}100%{opacity:0}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;ph&quot;&gt;&lt;div class=&quot;sc&quot;&gt;
+&lt;div class=&quot;isl&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;sb&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span style=&quot;font-size:13px&quot;&gt;5G &lt;span class=&quot;bat&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;hd&quot;&gt;&lt;span class=&quot;bk&quot;&gt;‹&lt;/span&gt;&lt;div class=&quot;av&quot;&gt;QL&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;nm&quot;&gt;Quiosque Lisboa &lt;span class=&quot;vf&quot;&gt;✓&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;sub&quot;&gt;Conta comercial&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;c&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ft&quot;&gt;&lt;span class=&quot;pl&quot;&gt;+&lt;/span&gt;&lt;div class=&quot;in&quot; id=&quot;in&quot;&gt;Mensagem&lt;/div&gt;&lt;div class=&quot;snd&quot; id=&quot;sd&quot;&gt;➤&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;cam&quot;&gt;&lt;div class=&quot;fr&quot;&gt;&lt;div class=&quot;qr&quot; id=&quot;qr&quot;&gt;&lt;/div&gt;&lt;div class=&quot;ln&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ctx&quot;&gt;Aponte para o QR do talão&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;fl&quot; id=&quot;fl&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;hb&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;cap&quot; id=&quot;cap&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+const $=i=&gt;document.getElementById(i),w=ms=&gt;new Promise(r=&gt;setTimeout(r,ms));
+const tk=&#x27;&lt;svg width=&quot;16&quot; height=&quot;11&quot; viewBox=&quot;0 0 16 11&quot;&gt;&lt;path d=&quot;M1 6l3 3 6-7M6 9l1 1 7-8&quot; fill=&quot;none&quot; stroke=&quot;#53BDEB&quot; stroke-width=&quot;1.6&quot;/&gt;&lt;/svg&gt;&#x27;;
+let q=&#x27;&#x27;;for(let i=0;i&lt;121;i++){const r=Math.floor(i/11),c=i%11,f=(r&lt;3&amp;&amp;c&lt;3)||(r&lt;3&amp;&amp;c&gt;7)||(r&gt;7&amp;&amp;c&lt;3);q+=&#x27;&lt;i class=&quot;&#x27;+((f||((i*7+r*3)%5&lt;2))?&#x27;k&#x27;:&#x27;&#x27;)+&#x27;&quot;&gt;&lt;/i&gt;&#x27;}$(&#x27;qr&#x27;).innerHTML=q;
+let sim=0,tm;const C=$(&#x27;c&#x27;);
+function cap(x){$(&#x27;cap&#x27;).innerHTML=&#x27;&lt;div class=&quot;h&quot;&gt;COM O WHATSAPP&lt;/div&gt;&#x27;+x}
+function add(c,h){const d=document.createElement(&#x27;div&#x27;);d.className=c;d.innerHTML=h;C.appendChild(d);C.scrollTo({top:C.scrollHeight,behavior:&#x27;smooth&#x27;});return d}
+async function run(){const T0=Date.now();sim=0;C.innerHTML=&#x27;&#x27;;$(&#x27;cam&#x27;).classList.remove(&#x27;off&#x27;);$(&#x27;in&#x27;).textContent=&#x27;Mensagem&#x27;;$(&#x27;in&#x27;).classList.remove(&#x27;on&#x27;);
+cap(&#x27;Tempo: &lt;b&gt;0 s&lt;/b&gt;&#x27;);clearInterval(tm);tm=setInterval(()=&gt;{sim++;cap(&#x27;Tempo: &lt;b&gt;&#x27;+sim+&#x27; s&lt;/b&gt;&#x27;)},1000);
+await w(2200);$(&#x27;fl&#x27;).classList.remove(&#x27;go&#x27;);void $(&#x27;fl&#x27;).offsetWidth;$(&#x27;fl&#x27;).classList.add(&#x27;go&#x27;);await w(200);$(&#x27;cam&#x27;).classList.add(&#x27;off&#x27;);
+add(&#x27;s&#x27;,&#x27;QR do talão · Quiosque Saldanha&#x27;);await w(700);
+$(&#x27;in&#x27;).textContent=&#x27;Olá! Talão FTR 2/531290 🧾&#x27;;$(&#x27;in&#x27;).classList.add(&#x27;on&#x27;);await w(1100);
+$(&#x27;sd&#x27;).classList.add(&#x27;p&#x27;);await w(150);$(&#x27;sd&#x27;).classList.remove(&#x27;p&#x27;);$(&#x27;in&#x27;).textContent=&#x27;Mensagem&#x27;;$(&#x27;in&#x27;).classList.remove(&#x27;on&#x27;);
+add(&#x27;m o&#x27;,&#x27;Olá! Talão FTR 2/531290 🧾&lt;span class=&quot;t&quot;&gt;19:57 &#x27;+tk+&#x27;&lt;/span&gt;&#x27;);await w(500);
+let d=add(&#x27;m i&#x27;,&#x27;&lt;span class=&quot;dots&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/span&gt;&#x27;);await w(900);
+d.innerHTML=&#x27;Olá, &lt;b&gt;Maria Silva&lt;/b&gt;! 👋 Bem-vinda ao &lt;b&gt;Quiosque Lisboa&lt;/b&gt;.&lt;br&gt;A partir de agora, aqui no WhatsApp tens:&lt;br&gt;💰 5% de cashback em todas as compras, nos 8 quiosques&lt;br&gt;🍺 Packs de bebidas com desconto&lt;br&gt;🎉 Ofertas e eventos em primeira mão&lt;br&gt;🧾 Saldo e compras sempre à mão&lt;br&gt;&lt;br&gt;Para criar a tua conta, aceita os &lt;span class=&quot;lk&quot;&gt;Termos e Condições&lt;/span&gt; e a &lt;span class=&quot;lk&quot;&gt;Política de Privacidade&lt;/span&gt;.&lt;span class=&quot;t&quot;&gt;19:57&lt;/span&gt;&lt;div class=&quot;bt&quot; id=&quot;ac&quot;&gt;✅ Aceito&lt;/div&gt;&lt;div class=&quot;bt&quot; style=&quot;margin-top:6px&quot;&gt;Ver termos&lt;/div&gt;&#x27;;C.scrollTo({top:C.scrollHeight,behavior:&#x27;smooth&#x27;});
+await w(3200);$(&#x27;ac&#x27;).classList.add(&#x27;on&#x27;);await w(350);
+add(&#x27;m o&#x27;,&#x27;✅ Aceito&lt;span class=&quot;t&quot;&gt;19:57 &#x27;+tk+&#x27;&lt;/span&gt;&#x27;);await w(400);
+d=add(&#x27;m i&#x27;,&#x27;&lt;span class=&quot;dots&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/span&gt;&#x27;);await w(900);
+d.innerHTML=&#x27;&lt;b&gt;Conta criada, Maria!&lt;/b&gt; 🎉 Já fazes parte do Clube Quiosque Lisboa.&lt;br&gt;Compra de 4,90&amp;nbsp;€ registada: &lt;b class=&quot;g&quot;&gt;+0,25&amp;nbsp;€ de cashback&lt;/b&gt;.&lt;span class=&quot;t&quot;&gt;19:57&lt;/span&gt;&#x27;;C.scrollTo({top:C.scrollHeight,behavior:&#x27;smooth&#x27;});
+clearInterval(tm);const fin=sim;await w(900);
+add(&#x27;m i&#x27;,&#x27;&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;ct&quot;&gt;CLUBE QL · BRONZE&lt;/div&gt;&lt;div class=&quot;cv&quot;&gt;0,25&amp;nbsp;€&lt;/div&gt;&lt;div class=&quot;cl&quot;&gt;saldo para usar em qualquer quiosque&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;t&quot;&gt;19:57&lt;/span&gt;&#x27;);
+cap(&#x27;Conta criada em &lt;b&gt;&#x27;+fin+&#x27; s&lt;/b&gt;&lt;br&gt;1 mensagem + 1 toque&#x27;);
+await w(Math.max(0,32000-(Date.now()-T0)));run()}
+run();
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe>
+<aside>Deixar correr as duas em simultâneo. À esquerda, o registo atual em quiosquelisboa.pt/cliente: 7 campos com NIF e password e validação até 1 dia útil, sem cashback para a compra que a cliente acabou de fazer. À direita, o mesmo QR abre o WhatsApp: a mensagem de boas-vindas trata a cliente pelo nome do perfil (Maria Silva), resume o que passa a ter no WhatsApp (cashback, packs, ofertas e eventos, saldo) e pede a aceitação dos Termos e Condições e da Política de Privacidade (RGPD), um toque em “Aceito” cria a conta e o cashback fica logo creditado. O consentimento fica registado com data e hora. Os tempos à esquerda são estimados para quem preenche no telemóvel.</aside>
+</section>
+
+<section id="duelo2" class="dark">
+<div class="head" style="width:560px">
+<p class="eyebrow">Simulação lado a lado</p>
+<h2>Comprar um cartão de 10 imperiais</h2>
+</div>
+<p class="lead" style="width:560px">O cartão de 10 imperiais a 15,00 € que hoje se vende no site, comprado das duas formas.</p>
+<iframe class="emb" style="position:absolute; left:780px; top:80px; width:400px; height:910px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.ph{width:400px;height:780px;border-radius:60px;background:#1C1C1E;padding:12px;box-shadow:0 0 0 2px #3A3A3C,0 24px 50px rgba(0,0,0,.45)}
+.sc{width:100%;height:100%;border-radius:49px;overflow:hidden;background:#fff;position:relative;display:flex;flex-direction:column}
+.isl{position:absolute;left:50%;top:10px;width:110px;height:32px;margin-left:-55px;background:#000;border-radius:18px;z-index:20}
+.sb{height:50px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px 0 34px;font-weight:600;font-size:15px;color:#111;background:#fff;position:relative;z-index:6}
+.bat{width:24px;height:11px;border:1.5px solid #111;border-radius:4px;padding:1px;display:inline-block;vertical-align:middle}.bat i{display:block;height:100%;width:80%;background:#111;border-radius:2px}
+.vw{flex:1;overflow:hidden;position:relative}
+.pg{transition:transform .45s ease}
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #E5E5E5}.lg{font-family:&quot;Arial Narrow&quot;,&quot;Helvetica Neue&quot;,Arial,sans-serif;font-stretch:condensed;font-weight:800;font-size:19px;color:#111;line-height:1;text-align:center;letter-spacing:-.3px}.lg small{display:block;font-size:10px;letter-spacing:1px;margin-top:3px}.lng{font-size:12px;font-weight:800;color:#111}.ttl{font-weight:900;font-size:30px;color:#111;padding:14px 16px 0;letter-spacing:.5px}.sub2{font-size:12px;color:#666;padding:2px 16px 0}
+.fm{padding:12px 16px;display:flex;flex-direction:column;gap:9px}
+.f label{display:block;font-size:11.5px;color:#111;font-weight:700;margin-bottom:3px}
+.bx{height:36px;border:1px solid #D6D6D6;border-radius:12px;padding:0 10px;display:flex;align-items:center;font-size:14.5px;color:#111;white-space:nowrap;overflow:hidden}
+.act .bx{border-color:#0A84FF;box-shadow:0 0 0 3px rgba(10,132,255,.18)}
+.act .bx:after{content:&#x27;&#x27;;width:1.5px;height:17px;background:#0A84FF;margin-left:1px;animation:bl 1s steps(1) infinite}
+.ck{display:flex;gap:8px;font-size:12px;color:#333;align-items:center;margin-top:2px}
+.cb{width:18px;height:18px;border:1.5px solid #999;border-radius:4px;flex:none;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.cb.on{background:#0A84FF;border-color:#0A84FF}
+.btn{height:42px;border-radius:12px;background:#141414;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;font-size:15px;margin-top:4px;transition:opacity .2s}
+.btn.on{opacity:.55}
+.url{flex:none;background:#fff;padding:2px 14px 8px;position:relative;z-index:6}
+.url div{background:#EDEDF0;border-radius:14px;height:36px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#111}
+.kb{position:absolute;left:0;right:0;bottom:0;height:236px;background:#D1D3D9;padding:10px 3px 34px;transform:translateY(100%);transition:transform .3s;display:flex;flex-direction:column;gap:10px;z-index:8}
+.kb.up{transform:none}
+.kr{display:flex;gap:5px;justify-content:center}.kr i{width:30px;height:38px;background:#fff;border-radius:5px;box-shadow:0 1px 0 #898A8D}.kr i.sp{width:190px}
+.ov{position:absolute;left:0;right:0;top:50px;bottom:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:30px;z-index:10;animation:fi .35s ease}
+.ov.on{display:flex}
+#ok{background:#fff}#ok .ic{width:64px;height:64px;border-radius:50%;background:#E8F5EC;color:#0A8F4A;font-size:34px;display:flex;align-items:center;justify-content:center}
+#ok h2{font-size:20px;color:#111}#ok p{font-size:15px;color:#555;line-height:1.4}
+#wt{background:#17322A;color:#F6F1E7}#wt .e{font-size:56px}#wt h2{font-size:24px}#wt p{font-size:14px;color:#CFE0D6}
+#wa{background:#EFE7DE;justify-content:flex-start;align-items:stretch;padding:0;gap:0}
+.hd{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:8px 14px 10px;border-bottom:1px solid #DDD;text-align:left}
+.av{width:36px;height:36px;border-radius:50%;background:#17322A;color:#E9B44C;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.nm{font-weight:600;font-size:15px;color:#111}.sub{font-size:11.5px;color:#667781}
+.ch{padding:12px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.m{max-width:86%;padding:7px 9px 6px;border-radius:9px;border-top-left-radius:0;font-size:15px;line-height:1.32;color:#111B21;background:#fff;box-shadow:0 1px .5px rgba(11,20,26,.13);animation:fi .3s ease}
+.t{float:right;margin:7px 0 -5px 10px;font-size:11px;color:#667781}
+.s{align-self:center;background:#FFF3D6;color:#7A5410;font-size:12.5px;padding:6px 10px;border-radius:8px;animation:fi .3s ease}
+.hb{position:absolute;bottom:7px;left:50%;width:130px;height:5px;margin-left:-65px;border-radius:3px;background:#111;z-index:21}
+.cap{width:400px;margin-top:16px;text-align:center;color:#CFE0D6;font-size:24px;line-height:1.35}
+.cap b{color:#E9B44C}.cap .h{font-size:26px;font-weight:700;color:#F6F1E7;letter-spacing:.5px}
+@keyframes bl{50%{opacity:0}}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+.mn{display:grid;grid-template-columns:repeat(5,1fr);margin:12px 14px;border:1px solid #E2E2E2;border-radius:14px;overflow:hidden}
+.mn div{padding:10px 2px;text-align:center;font-size:10px;font-weight:700;color:#111;border-left:1px solid #E2E2E2}.mn div:first-child{border-left:0}.mn i{display:block;font-style:normal;font-size:17px;margin-bottom:3px}
+.cd{margin:0 14px;border:1px solid #EFE6CC;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:10px}
+.cr{display:flex;gap:12px}.im{width:110px;height:130px;border-radius:12px;background:linear-gradient(180deg,#5C6B3A,#2E3A1E);color:#fff;font-weight:900;font-size:30px;line-height:.9;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:&quot;Arial Narrow&quot;,Arial,sans-serif}.im small{font-size:15px}
+.ci h3{font-size:17px;color:#111}.pill{display:inline-block;background:#C9A85C;border-radius:12px;padding:2px 8px;font-size:12px;font-weight:800;margin:6px 0}.ci p{font-size:11px;color:#555}.pr{font-size:24px;font-weight:900;color:#111;margin-top:8px}
+.gb{height:40px;border-radius:12px;background:#C9A85C;color:#111;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;transition:opacity .2s}.gb.on{opacity:.55}
+.opt{display:flex;align-items:center;gap:10px;border:1px solid #D6D6D6;border-radius:12px;padding:10px 12px;font-size:14px;color:#111}.opt.sel{border-color:#111;box-shadow:0 0 0 1px #111}.rd{width:16px;height:16px;border-radius:50%;border:1.5px solid #999}.sel .rd{border:5px solid #111}
+.scr{display:none}.scr.on{display:block;animation:fi .3s}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;ph&quot;&gt;&lt;div class=&quot;sc&quot;&gt;
+&lt;div class=&quot;isl&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;sb&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span style=&quot;font-size:13px&quot;&gt;5G &lt;span class=&quot;bat&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;url&quot;&gt;&lt;div&gt;…oes.quiosquelisboa.pt&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;vw&quot;&gt;&lt;div class=&quot;pg&quot; id=&quot;pg&quot;&gt;
+&lt;div class=&quot;hdr&quot;&gt;&lt;div class=&quot;lg&quot;&gt;QUIOSQUE LISBOA&lt;small&gt;• CAFÉ | BAR •&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;lng&quot;&gt;PT | &lt;span style=&quot;color:#999&quot;&gt;EN&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;scr&quot; id=&quot;s1&quot;&gt;&lt;div class=&quot;ttl&quot;&gt;ENTRAR&lt;/div&gt;&lt;div class=&quot;fm&quot;&gt;&lt;div class=&quot;f&quot; id=&quot;f0&quot;&gt;&lt;label&gt;NIF&lt;/label&gt;&lt;div class=&quot;bx&quot;&gt;&lt;span id=&quot;v0&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;f&quot; id=&quot;f1&quot;&gt;&lt;label&gt;Password&lt;/label&gt;&lt;div class=&quot;bx&quot;&gt;&lt;span id=&quot;v1&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;btn&quot; id=&quot;b1&quot;&gt;Entrar&lt;/div&gt;&lt;div style=&quot;text-align:center;font-size:12.5px;font-weight:700;text-decoration:underline;color:#111;margin-top:6px&quot;&gt;Esqueci-me da Password&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;scr&quot; id=&quot;s2&quot;&gt;&lt;div class=&quot;mn&quot;&gt;&lt;div&gt;&lt;i&gt;▭&lt;/i&gt;Os Meus Cartões&lt;/div&gt;&lt;div&gt;&lt;i&gt;⌖&lt;/i&gt;Localizações&lt;/div&gt;&lt;div&gt;&lt;i&gt;☺&lt;/i&gt;Canais&lt;/div&gt;&lt;div&gt;&lt;i&gt;◯&lt;/i&gt;Conta&lt;/div&gt;&lt;div&gt;&lt;i&gt;→&lt;/i&gt;Sair&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:4px 16px 10px&quot;&gt;&lt;b style=&quot;font-size:15px;color:#111&quot;&gt;CARTÕES DISPONÍVEIS&lt;/b&gt;&lt;p style=&quot;font-size:12px;color:#666&quot;&gt;Compre cartões digitais e utilize-os nos Quiosques Lisboa&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;cd&quot;&gt;&lt;div class=&quot;cr&quot;&gt;&lt;div class=&quot;im&quot;&gt;10&lt;small&gt;IMPERIAIS&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;ci&quot;&gt;&lt;h3&gt;🍺 10 Imperiais&lt;/h3&gt;&lt;span class=&quot;pill&quot;&gt;10x&lt;/span&gt; &lt;b style=&quot;font-size:13px&quot;&gt;Imperial&lt;/b&gt;&lt;p&gt;Pode redimir até dia 01/01/2027&lt;/p&gt;&lt;div class=&quot;pr&quot;&gt;15,00&amp;nbsp;€&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;gb&quot; id=&quot;b2&quot;&gt;Comprar&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;scr&quot; id=&quot;s3&quot;&gt;&lt;div class=&quot;ttl&quot;&gt;PAGAMENTO&lt;/div&gt;&lt;div class=&quot;sub2&quot;&gt;10 Imperiais · 15,00&amp;nbsp;€&lt;/div&gt;&lt;div class=&quot;fm&quot;&gt;&lt;div class=&quot;opt&quot; id=&quot;o1&quot;&gt;&lt;span class=&quot;rd&quot;&gt;&lt;/span&gt;MB WAY&lt;/div&gt;&lt;div class=&quot;opt&quot;&gt;&lt;span class=&quot;rd&quot;&gt;&lt;/span&gt;Cartão de crédito&lt;/div&gt;&lt;div class=&quot;f&quot; id=&quot;f2&quot;&gt;&lt;label&gt;Telemóvel MB WAY&lt;/label&gt;&lt;div class=&quot;bx&quot;&gt;&lt;span id=&quot;v2&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;btn&quot; id=&quot;b3&quot;&gt;Pagar 15,00&amp;nbsp;€&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;kb&quot; id=&quot;kb&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ov&quot; id=&quot;ok&quot;&gt;&lt;div class=&quot;ic&quot;&gt;📲&lt;/div&gt;&lt;h2&gt;Confirme na app MB WAY&lt;/h2&gt;&lt;p&gt;Depois, o cartão aparece&lt;br&gt;em “Os Meus Cartões”.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;hb&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;cap&quot; id=&quot;cap&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+const $=i=&gt;document.getElementById(i),w=ms=&gt;new Promise(r=&gt;setTimeout(r,ms));
+$(&#x27;kb&#x27;).innerHTML=[10,9,7].map(n=&gt;&#x27;&lt;div class=&quot;kr&quot;&gt;&#x27;+&#x27;&lt;i&gt;&lt;/i&gt;&#x27;.repeat(n)+&#x27;&lt;/div&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;div class=&quot;kr&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i class=&quot;sp&quot;&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;&#x27;;
+let sim=0;const fmt=s=&gt;Math.floor(s/60)+&#x27; min &#x27;+String(Math.floor(s%60)).padStart(2,&#x27;0&#x27;)+&#x27; s&#x27;;
+function cap(x){$(&#x27;cap&#x27;).innerHTML=&#x27;&lt;div class=&quot;h&quot;&gt;HOJE&lt;/div&gt;&#x27;+x}
+const tc=()=&gt;cap(&#x27;A comprar: &lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt;&#x27;);
+function go(n){[&#x27;s1&#x27;,&#x27;s2&#x27;,&#x27;s3&#x27;].forEach(i=&gt;$(i).classList.toggle(&#x27;on&#x27;,i==n));$(&#x27;pg&#x27;).style.transform=&#x27;none&#x27;}
+async function typ(i,t,secs){const f=$(&#x27;f&#x27;+i),v=$(&#x27;v&#x27;+i);f.classList.add(&#x27;act&#x27;);$(&#x27;kb&#x27;).classList.add(&#x27;up&#x27;);for(const c of t){v.textContent+=c;sim+=secs/t.length;tc();await w(70)}await w(200);f.classList.remove(&#x27;act&#x27;)}
+async function tap(id,x,secs){const b=$(id);b.classList.add(&#x27;on&#x27;);if(x)b.textContent=x;sim+=secs;tc();await w(900)}
+async function run(){const T0=Date.now();sim=0;[&#x27;v0&#x27;,&#x27;v1&#x27;,&#x27;v2&#x27;].forEach(i=&gt;$(i).textContent=&#x27;&#x27;);[&#x27;b1&#x27;,&#x27;b2&#x27;,&#x27;b3&#x27;].forEach(i=&gt;$(i).classList.remove(&#x27;on&#x27;));$(&#x27;b1&#x27;).textContent=&#x27;Entrar&#x27;;$(&#x27;b3&#x27;).innerHTML=&#x27;Pagar 15,00&amp;nbsp;€&#x27;;$(&#x27;o1&#x27;).classList.remove(&#x27;sel&#x27;);$(&#x27;ok&#x27;).classList.remove(&#x27;on&#x27;);
+go(&#x27;s1&#x27;);tc();sim=8;await w(900);
+await typ(0,&#x27;123456789&#x27;,10);await typ(1,&#x27;••••••••••&#x27;,10);$(&#x27;kb&#x27;).classList.remove(&#x27;up&#x27;);await w(300);
+await tap(&#x27;b1&#x27;,&#x27;A entrar…&#x27;,4);go(&#x27;s2&#x27;);sim+=3;tc();await w(1300);
+$(&#x27;pg&#x27;).style.transform=&#x27;translateY(-90px)&#x27;;sim+=5;tc();await w(1100);
+await tap(&#x27;b2&#x27;,&#x27;&#x27;,3);go(&#x27;s3&#x27;);await w(900);
+$(&#x27;o1&#x27;).classList.add(&#x27;sel&#x27;);sim+=3;tc();await w(700);
+await typ(2,&#x27;912 345 678&#x27;,8);$(&#x27;kb&#x27;).classList.remove(&#x27;up&#x27;);await w(300);
+await tap(&#x27;b3&#x27;,&#x27;A processar…&#x27;,3);$(&#x27;ok&#x27;).classList.add(&#x27;on&#x27;);sim+=20;
+cap(&#x27;Comprado em &lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt;&lt;br&gt;login com NIF e password · 3 ecrãs&#x27;);
+await w(Math.max(0,30000-(Date.now()-T0)));run()}
+run();
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe>
+<iframe class="emb" style="position:absolute; left:1320px; top:80px; width:400px; height:910px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.ph{width:400px;height:780px;border-radius:60px;background:#1C1C1E;padding:12px;box-shadow:0 0 0 2px #3A3A3C,0 24px 50px rgba(0,0,0,.45)}
+.sc{width:100%;height:100%;border-radius:49px;overflow:hidden;background:#EFE7DE;position:relative;display:flex;flex-direction:column}
+.isl{position:absolute;left:50%;top:10px;width:110px;height:32px;margin-left:-55px;background:#000;border-radius:18px;z-index:20}
+.sb{height:50px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px 0 34px;font-weight:600;font-size:15px;color:#111;background:#F6F5F3}
+.bat{width:24px;height:11px;border:1.5px solid #111;border-radius:4px;padding:1px;display:inline-block;vertical-align:middle}.bat i{display:block;height:100%;width:80%;background:#111;border-radius:2px}
+.hd{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:6px 14px 10px;border-bottom:1px solid #DDD}
+.bk{font-size:32px;line-height:20px;color:#111;font-weight:300;margin-top:-4px}
+.av{width:36px;height:36px;border-radius:50%;background:#17322A;color:#E9B44C;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.nm{font-weight:600;font-size:15px;color:#111;display:flex;align-items:center;gap:5px}
+.vf{width:14px;height:14px;border-radius:50%;background:#25D366;color:#fff;font-size:9px;display:inline-flex;align-items:center;justify-content:center}
+.sub{font-size:11.5px;color:#667781}
+#c{flex:1;overflow-y:auto;scrollbar-width:none;padding:12px;display:flex;flex-direction:column;gap:7px;background-image:radial-gradient(#E2D8CC 1px,transparent 1px);background-size:18px 18px}
+.m{max-width:84%;padding:7px 9px 6px;border-radius:9px;font-size:15px;line-height:1.32;color:#111B21;box-shadow:0 1px .5px rgba(11,20,26,.13);animation:fi .28s ease-out}
+.i{align-self:flex-start;background:#fff;border-top-left-radius:0}.o{align-self:flex-end;background:#D9FDD3;border-top-right-radius:0}
+.t{float:right;margin:7px 0 -5px 10px;font-size:11px;color:#667781;display:inline-flex;gap:3px;align-items:center}
+.s{align-self:center;background:#fff;color:#54656F;font-size:12px;padding:5px 10px;border-radius:8px;animation:fi .28s}
+.g{color:#0A8F4A}
+.card{background:#17322A;border-radius:10px;padding:12px 14px;color:#CFE0D6;margin-bottom:4px;min-width:210px}
+.ct{font-size:10.5px;letter-spacing:1.5px;color:#E9B44C;font-weight:700}.cv{font-size:28px;font-weight:700;color:#F6F1E7;margin-top:4px}.cl{font-size:11.5px}
+.dots{display:inline-flex;gap:4px;padding:4px 2px}.dots b{width:7px;height:7px;border-radius:50%;background:#9AA5AB;animation:d 1s infinite}.dots b:nth-child(2){animation-delay:.15s}.dots b:nth-child(3){animation-delay:.3s}
+.ft{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:8px 12px 26px}
+.pl{font-size:26px;color:#111;font-weight:300}
+.in{flex:1;min-height:36px;border-radius:18px;background:#fff;border:1px solid #E1E1E1;padding:7px 14px;font-size:15px;color:#9AA0A6}
+.in.on{color:#111}
+.snd{width:36px;height:36px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;transition:transform .15s}
+.snd.p{transform:scale(.85)}
+#cam{position:absolute;inset:0;background:#0E0E10;z-index:15;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px}
+#cam.off{display:none}
+.fr{width:230px;height:230px;position:relative;display:flex;align-items:center;justify-content:center;background:#F4F1EA;border-radius:6px}
+.fr:before,.fr:after{content:&#x27;&#x27;;position:absolute;inset:-14px;border:4px solid #E9B44C;border-radius:18px;clip-path:polygon(0 0,30% 0,30% 100%,0 100%,0 0,100% 0,100% 30%,0 30%)}
+.fr:after{transform:rotate(180deg)}
+.qr{display:grid;grid-template-columns:repeat(11,13px);gap:1px}.qr i{width:13px;height:13px}.qr i.k{background:#111}
+.ln{position:absolute;left:8px;right:8px;height:3px;background:#E9B44C;box-shadow:0 0 12px #E9B44C;animation:sc 1.4s ease-in-out infinite}
+.ctx{color:#fff;font-size:15px}
+.fl{position:absolute;inset:0;background:#fff;opacity:0;z-index:16;pointer-events:none}
+.fl.go{animation:fl .4s}
+.hb{position:absolute;bottom:7px;left:50%;width:130px;height:5px;margin-left:-65px;border-radius:3px;background:#111;z-index:21}
+.cap{width:400px;margin-top:16px;text-align:center;color:#CFE0D6;font-size:24px;line-height:1.35}
+.cap b{color:#E9B44C}.cap .h{font-size:26px;font-weight:700;color:#F6F1E7;letter-spacing:.5px}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes d{0%,60%,100%{opacity:.35}30%{opacity:1}}
+@keyframes sc{0%,100%{top:12px}50%{top:214px}}
+@keyframes fl{0%{opacity:0}30%{opacity:.9}100%{opacity:0}}
+
+.bt{clear:both;margin:8px -9px -6px;border-top:1px solid #E9EDEF;padding:10px;text-align:center;color:#027EB5;font-weight:500;font-size:15px;transition:background .2s}.bt.on{background:#E9EDEF}
+.pi{height:120px;border-radius:7px;background:linear-gradient(180deg,#5C6B3A,#2E3A1E);color:#fff;font-family:&quot;Arial Narrow&quot;,Arial,sans-serif;font-weight:900;font-size:40px;line-height:.9;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:-3px -5px 8px}.pi small{font-size:18px}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;ph&quot;&gt;&lt;div class=&quot;sc&quot;&gt;
+&lt;div class=&quot;isl&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;sb&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span style=&quot;font-size:13px&quot;&gt;5G &lt;span class=&quot;bat&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;hd&quot;&gt;&lt;span class=&quot;bk&quot;&gt;‹&lt;/span&gt;&lt;div class=&quot;av&quot;&gt;QL&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;nm&quot;&gt;Quiosque Lisboa &lt;span class=&quot;vf&quot;&gt;✓&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;sub&quot;&gt;Conta comercial&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;c&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ft&quot;&gt;&lt;span class=&quot;pl&quot;&gt;+&lt;/span&gt;&lt;div class=&quot;in&quot;&gt;Mensagem&lt;/div&gt;&lt;div class=&quot;snd&quot;&gt;🎙&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;hb&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;cap&quot; id=&quot;cap&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+const $=i=&gt;document.getElementById(i),w=ms=&gt;new Promise(r=&gt;setTimeout(r,ms));
+const tk=&#x27;&lt;svg width=&quot;16&quot; height=&quot;11&quot; viewBox=&quot;0 0 16 11&quot;&gt;&lt;path d=&quot;M1 6l3 3 6-7M6 9l1 1 7-8&quot; fill=&quot;none&quot; stroke=&quot;#53BDEB&quot; stroke-width=&quot;1.6&quot;/&gt;&lt;/svg&gt;&#x27;;
+let sim=0,tm;const C=$(&#x27;c&#x27;);
+function cap(x){$(&#x27;cap&#x27;).innerHTML=&#x27;&lt;div class=&quot;h&quot;&gt;COM O WHATSAPP&lt;/div&gt;&#x27;+x}
+function add(c,h){const d=document.createElement(&#x27;div&#x27;);d.className=c;d.innerHTML=h;C.appendChild(d);C.scrollTo({top:C.scrollHeight,behavior:&#x27;smooth&#x27;});return d}
+async function inn(h,t,b){const d=add(&#x27;m i&#x27;,&#x27;&lt;span class=&quot;dots&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/span&gt;&#x27;);await w(900);d.innerHTML=h+&#x27;&lt;span class=&quot;t&quot;&gt;&#x27;+t+&#x27;&lt;/span&gt;&#x27;+(b||&#x27;&#x27;);C.scrollTo({top:C.scrollHeight,behavior:&#x27;smooth&#x27;});return d}
+async function run(){const T0=Date.now();sim=0;C.innerHTML=&#x27;&#x27;;cap(&#x27;A comprar: &lt;b&gt;0 s&lt;/b&gt;&#x27;);
+add(&#x27;s&#x27;,&#x27;SEXTA-FEIRA&#x27;);await w(600);
+const o=add(&#x27;m i&#x27;,&#x27;&lt;div class=&quot;pi&quot;&gt;10&lt;small&gt;IMPERIAIS&lt;/small&gt;&lt;/div&gt;Fim de semana de jogo? ⚽ &lt;b&gt;10 imperiais por 15,00&amp;nbsp;€&lt;/b&gt;, para usar em qualquer quiosque até 01/01/2027.&lt;span class=&quot;t&quot;&gt;18:00&lt;/span&gt;&lt;div class=&quot;bt&quot; id=&quot;b&quot;&gt;Comprar&lt;/div&gt;&#x27;);
+await w(2200);clearInterval(tm);tm=setInterval(()=&gt;{sim++;cap(&#x27;A comprar: &lt;b&gt;&#x27;+sim+&#x27; s&lt;/b&gt;&#x27;)},1000);
+await w(700);$(&#x27;b&#x27;).classList.add(&#x27;on&#x27;);await w(400);
+add(&#x27;m o&#x27;,&#x27;Comprar&lt;span class=&quot;t&quot;&gt;18:04 &#x27;+tk+&#x27;&lt;/span&gt;&#x27;);await w(400);
+await inn(&#x27;Enviámos um pedido &lt;b&gt;MB WAY de 15,00&amp;nbsp;€&lt;/b&gt; para o teu telemóvel. 📲&#x27;,&#x27;18:04&#x27;);await w(2000);
+await inn(&#x27;✅ &lt;b&gt;Pago!&lt;/b&gt; As 10 imperiais já estão no teu cartão. Mostra o código &lt;b&gt;QL-4821&lt;/b&gt; ao balcão.&lt;br&gt;&lt;b class=&quot;g&quot;&gt;+0,75&amp;nbsp;€ de cashback&lt;/b&gt;&#x27;,&#x27;18:05&#x27;);
+clearInterval(tm);const fin=sim;await w(800);
+add(&#x27;m i&#x27;,&#x27;&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;ct&quot;&gt;CLUBE QL · 10 IMPERIAIS&lt;/div&gt;&lt;div class=&quot;cv&quot;&gt;10 / 10&lt;/div&gt;&lt;div class=&quot;cl&quot;&gt;saldo de cashback 1,00&amp;nbsp;€&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;t&quot;&gt;18:05&lt;/span&gt;&#x27;);
+cap(&#x27;Comprado em &lt;b&gt;&#x27;+fin+&#x27; s&lt;/b&gt;&lt;br&gt;sem login · &lt;b&gt;0,75&amp;nbsp;€&lt;/b&gt; de cashback&#x27;);
+await w(Math.max(0,30000-(Date.now()-T0)));run()}
+run();
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe>
+<aside>À esquerda, o portal de cartões atual: entrar com NIF e password, escolher o cartão, pagar. À direita, a oferta chega no WhatsApp e compra-se com um toque e MB WAY. O produto e o preço são os reais do site (10 Imperiais, 15,00 €). O método de pagamento do site é ilustrativo.</aside>
+</section>
+
+<section id="resgate" class="dark">
+<div class="head" style="width:560px"><p class="eyebrow">Usar o cashback ao balcão</p><h2>A Ana quer usar o seu saldo</h2></div>
+<div style="display:flex; flex-direction:column; gap:18px; width:560px"><div style="border-top:2px solid #E9B44C; padding-top:10px"><p style="font-weight:700; font-size:23px; color:#F6F1E7; margin:0 0 4px">Principal: o leitor QR que já têm</p><p style="font-size:20px; line-height:1.38; color:#CFE0D6; margin:0">A pistola lê o QR da cliente no WhatsApp, a caixa mostra o saldo e pergunta quanto descontar. Já funciona assim na Quinta da Abelheira.</p></div><div style="border-top:2px solid #E9B44C; padding-top:10px"><p style="font-weight:700; font-size:23px; color:#F6F1E7; margin:0 0 4px">A decidir no piloto: QR fixo ou dinâmico</p><p style="font-size:20px; line-height:1.38; color:#CFE0D6; margin:0">Fixo e pessoal desde a adesão, como na Abelheira, ou novo a cada uso. Escolhemos com o João, conforme o que o Sage 100c permitir.</p></div><div style="border-top:2px solid #E9B44C; padding-top:10px"><p style="font-weight:700; font-size:23px; color:#F6F1E7; margin:0 0 4px">Alternativa: o telemóvel do quiosque</p><p style="font-size:20px; line-height:1.38; color:#CFE0D6; margin:0">Se o leitor falhar: o número da cliente no telemóvel do quiosque e um código de 4 dígitos por WhatsApp.</p></div></div>
+<iframe class="emb" style="position:absolute; left:780px; top:80px; width:400px; height:910px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.st{height:250px;border-radius:20px;background:#F6F1E7;padding:14px 18px;color:#17322A;box-shadow:0 14px 30px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.sh{font-size:11px;letter-spacing:1.6px;font-weight:700;color:#8A6A2A;display:flex;justify-content:space-between}
+.rw{display:flex;justify-content:space-between;align-items:center;font-size:16px;border-bottom:1px solid #E4DCCB;padding-bottom:6px}
+.rw b{font-size:17px}.fd{background:#fff;border:1.5px solid #D8CFBC;border-radius:8px;padding:4px 10px;min-width:150px;text-align:right;font-weight:700;font-size:17px;letter-spacing:1px}
+.fd{min-height:31px}.fd.f{border-color:#E9B44C}
+.sbt{margin-top:auto;border-radius:10px;padding:9px;text-align:center;font-weight:700;font-size:15px;background:#17322A;color:#F6F1E7;transition:all .25s}
+.sbt.ok{background:#0A8F4A}.sbt.w{background:#E9B44C;color:#17322A}.sbt.p{transform:scale(.96)}
+.ph{width:400px;height:540px;border-radius:54px;background:#1C1C1E;padding:11px;box-shadow:0 0 0 2px #3A3A3C,0 24px 50px rgba(0,0,0,.45)}
+.sc{width:100%;height:100%;border-radius:44px;overflow:hidden;background:#EFE7DE;position:relative;display:flex;flex-direction:column}
+.isl{position:absolute;left:50%;top:9px;width:104px;height:30px;margin-left:-52px;background:#000;border-radius:16px;z-index:20}
+.sb{height:46px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px 0 34px;font-weight:600;font-size:14px;color:#111;background:#F6F5F3}
+.hd{background:#F6F5F3;display:flex;align-items:center;gap:9px;padding:4px 14px 8px;border-bottom:1px solid #DDD}
+.av{width:32px;height:32px;border-radius:50%;background:#17322A;color:#E9B44C;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center}
+.nm{font-weight:600;font-size:14.5px;color:#111}.vf{color:#25D366}.sub{font-size:11px;color:#667781}
+#c{flex:1;overflow-y:auto;scrollbar-width:none;padding:10px 12px 18px;display:flex;flex-direction:column;gap:6px;background-image:radial-gradient(#E2D8CC 1px,transparent 1px);background-size:18px 18px}
+.m{max-width:86%;padding:7px 9px 6px;border-radius:9px;font-size:14.5px;line-height:1.32;color:#111B21;box-shadow:0 1px .5px rgba(11,20,26,.13);animation:fi .28s ease-out}
+.i{align-self:flex-start;background:#fff;border-top-left-radius:0}.o{align-self:flex-end;background:#D9FDD3;border-top-right-radius:0}
+.t{float:right;margin:7px 0 -5px 10px;font-size:10.5px;color:#667781}
+.s{align-self:center;background:#fff;color:#54656F;font-size:11.5px;padding:4px 10px;border-radius:8px}
+.g{color:#0A8F4A}.bt{clear:both;margin:8px -9px -6px;border-top:1px solid #E9EDEF;padding:8px;text-align:center;color:#027EB5;font-weight:500;font-size:14px;transition:background .2s}.bt.on{background:#E9EDEF}
+.qw{position:relative;width:170px;height:170px;margin:6px auto 4px;background:#fff;padding:8px;border:1px solid #eee;border-radius:6px}
+.qr{display:grid;grid-template-columns:repeat(13,1fr);width:100%;height:100%}.qr i.k{background:#111}
+.us{position:absolute;inset:0;background:rgba(255,255,255,.88);display:flex;align-items:center;justify-content:center;font-weight:700;color:#0A8F4A;font-size:18px;opacity:0;transition:opacity .3s}
+.cd{text-align:center;font-size:12.5px;color:#667781}.cd b{color:#111}
+.otp{font-size:30px;font-weight:800;letter-spacing:8px;text-align:center;margin:6px 0;color:#17322A}
+.dots{display:inline-flex;gap:4px;padding:4px 2px}.dots b{width:7px;height:7px;border-radius:50%;background:#9AA5AB;animation:d 1s infinite}.dots b:nth-child(2){animation-delay:.15s}.dots b:nth-child(3){animation-delay:.3s}
+.hb{position:absolute;bottom:6px;left:50%;width:120px;height:5px;margin-left:-60px;border-radius:3px;background:#111}
+.cap{width:400px;margin-top:14px;text-align:center;color:#CFE0D6;font-size:21px;line-height:1.35}.cap b{color:#E9B44C}.cap .h{font-size:24px;font-weight:700;color:#F6F1E7;letter-spacing:.5px}
+.fl{position:absolute;inset:0;border-radius:20px;background:#E9B44C;opacity:0;pointer-events:none}.fl.go{animation:fl .5s}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes d{0%,60%,100%{opacity:.35}30%{opacity:1}}
+@keyframes fl{0%{opacity:0}30%{opacity:.35}100%{opacity:0}}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;st&quot; style=&quot;position:relative&quot;&gt;&lt;div class=&quot;sh&quot;&gt;&lt;span&gt;CAIXA · SALDANHA&lt;/span&gt;&lt;span&gt;13:12&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;rw&quot;&gt;&lt;span&gt;2 imperiais + tosta&lt;/span&gt;&lt;b&gt;6,80&amp;nbsp;€&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;rw&quot;&gt;&lt;span id=&quot;sn&quot;&gt;Saldo disponível&lt;/span&gt;&lt;b id=&quot;sl&quot; style=&quot;color:#9AA0A6&quot;&gt;—&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;rw&quot;&gt;&lt;span id=&quot;ql&quot; style=&quot;color:#9AA0A6&quot;&gt;Quanto descontar?&lt;/span&gt;&lt;span class=&quot;fd&quot; id=&quot;qv&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;rw&quot; style=&quot;border:0&quot;&gt;&lt;span&gt;A pagar&lt;/span&gt;&lt;b id=&quot;tp&quot; style=&quot;font-size:20px&quot;&gt;6,80&amp;nbsp;€&lt;/b&gt;&lt;/div&gt;
+&lt;div class=&quot;sbt&quot; id=&quot;sb&quot;&gt;Ler QR com a pistola&lt;/div&gt;&lt;div class=&quot;fl&quot; id=&quot;fl&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ph&quot;&gt;&lt;div class=&quot;sc&quot;&gt;&lt;div class=&quot;isl&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;sb&quot;&gt;&lt;span&gt;13:12&lt;/span&gt;&lt;span style=&quot;font-size:12px&quot;&gt;5G ▮&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;hd&quot;&gt;&lt;span style=&quot;font-size:28px;font-weight:300;line-height:18px&quot;&gt;‹&lt;/span&gt;&lt;div class=&quot;av&quot;&gt;QL&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;nm&quot;&gt;Quiosque Lisboa &lt;span class=&quot;vf&quot;&gt;●&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;sub&quot;&gt;Conta comercial&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;c&quot;&gt;&lt;/div&gt;&lt;div class=&quot;hb&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cap&quot; id=&quot;cap&quot;&gt;&lt;div class=&quot;h&quot;&gt;COM O LEITOR QR&lt;/div&gt;QR de cliente no WhatsApp&lt;/div&gt;&lt;script&gt;const $=i=&gt;document.getElementById(i),w=ms=&gt;new Promise(r=&gt;setTimeout(r,ms)),C=$(&#x27;c&#x27;);
+const tk=&#x27;&lt;svg width=&quot;16&quot; height=&quot;11&quot; viewBox=&quot;0 0 16 11&quot;&gt;&lt;path d=&quot;M1 6l3 3 6-7M6 9l1 1 7-8&quot; fill=&quot;none&quot; stroke=&quot;#53BDEB&quot; stroke-width=&quot;1.6&quot;/&gt;&lt;/svg&gt;&#x27;;
+const dots=&#x27;&lt;span class=&quot;dots&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/span&gt;&#x27;;
+function sc(){C.scrollTo({top:C.scrollHeight,behavior:&#x27;smooth&#x27;})}
+function add(c,h){const d=document.createElement(&#x27;div&#x27;);d.className=c;d.innerHTML=h;C.appendChild(d);sc();return d}
+async function inn(h,t,b){const d=add(&#x27;m i&#x27;,dots);await w(800);d.innerHTML=h+&#x27;&lt;span class=&quot;t&quot;&gt;&#x27;+t+&#x27;&lt;/span&gt;&#x27;+(b||&#x27;&#x27;);sc();return d}
+function out(h,t){add(&#x27;m o&#x27;,h+&#x27;&lt;span class=&quot;t&quot;&gt;&#x27;+t+&#x27; &#x27;+tk+&#x27;&lt;/span&gt;&#x27;)}
+async function typ(id,s,ms){const e=$(id);e.classList.add(&#x27;f&#x27;);e.textContent=&#x27;&#x27;;for(const ch of s){e.textContent+=ch;await w(ms)}e.classList.remove(&#x27;f&#x27;)}
+function cap(h,x){$(&#x27;cap&#x27;).innerHTML=&#x27;&lt;div class=&quot;h&quot;&gt;&#x27;+h+&#x27;&lt;/div&gt;&#x27;+x}
+function flash(){const f=$(&#x27;fl&#x27;);f.classList.remove(&#x27;go&#x27;);void f.offsetWidth;f.classList.add(&#x27;go&#x27;)}
+let q=&#x27;&#x27;,sd=7;for(let i=0;i&lt;169;i++){const r=Math.floor(i/13),c=i%13;sd=(sd*1103515245+12345)%2147483648;const inF=(a,b)=&gt;a&lt;3&amp;&amp;b&lt;3,F=inF(r,c)||inF(r,12-c)||inF(12-r,c);const ring=(a,b)=&gt;(a==1&amp;&amp;b==1);const k=F?!(ring(r,c)||ring(r,12-c)||ring(12-r,c))||true:(r==3&amp;&amp;c&lt;4)||(c==3&amp;&amp;r&lt;4)?false:sd%100&lt;48;q+=&#x27;&lt;i class=&quot;&#x27;+(k?&#x27;k&#x27;:&#x27;&#x27;)+&#x27;&quot;&gt;&lt;/i&gt;&#x27;}
+async function run(){const T0=Date.now();C.innerHTML=&#x27;&#x27;;$(&#x27;sl&#x27;).textContent=&#x27;—&#x27;;$(&#x27;sl&#x27;).style.color=&#x27;#9AA0A6&#x27;;$(&#x27;sn&#x27;).textContent=&#x27;Saldo disponível&#x27;;$(&#x27;qv&#x27;).textContent=&#x27;&#x27;;$(&#x27;ql&#x27;).style.color=&#x27;#9AA0A6&#x27;;$(&#x27;tp&#x27;).innerHTML=&#x27;6,80&amp;nbsp;€&#x27;;$(&#x27;sb&#x27;).className=&#x27;sbt&#x27;;$(&#x27;sb&#x27;).textContent=&#x27;Ler QR com a pistola&#x27;;
+cap(&#x27;COM O LEITOR QR&#x27;,&#x27;QR de cliente no WhatsApp&#x27;);
+add(&#x27;s&#x27;,&#x27;Hoje · Quiosque Saldanha&#x27;);await w(500);
+await inn(&#x27;Olá, &lt;b&gt;Ana&lt;/b&gt;! 👋 O teu saldo é &lt;b class=&quot;g&quot;&gt;3,40&amp;nbsp;€&lt;/b&gt;.&#x27;,&#x27;13:12&#x27;,&#x27;&lt;div class=&quot;bt&quot; id=&quot;ub&quot;&gt;☰ Ver opções&lt;/div&gt;&#x27;);
+await w(1600);$(&#x27;ub&#x27;).classList.add(&#x27;on&#x27;);await w(350);out(&#x27;Código QR&#x27;,&#x27;13:12&#x27;);await w(300);
+const d=await inn(&#x27;O teu &lt;b&gt;QR de cliente&lt;/b&gt;. Mostra-o ao balcão:&lt;div class=&quot;qw&quot;&gt;&lt;div class=&quot;qr&quot;&gt;&#x27;+q+&#x27;&lt;/div&gt;&lt;div class=&quot;us&quot; id=&quot;us&quot;&gt;✓ Lido&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cd&quot;&gt;&lt;b&gt;Ana Silva&lt;/b&gt; · Clube Quiosque Lisboa&lt;/div&gt;&#x27;,&#x27;13:12&#x27;);
+await w(1800);$(&#x27;sb&#x27;).className=&#x27;sbt w&#x27;;$(&#x27;sb&#x27;).textContent=&#x27;🔫 A ler QR…&#x27;;flash();await w(1100);
+$(&#x27;us&#x27;).style.opacity=1;$(&#x27;sn&#x27;).textContent=&#x27;Ana S. · saldo&#x27;;$(&#x27;sl&#x27;).innerHTML=&#x27;3,40&amp;nbsp;€&#x27;;$(&#x27;sl&#x27;).style.color=&#x27;#0A8F4A&#x27;;$(&#x27;sb&#x27;).className=&#x27;sbt&#x27;;$(&#x27;sb&#x27;).textContent=&#x27;Confirmar desconto&#x27;;$(&#x27;ql&#x27;).style.color=&#x27;#17322A&#x27;;
+await w(700);await typ(&#x27;qv&#x27;,&#x27;3,40 €&#x27;,140);await w(300);$(&#x27;tp&#x27;).innerHTML=&#x27;3,40&amp;nbsp;€&#x27;;$(&#x27;sb&#x27;).classList.add(&#x27;p&#x27;);await w(150);$(&#x27;sb&#x27;).className=&#x27;sbt ok&#x27;;$(&#x27;sb&#x27;).textContent=&#x27;✓ Descontado · a pagar 3,40 €&#x27;;
+await w(700);await inn(&#x27;✅ Usaste &lt;b&gt;3,40&amp;nbsp;€&lt;/b&gt; de saldo no Quiosque Saldanha.&lt;br&gt;Pagaste 3,40&amp;nbsp;€ e ganhaste &lt;b class=&quot;g&quot;&gt;+0,17&amp;nbsp;€&lt;/b&gt;.&lt;br&gt;Novo saldo: &lt;b&gt;0,17&amp;nbsp;€&lt;/b&gt;&#x27;,&#x27;13:13&#x27;);
+cap(&#x27;COM O LEITOR QR&#x27;,&#x27;Feito em &lt;b&gt;&#x27;+Math.round((Date.now()-T0)/1000)+&#x27; s&lt;/b&gt; · como na Abelheira&#x27;);
+await w(Math.max(0,24000-(Date.now()-T0)));run()}
+run();&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+<iframe class="emb" style="position:absolute; left:1320px; top:80px; width:400px; height:910px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.st{height:250px;border-radius:20px;background:#F6F1E7;padding:14px 18px;color:#17322A;box-shadow:0 14px 30px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.sh{font-size:11px;letter-spacing:1.6px;font-weight:700;color:#8A6A2A;display:flex;justify-content:space-between}
+.rw{display:flex;justify-content:space-between;align-items:center;font-size:16px;border-bottom:1px solid #E4DCCB;padding-bottom:6px}
+.rw b{font-size:17px}.fd{background:#fff;border:1.5px solid #D8CFBC;border-radius:8px;padding:4px 10px;min-width:150px;text-align:right;font-weight:700;font-size:17px;letter-spacing:1px}
+.fd{min-height:31px}.fd.f{border-color:#E9B44C}
+.sbt{margin-top:auto;border-radius:10px;padding:9px;text-align:center;font-weight:700;font-size:15px;background:#17322A;color:#F6F1E7;transition:all .25s}
+.sbt.ok{background:#0A8F4A}.sbt.w{background:#E9B44C;color:#17322A}.sbt.p{transform:scale(.96)}
+.ph{width:400px;height:540px;border-radius:54px;background:#1C1C1E;padding:11px;box-shadow:0 0 0 2px #3A3A3C,0 24px 50px rgba(0,0,0,.45)}
+.sc{width:100%;height:100%;border-radius:44px;overflow:hidden;background:#EFE7DE;position:relative;display:flex;flex-direction:column}
+.isl{position:absolute;left:50%;top:9px;width:104px;height:30px;margin-left:-52px;background:#000;border-radius:16px;z-index:20}
+.sb{height:46px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px 0 34px;font-weight:600;font-size:14px;color:#111;background:#F6F5F3}
+.hd{background:#F6F5F3;display:flex;align-items:center;gap:9px;padding:4px 14px 8px;border-bottom:1px solid #DDD}
+.av{width:32px;height:32px;border-radius:50%;background:#17322A;color:#E9B44C;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center}
+.nm{font-weight:600;font-size:14.5px;color:#111}.vf{color:#25D366}.sub{font-size:11px;color:#667781}
+#c{flex:1;overflow-y:auto;scrollbar-width:none;padding:10px 12px 18px;display:flex;flex-direction:column;gap:6px;background-image:radial-gradient(#E2D8CC 1px,transparent 1px);background-size:18px 18px}
+.m{max-width:86%;padding:7px 9px 6px;border-radius:9px;font-size:14.5px;line-height:1.32;color:#111B21;box-shadow:0 1px .5px rgba(11,20,26,.13);animation:fi .28s ease-out}
+.i{align-self:flex-start;background:#fff;border-top-left-radius:0}.o{align-self:flex-end;background:#D9FDD3;border-top-right-radius:0}
+.t{float:right;margin:7px 0 -5px 10px;font-size:10.5px;color:#667781}
+.s{align-self:center;background:#fff;color:#54656F;font-size:11.5px;padding:4px 10px;border-radius:8px}
+.g{color:#0A8F4A}.bt{clear:both;margin:8px -9px -6px;border-top:1px solid #E9EDEF;padding:8px;text-align:center;color:#027EB5;font-weight:500;font-size:14px;transition:background .2s}.bt.on{background:#E9EDEF}
+.qw{position:relative;width:170px;height:170px;margin:6px auto 4px;background:#fff;padding:8px;border:1px solid #eee;border-radius:6px}
+.qr{display:grid;grid-template-columns:repeat(13,1fr);width:100%;height:100%}.qr i.k{background:#111}
+.us{position:absolute;inset:0;background:rgba(255,255,255,.88);display:flex;align-items:center;justify-content:center;font-weight:700;color:#0A8F4A;font-size:18px;opacity:0;transition:opacity .3s}
+.cd{text-align:center;font-size:12.5px;color:#667781}.cd b{color:#111}
+.otp{font-size:30px;font-weight:800;letter-spacing:8px;text-align:center;margin:6px 0;color:#17322A}
+.dots{display:inline-flex;gap:4px;padding:4px 2px}.dots b{width:7px;height:7px;border-radius:50%;background:#9AA5AB;animation:d 1s infinite}.dots b:nth-child(2){animation-delay:.15s}.dots b:nth-child(3){animation-delay:.3s}
+.hb{position:absolute;bottom:6px;left:50%;width:120px;height:5px;margin-left:-60px;border-radius:3px;background:#111}
+.cap{width:400px;margin-top:14px;text-align:center;color:#CFE0D6;font-size:21px;line-height:1.35}.cap b{color:#E9B44C}.cap .h{font-size:24px;font-weight:700;color:#F6F1E7;letter-spacing:.5px}
+.fl{position:absolute;inset:0;border-radius:20px;background:#E9B44C;opacity:0;pointer-events:none}.fl.go{animation:fl .5s}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes d{0%,60%,100%{opacity:.35}30%{opacity:1}}
+@keyframes fl{0%{opacity:0}30%{opacity:.35}100%{opacity:0}}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;st&quot; style=&quot;position:relative&quot;&gt;&lt;div class=&quot;sh&quot;&gt;&lt;span&gt;TELEMÓVEL DO QUIOSQUE&lt;/span&gt;&lt;span&gt;13:12&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;rw&quot;&gt;&lt;span&gt;Telemóvel&lt;/span&gt;&lt;span class=&quot;fd&quot; id=&quot;tl&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;rw&quot;&gt;&lt;span&gt;Valor a usar&lt;/span&gt;&lt;span class=&quot;fd&quot; id=&quot;vl&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;rw&quot; style=&quot;border:0&quot;&gt;&lt;span id=&quot;kl&quot; style=&quot;color:#9AA0A6&quot;&gt;Código&lt;/span&gt;&lt;span class=&quot;fd&quot; id=&quot;kd&quot; style=&quot;letter-spacing:6px&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;sbt&quot; id=&quot;sb&quot;&gt;Enviar código&lt;/div&gt;&lt;div class=&quot;fl&quot; id=&quot;fl&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ph&quot;&gt;&lt;div class=&quot;sc&quot;&gt;&lt;div class=&quot;isl&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;sb&quot;&gt;&lt;span&gt;13:12&lt;/span&gt;&lt;span style=&quot;font-size:12px&quot;&gt;5G ▮&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;hd&quot;&gt;&lt;span style=&quot;font-size:28px;font-weight:300;line-height:18px&quot;&gt;‹&lt;/span&gt;&lt;div class=&quot;av&quot;&gt;QL&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;nm&quot;&gt;Quiosque Lisboa &lt;span class=&quot;vf&quot;&gt;●&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;sub&quot;&gt;Conta comercial&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;c&quot;&gt;&lt;/div&gt;&lt;div class=&quot;hb&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cap&quot; id=&quot;cap&quot;&gt;&lt;div class=&quot;h&quot;&gt;ALTERNATIVA&lt;/div&gt;Telemóvel do quiosque + código&lt;/div&gt;&lt;script&gt;const $=i=&gt;document.getElementById(i),w=ms=&gt;new Promise(r=&gt;setTimeout(r,ms)),C=$(&#x27;c&#x27;);
+const tk=&#x27;&lt;svg width=&quot;16&quot; height=&quot;11&quot; viewBox=&quot;0 0 16 11&quot;&gt;&lt;path d=&quot;M1 6l3 3 6-7M6 9l1 1 7-8&quot; fill=&quot;none&quot; stroke=&quot;#53BDEB&quot; stroke-width=&quot;1.6&quot;/&gt;&lt;/svg&gt;&#x27;;
+const dots=&#x27;&lt;span class=&quot;dots&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/span&gt;&#x27;;
+function sc(){C.scrollTo({top:C.scrollHeight,behavior:&#x27;smooth&#x27;})}
+function add(c,h){const d=document.createElement(&#x27;div&#x27;);d.className=c;d.innerHTML=h;C.appendChild(d);sc();return d}
+async function inn(h,t,b){const d=add(&#x27;m i&#x27;,dots);await w(800);d.innerHTML=h+&#x27;&lt;span class=&quot;t&quot;&gt;&#x27;+t+&#x27;&lt;/span&gt;&#x27;+(b||&#x27;&#x27;);sc();return d}
+function out(h,t){add(&#x27;m o&#x27;,h+&#x27;&lt;span class=&quot;t&quot;&gt;&#x27;+t+&#x27; &#x27;+tk+&#x27;&lt;/span&gt;&#x27;)}
+async function typ(id,s,ms){const e=$(id);e.classList.add(&#x27;f&#x27;);e.textContent=&#x27;&#x27;;for(const ch of s){e.textContent+=ch;await w(ms)}e.classList.remove(&#x27;f&#x27;)}
+function cap(h,x){$(&#x27;cap&#x27;).innerHTML=&#x27;&lt;div class=&quot;h&quot;&gt;&#x27;+h+&#x27;&lt;/div&gt;&#x27;+x}
+function flash(){const f=$(&#x27;fl&#x27;);f.classList.remove(&#x27;go&#x27;);void f.offsetWidth;f.classList.add(&#x27;go&#x27;)}
+async function run(){const T0=Date.now();C.innerHTML=&#x27;&#x27;;[&#x27;tl&#x27;,&#x27;vl&#x27;,&#x27;kd&#x27;].forEach(i=&gt;$(i).textContent=&#x27;&#x27;);$(&#x27;kl&#x27;).style.color=&#x27;#9AA0A6&#x27;;$(&#x27;kl&#x27;).textContent=&#x27;Código&#x27;;$(&#x27;sb&#x27;).className=&#x27;sbt&#x27;;$(&#x27;sb&#x27;).textContent=&#x27;Enviar código&#x27;;
+cap(&#x27;ALTERNATIVA&#x27;,&#x27;Telemóvel do quiosque + código&#x27;);
+add(&#x27;s&#x27;,&#x27;Hoje · Quiosque Saldanha&#x27;);await w(400);
+add(&#x27;m i&#x27;,&#x27;O teu saldo: &lt;b class=&quot;g&quot;&gt;3,40&amp;nbsp;€&lt;/b&gt; 💳&lt;span class=&quot;t&quot;&gt;ontem&lt;/span&gt;&#x27;);await w(700);
+await typ(&#x27;tl&#x27;,&#x27;912 345 123&#x27;,110);await w(250);await typ(&#x27;vl&#x27;,&#x27;3,40 €&#x27;,110);await w(400);
+$(&#x27;sb&#x27;).classList.add(&#x27;p&#x27;);await w(150);$(&#x27;sb&#x27;).classList.remove(&#x27;p&#x27;);$(&#x27;sb&#x27;).className=&#x27;sbt w&#x27;;$(&#x27;sb&#x27;).textContent=&#x27;Código enviado para •••123&#x27;;
+await w(400);await inn(&#x27;🔐 Código para usar &lt;b&gt;3,40&amp;nbsp;€&lt;/b&gt; do teu saldo no &lt;b&gt;Quiosque Saldanha&lt;/b&gt;:&lt;div class=&quot;otp&quot;&gt;7391&lt;/div&gt;Válido 2 min. Só o mostres ao balcão.&#x27;,&#x27;13:12&#x27;);
+$(&#x27;kl&#x27;).style.color=&#x27;#17322A&#x27;;await w(1800);await typ(&#x27;kd&#x27;,&#x27;7391&#x27;,260);await w(350);
+flash();$(&#x27;sb&#x27;).className=&#x27;sbt ok&#x27;;$(&#x27;sb&#x27;).textContent=&#x27;✓ Ana S. · −3,40 € · a pagar 3,40 €&#x27;;
+await w(700);await inn(&#x27;✅ Usaste &lt;b&gt;3,40&amp;nbsp;€&lt;/b&gt; de saldo no Quiosque Saldanha.&lt;br&gt;Pagaste 3,40&amp;nbsp;€ e ganhaste &lt;b class=&quot;g&quot;&gt;+0,17&amp;nbsp;€&lt;/b&gt;.&lt;br&gt;Novo saldo: &lt;b&gt;0,17&amp;nbsp;€&lt;/b&gt;&#x27;,&#x27;13:13&#x27;);
+cap(&#x27;ALTERNATIVA&#x27;,&#x27;Desconto feito em &lt;b&gt;&#x27;+Math.round((Date.now()-T0)/1000)+&#x27; s&lt;/b&gt; · sem leitor&#x27;);
+await w(Math.max(0,24000-(Date.now()-T0)));run()}
+run();&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+<aside>O João confirmou: todos os quiosques têm leitor de QR tipo pistola e telemóvel, e a faturação é Sage 100c. A Ana tem 3,40 € de saldo acumulado e paga uma conta de 6,80 €. À esquerda, o cenário principal, que já está em produção na Quinta da Abelheira: a pistola lê o QR que a cliente tem no WhatsApp, a caixa mostra se há saldo e quanto, e pergunta quanto descontar. Na Abelheira a caixa é WinRest e o QR é fixo, pessoal e intransmissível, atribuído na adesão. Não sabemos ainda como os quiosques vão querer fazer com o Sage 100c, por isso apresentar duas opções a decidir no piloto: 1) QR fixo, como na Abelheira: o QR só existe na conversa de WhatsApp da cliente com o Quiosque Lisboa, por isso só é usado por outra pessoa se ela o partilhar; a caixa mostra o nome e cada uso gera logo uma mensagem para ela. Em qualquer opção, o QR e o código só existem no WhatsApp da cliente. 2) QR dinâmico: gerado na hora, válido 2 minutos e de uso único, para quem quiser ainda mais segurança. Para o balcão é igual. A forma da integração com o Sage 100c (artigo de desconto, meio de pagamento "Saldo Clube" ou API) fica a fechar com o parceiro Sage deles. À direita, a alternativa: o funcionário põe o número da cliente no telemóvel do quiosque e o sistema envia-lhe um código novo de 4 dígitos por WhatsApp, válido 2 minutos e de uso único. O ecrã mostra só os 3 últimos dígitos do número. Podemos pôr limites diários por cliente e por funcionário e alertas para usos fora do normal. As regras do saldo (valor mínimo, validade, uso parcial) decide-as o João. A parte paga da compra volta a dar cashback.</aside>
+</section>
+
+<section id="jornada" class="dark">
+<div class="head">
+<p class="eyebrow">Como funciona para o cliente</p>
+<h2>Do QR code à compra repetida, sem instalar nada</h2>
+</div>
+<div class="steps">
+<div class="step rise" style="--i:0"><p class="n">1. Adere</p><p class="txt">Lê o QR no balcão ou no copo e manda “Olá”. Ganha logo uma bebida.</p></div>
+<div class="step rise" style="--i:1"><p class="n">2. Compra</p><p class="txt">Diz o número ou mostra um código ao balcão. A compra fica registada.</p></div>
+<div class="step rise" style="--i:2"><p class="n">3. Acumula</p><p class="txt">Recebe 5% em cashback: “Tens 3,40 € para gastar em qualquer quiosque.”</p></div>
+<div class="step rise" style="--i:3"><p class="n">4. Volta</p><p class="txt">Recebe ofertas à medida e compra packs ou reserva mesa na conversa.</p></div>
+</div>
+<p class="lead">O número de telemóvel passa a ser o cartão de cliente, para portugueses e para turistas.</p>
+<aside>Mostrar aqui a demo no telemóvel, se a tivermos. Os 5% de cashback são um exemplo; a percentagem e a validade do saldo definem-se com o João.</aside>
+</section>
+
+<section id="demo" class="dark">
+<div class="head" style="width:1000px">
+<p class="eyebrow">Demonstração</p>
+<h2>Assim fica o WhatsApp do Quiosque Lisboa</h2>
+</div>
+<div class="steps" style="grid-template-columns:1fr; gap:20px; width:960px">
+<div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">1</p><p class="txt">Lê o QR do talão, aceita os termos e entra no Clube, já com o cashback dessa compra.</p></div>
+<div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">2</p><p class="txt">Recebe o cartão digital e uma imperial de oferta.</p></div>
+<div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">3</p><p class="txt">Cada compra soma cashback e aproxima o nível seguinte.</p></div>
+<div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">4</p><p class="txt">Recebe o Pack Jogo e paga por MB WAY sem sair da conversa.</p></div>
+<div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">5</p><p class="txt">Reserva mesa para o jogo com uma mensagem.</p></div>
+</div>
+<iframe class="emb" style="position:absolute; left:1300px; top:96px; width:452px; height:888px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.ph{width:452px;height:888px;border-radius:68px;background:#1C1C1E;padding:13px;box-shadow:0 0 0 2px #3A3A3C,0 30px 60px rgba(0,0,0,.45)}
+.sc{width:100%;height:100%;border-radius:56px;overflow:hidden;background:#EFE7DE;display:flex;flex-direction:column;position:relative}
+.sb{height:54px;background:#F6F5F3;display:flex;align-items:center;justify-content:space-between;padding:0 30px 0 38px;font-weight:600;font-size:16px;color:#111}
+.isl{position:absolute;left:50%;top:11px;width:122px;height:35px;margin-left:-61px;background:#000;border-radius:20px}
+.ic{display:flex;gap:6px;align-items:center;font-size:13px}
+.bat{width:25px;height:12px;border:1.5px solid #111;border-radius:4px;padding:1px}.bat i{display:block;height:100%;width:80%;background:#111;border-radius:2px}
+.hd{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:6px 14px 10px;border-bottom:1px solid #DDD}
+.bk{font-size:34px;line-height:20px;color:#111;font-weight:300;margin-top:-4px}
+.av{width:38px;height:38px;border-radius:50%;background:#17322A;color:#E9B44C;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.nm{font-weight:600;font-size:16px;color:#111;display:flex;align-items:center;gap:5px}
+.vf{width:15px;height:15px;border-radius:50%;background:#25D366;color:#fff;font-size:10px;display:inline-flex;align-items:center;justify-content:center}
+.sub{font-size:12px;color:#667781}
+#c{flex:1;overflow-y:auto;padding:12px 12px 8px;display:flex;flex-direction:column;gap:6px;scrollbar-width:none;background-image:radial-gradient(#E2D8CC 1px,transparent 1px);background-size:18px 18px}
+#c::-webkit-scrollbar{display:none}
+.m{max-width:80%;padding:7px 9px 6px;border-radius:9px;font-size:15.5px;line-height:1.32;color:#111B21;box-shadow:0 1px .5px rgba(11,20,26,.13);animation:p .28s ease-out}
+.i{align-self:flex-start;background:#fff;border-top-left-radius:0}
+.o{align-self:flex-end;background:#D9FDD3;border-top-right-radius:0}
+.t{float:right;margin:7px 0 -5px 10px;font-size:11px;color:#667781;display:inline-flex;gap:3px;align-items:center}
+.s{align-self:center;background:#FFF;color:#54656F;font-size:12.5px;padding:5px 10px;border-radius:8px;box-shadow:0 1px .5px rgba(11,20,26,.13);margin:4px 0;animation:p .28s ease-out}
+.bt{clear:both;margin:8px -9px -6px;border-top:1px solid #E9EDEF;padding:10px;text-align:center;color:#027EB5;font-weight:500;font-size:15px;transition:background .2s}
+.bt.on{background:#E9EDEF}
+.card{background:#17322A;border-radius:10px;padding:14px 16px;color:#CFE0D6;margin-bottom:4px;min-width:230px}
+.ct{font-size:11px;letter-spacing:1.5px;color:#E9B44C;font-weight:700}
+.cv{font-size:32px;font-weight:700;color:#F6F1E7;margin-top:6px}
+.cl{font-size:12px}.cc{font-size:13px;margin-top:10px;padding-top:8px;border-top:1px solid #2E5A4C}
+.g{color:#0A8F4A}.lk{color:#027EB5;text-decoration:underline}.hint{align-self:flex-end;font-size:11.5px;color:#667781;margin:-2px 4px 2px;animation:p .28s ease-out}
+.bar{height:6px;background:#E9EDEF;border-radius:3px;margin:8px 0 4px}.bar i{display:block;height:100%;background:#25D366;border-radius:3px;transition:width 1.2s ease}
+.sm{font-size:12.5px;color:#667781}
+.pk{display:flex;gap:10px;background:#F5F6F6;border-radius:8px;padding:8px;margin-bottom:6px}
+.pi{width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,#E9B44C,#C8862A);display:flex;align-items:center;justify-content:center;font-size:24px}
+.pb{font-size:14px;line-height:1.35}
+.dots{display:inline-flex;gap:4px;padding:4px 2px}.dots b{width:7px;height:7px;border-radius:50%;background:#9AA5AB;animation:d 1s infinite}.dots b:nth-child(2){animation-delay:.15s}.dots b:nth-child(3){animation-delay:.3s}
+.ft{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:8px 14px 30px}
+.pl{font-size:28px;color:#111;font-weight:300}
+.in{flex:1;height:36px;border-radius:18px;background:#fff;border:1px solid #E1E1E1;padding:0 14px;display:flex;align-items:center;color:#9AA0A6;font-size:15px}
+.mic{width:24px;height:24px;border-radius:12px;border:2px solid #111;opacity:.8}
+.hb{position:absolute;bottom:8px;left:50%;width:140px;height:5px;margin-left:-70px;border-radius:3px;background:#111}
+@keyframes p{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes d{0%,60%,100%{opacity:.35}30%{opacity:1}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;ph&quot;&gt;&lt;div class=&quot;sc&quot;&gt;
+&lt;div class=&quot;isl&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;sb&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span class=&quot;ic&quot;&gt;5G &lt;span class=&quot;bat&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;hd&quot;&gt;&lt;span class=&quot;bk&quot;&gt;‹&lt;/span&gt;&lt;div class=&quot;av&quot;&gt;QL&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;nm&quot;&gt;Quiosque Lisboa &lt;span class=&quot;vf&quot;&gt;✓&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;sub&quot;&gt;Conta comercial&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;c&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ft&quot;&gt;&lt;span class=&quot;pl&quot;&gt;+&lt;/span&gt;&lt;div class=&quot;in&quot;&gt;Mensagem&lt;/div&gt;&lt;span class=&quot;mic&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;hb&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;script&gt;
+const C=document.getElementById(&#x27;c&#x27;);
+const tk=&#x27;&lt;svg width=&quot;16&quot; height=&quot;11&quot; viewBox=&quot;0 0 16 11&quot;&gt;&lt;path d=&quot;M1 6l3 3 6-7M6 9l1 1 7-8&quot; fill=&quot;none&quot; stroke=&quot;#53BDEB&quot; stroke-width=&quot;1.6&quot;/&gt;&lt;/svg&gt;&#x27;;
+const w=ms=&gt;new Promise(r=&gt;setTimeout(r,ms));
+const sc=()=&gt;C.scrollTo({top:C.scrollHeight,behavior:&#x27;smooth&#x27;});
+function el(c,h){const d=document.createElement(&#x27;div&#x27;);d.className=c;d.innerHTML=h;C.appendChild(d);sc();return d}
+async function inn(h,t,b){const d=el(&#x27;m i&#x27;,&#x27;&lt;span class=&quot;dots&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/span&gt;&#x27;);await w(1100);d.innerHTML=h+&#x27;&lt;span class=&quot;t&quot;&gt;&#x27;+t+&#x27;&lt;/span&gt;&#x27;+(b||&#x27;&#x27;);sc();return d}
+function out(h,t){el(&#x27;m o&#x27;,h+&#x27;&lt;span class=&quot;t&quot;&gt;&#x27;+t+&#x27; &#x27;+tk+&#x27;&lt;/span&gt;&#x27;)}
+async function tap(id,t,x){const b=document.getElementById(id);if(b){b.classList.add(&#x27;on&#x27;);await w(450)}out(x,t)}
+async function run(){C.innerHTML=&#x27;&#x27;;
+el(&#x27;s&#x27;,&#x27;QR do talão lido · Quiosque Saldanha&#x27;);await w(900);
+out(&#x27;Olá! Quero o meu cashback 🧾&lt;br&gt;Talão FTR 2/531290&#x27;,&#x27;19:57&#x27;);el(&#x27;hint&#x27;,&#x27;mensagem preenchida pelo QR&#x27;);await w(700);
+await inn(&#x27;Olá, &lt;b&gt;Ana&lt;/b&gt;! 👋 Para criar a tua conta no &lt;b&gt;Clube Quiosque Lisboa&lt;/b&gt; e ganhar cashback, aceita os &lt;span class=&quot;lk&quot;&gt;Termos e Condições&lt;/span&gt; e a &lt;span class=&quot;lk&quot;&gt;Política de Privacidade&lt;/span&gt;.&#x27;,&#x27;19:57&#x27;,&#x27;&lt;div class=&quot;bt&quot; id=&quot;ba&quot;&gt;✅ Aceito&lt;/div&gt;&lt;div class=&quot;bt&quot; style=&quot;margin-top:4px&quot;&gt;Ver termos&lt;/div&gt;&#x27;);await w(1800);
+await tap(&#x27;ba&#x27;,&#x27;19:57&#x27;,&#x27;✅ Aceito&#x27;);await w(500);
+await inn(&#x27;&lt;b&gt;Conta criada!&lt;/b&gt; Bem-vinda ao Clube, Ana! 🎉&lt;br&gt;Registámos a tua compra de &lt;b&gt;4,90&amp;nbsp;€&lt;/b&gt; e ganhaste &lt;b class=&quot;g&quot;&gt;+0,25&amp;nbsp;€ de cashback&lt;/b&gt;.&lt;br&gt;E a &lt;b&gt;próxima imperial é oferta&lt;/b&gt;.&#x27;,&#x27;19:57&#x27;,&#x27;&lt;div class=&quot;bt&quot; id=&quot;b1&quot;&gt;Ver o meu cartão&lt;/div&gt;&#x27;);await w(1700);
+await tap(&#x27;b1&#x27;,&#x27;19:58&#x27;,&#x27;Ver o meu cartão&#x27;);await w(500);
+await inn(&#x27;&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;ct&quot;&gt;CLUBE QL · BRONZE&lt;/div&gt;&lt;div class=&quot;cv&quot;&gt;0,25&amp;nbsp;€&lt;/div&gt;&lt;div class=&quot;cl&quot;&gt;saldo de cashback&lt;/div&gt;&lt;div class=&quot;cc&quot;&gt;O teu QR de cliente está em &lt;b&gt;Ver opções&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;Mostra-o ao balcão para usar o saldo em qualquer quiosque.&#x27;,&#x27;19:58&#x27;);await w(2300);
+el(&#x27;s&#x27;,&#x27;SÁBADO&#x27;);await w(600);
+const d=await inn(&#x27;Obrigado pela visita ao &lt;b&gt;Quiosque Saldanha&lt;/b&gt;! 🍻&lt;br&gt;Compra: 18,50&amp;nbsp;€&lt;br&gt;&lt;b class=&quot;g&quot;&gt;+0,93&amp;nbsp;€ de cashback&lt;/b&gt; · saldo 1,18&amp;nbsp;€&lt;div class=&quot;bar&quot;&gt;&lt;i style=&quot;width:0&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;span class=&quot;sm&quot;&gt;Faltam 2 visitas para o nível Prata&lt;/span&gt;&#x27;,&#x27;21:47&#x27;);
+await w(150);d.querySelector(&#x27;.bar i&#x27;).style.width=&#x27;60%&#x27;;await w(2500);
+el(&#x27;s&#x27;,&#x27;QUARTA-FEIRA&#x27;);await w(600);
+await inn(&#x27;&lt;div class=&quot;pk&quot;&gt;&lt;div class=&quot;pi&quot;&gt;⚽🍺&lt;/div&gt;&lt;div class=&quot;pb&quot;&gt;&lt;b&gt;Pack Jogo · Benfica–Porto&lt;/b&gt;&lt;br&gt;4 imperiais + tremoços&lt;br&gt;&lt;s&gt;14,00&amp;nbsp;€&lt;/s&gt; &lt;b class=&quot;g&quot;&gt;10,00&amp;nbsp;€&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;Domingo no Saldanha, com ecrã gigante. Só para membros do Clube.&#x27;,&#x27;16:05&#x27;,&#x27;&lt;div class=&quot;bt&quot; id=&quot;b2&quot;&gt;Comprar pack&lt;/div&gt;&#x27;);await w(1900);
+await tap(&#x27;b2&#x27;,&#x27;16:06&#x27;,&#x27;Comprar pack&#x27;);await w(500);
+await inn(&#x27;Enviámos um pedido &lt;b&gt;MB WAY de 10,00&amp;nbsp;€&lt;/b&gt; para o teu telemóvel. 📲&#x27;,&#x27;16:06&#x27;);await w(1500);
+await inn(&#x27;✅ &lt;b&gt;Pago!&lt;/b&gt; O teu Pack Jogo está guardado.&lt;br&gt;Ainda tens &lt;b&gt;1,18&amp;nbsp;€&lt;/b&gt; de cashback para usar no dia.&#x27;,&#x27;16:07&#x27;);await w(1700);
+out(&#x27;Consegues guardar-me mesa para 4? 😄&#x27;,&#x27;16:08&#x27;);await w(500);
+await inn(&#x27;Feito! Mesa para 4 no &lt;b&gt;Saldanha&lt;/b&gt;, domingo às 19h30. Até lá! 🙌&#x27;,&#x27;16:08&#x27;);await w(6000);
+run()}
+run();
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+<aside>Deixar a animação correr enquanto se explica. É uma simulação: os nomes, valores e o jogo são exemplos. A animação só corre na apresentação no browser; no PowerPoint e no PDF fica uma imagem parada.</aside>
+</section>
+
+<section id="numeros" class="accent">
+<div class="head">
+<p class="eyebrow">Conta simples</p>
+<h2>Uma visita a mais por mês já paga o projeto</h2>
+</div>
+<div class="calc">
+<div class="box"><p class="v">3.000</p><p class="l">clientes no programa</p></div>
+<p class="op">×</p>
+<div class="box"><p class="v">10%</p><p class="l">voltam mais 1 vez/mês</p></div>
+<p class="op">×</p>
+<div class="box"><p class="v">8 €</p><p class="l">talão médio</p></div>
+<p class="op">=</p>
+<div class="box res"><p class="v">2.400 €</p><p class="l">a mais por mês</p></div>
+</div>
+<p class="lead">Antes de contar com packs de bebidas, eventos e encomendas nos Hambúrgueres Santos.</p>
+<p class="small">Números ilustrativos. Substituir pelos dados reais do Grupo QL.</p>
+<aside>Perguntar ao João os números reais: clientes registados com NIF, talão médio, visitas por mês. Refazer a conta com ele na reunião.</aside>
+</section>
+
+<section id="quiosques">
+<div class="head">
+<p class="eyebrow">Casos de uso · Quiosques</p>
+<h2>Seis formas de vender mais nos quiosques</h2>
+</div>
+<div class="cards">
+<div class="card rise" style="--i:0"><h3>Noite de futebol</h3><p class="txt">Lugar garantido e 4 imperiais vendidos antes do jogo no Saldanha, Campolide e Cais do Sodré.</p></div>
+<div class="card rise" style="--i:1"><h3>Packs de bebidas</h3><p class="txt">“10 imperiais por 15 €” pagos já, levantados em qualquer quiosque.</p></div>
+<div class="card rise" style="--i:2"><h3>Clube do café</h3><p class="txt">Assinatura mensal para quem trabalha perto. Receita fixa todos os meses.</p></div>
+<div class="card rise" style="--i:3"><h3>Passaporte QL</h3><p class="txt">Um carimbo digital por quiosque visitado. Quem completa ganha um prémio.</p></div>
+<div class="card rise" style="--i:4"><h3>Dias fracos</h3><p class="txt">Oferta às 15h de uma terça chuvosa só para quem costuma ir àquele quiosque.</p></div>
+<div class="card rise" style="--i:5"><h3>Marcas parceiras</h3><p class="txt">Uma cervejeira patrocina campanhas para a base de clientes.</p></div>
+</div>
+<aside>Perguntar ao João qual destas lhe faz mais sentido começar. O futebol e os packs são os que mais rapidamente geram receita.</aside>
+</section>
+
+<section id="burgers" class="dark">
+<div class="head">
+<p class="eyebrow">Casos de uso · Hambúrgueres Santos</p>
+<h2>A mesma plataforma, aplicada aos hambúrgueres</h2>
+</div>
+<div class="cards">
+<div class="card rise" style="--i:0"><h3>Encomenda direta</h3><p class="txt">Menu, pedido e pagamento no WhatsApp, sem as comissões das plataformas de entrega.</p></div>
+<div class="card rise" style="--i:1"><h3>Cartão de carimbos</h3><p class="txt">Nove hambúrgueres e o décimo é oferta, contado automaticamente.</p></div>
+<div class="card rise" style="--i:2"><h3>Burger do mês</h3><p class="txt">Lançado primeiro no WhatsApp, com reserva antecipada.</p></div>
+<div class="card rise" style="--i:3"><h3>Almoço de empresas</h3><p class="txt">Encomenda de grupo até às 11h, pronta às 13h.</p></div>
+<div class="card rise" style="--i:4"><h3>Recuperar clientes</h3><p class="txt">Quem não volta há 45 dias recebe batatas grátis na próxima visita.</p></div>
+<div class="card rise" style="--i:5"><h3>Quiosque + burger</h3><p class="txt">Uma só conta de cliente para as duas marcas, com ofertas cruzadas.</p></div>
+</div>
+<aside>Perguntar quanto do negócio dos Santos passa pela Uber Eats e pela Glovo. Cada encomenda que passa para o WhatsApp poupa a comissão e fica com o contacto do cliente.</aside>
+</section>
+
+<section id="nos">
+<div class="head">
+<p class="eyebrow">Quem somos</p>
+<h2>[Nome da empresa]: WhatsApp que vende</h2>
+</div>
+<div class="cards four">
+<div class="card rise" style="--i:0"><h3>E-commerce</h3><p class="txt">Catálogo, encomendas e pagamento dentro do WhatsApp.</p></div>
+<div class="card rise" style="--i:1"><h3>Fidelização</h3><p class="txt">Cashback, pontos e níveis ligados ao número de telemóvel.</p></div>
+<div class="card rise" style="--i:2"><h3>Campanhas</h3><p class="txt">Mensagens segmentadas por local, hábito e momento.</p></div>
+<div class="card rise" style="--i:3"><h3>Leads</h3><p class="txt">Cada QR, anúncio e visita vira um contacto com nome.</p></div>
+</div>
+<div class="cards">
+<div class="card"><p class="num">[__]</p><p class="txt">[clientes ativos / marcas que confiam em nós]</p></div>
+<div class="card"><p class="num">[__]</p><p class="txt">[resultado de um caso real, ex.: % de clientes que voltaram]</p></div>
+<div class="card"><p class="num">[__]</p><p class="txt">[mensagens ou vendas geridas por mês]</p></div>
+</div>
+<aside>Preencher com os dados reais da empresa: nome, logótipo, clientes, resultados de casos e equipa. Ideal: um caso de restauração ou retalho com números.</aside>
+</section>
+
+<section id="caso" style="flex-direction:row; gap:96px; align-items:center">
+<div style="display:flex; flex-direction:column; gap:32px; flex:1">
+<div class="head">
+<p class="eyebrow">Caso real · em produção</p>
+<h2>Quinta da Abelheira: o mesmo modelo já a funcionar</h2>
+</div>
+<div class="cards two">
+<div class="card rise" style="--i:0"><h3>Um menu, cinco opções</h3><p class="txt">Em “Ver opções”: código QR, saldo (“tem 3,07 €”), transações, perguntas e idioma.</p></div>
+<div class="card rise" style="--i:1"><h3>Desconto ao balcão</h3><p class="txt">Cada cliente tem um QR pessoal e fixo. A pistola lê-o e a caixa (WinRest) mostra o saldo e pergunta quanto descontar.</p></div>
+</div>
+<div class="cards">
+<div class="card"><p class="num">[__]</p><p class="txt">[clientes inscritos]</p></div>
+<div class="card"><p class="num">[__]</p><p class="txt">[% que voltaram]</p></div>
+<div class="card"><p class="num">[__]</p><p class="txt">[cashback atribuído]</p></div>
+</div>
+</div>
+<video src="assets/5bdd74586c2b450802348d3336fa35ba.mp4" poster="assets/63b9fede0d220ae0e15290ac19ec50f3.jpg" autoplay muted loop playsinline style="width:380px; height:823px; object-fit:cover; border-radius:44px; border:10px solid #1C1C1E"></video>
+<aside>Gravação real do canal da Quinta da Abelheira, cliente em produção: o cliente abre Ver opções, escolhe Consultar Saldo e recebe o saldo em segundos. Também há assistente virtual para perguntas livres. O nome do cliente está desfocado. Preencher os números do caso antes da reunião.</aside>
+</section>
+
+<section id="migracao">
+<div class="head">
+<p class="eyebrow">A mudança</p>
+<h2>Passar para um só WhatsApp sem perder seguidores</h2>
+</div>
+<div class="steps" style="grid-template-columns:1fr 1fr 1fr">
+<div class="step rise" style="--i:0"><p class="n">Semanas 1 a 2</p><p class="txt">Cada um dos 9 canais anuncia: “Mudámos para um só WhatsApp do Quiosque Lisboa, com cashback para quem aderir.”</p></div>
+<div class="step rise" style="--i:1"><p class="n">Semanas 2 a 4</p><p class="txt">A oferta de boas-vindas dá motivo para mudar. QR codes nos balcões trazem os clientes que não seguiam nenhum canal.</p></div>
+<div class="step rise" style="--i:2"><p class="n">Depois</p><p class="txt">Os canais antigos fecham ou passam a apontar para o novo número. Quem tinha desconto com NIF entra no programa ao dar o telemóvel.</p></div>
+</div>
+<aside>A preocupação natural do João vai ser perder a audiência que já tem. A resposta: a mudança é anunciada nos próprios canais, com um incentivo, e os canais só fecham quando a nova base estiver maior.</aside>
+</section>
+
+<section id="piloto" class="dark">
+<div class="head">
+<p class="eyebrow">Piloto de 30 dias</p>
+<h2>Começar pequeno e decidir com números</h2>
+</div>
+<div class="steps">
+<div class="step rise" style="--i:0"><p class="n">Semana 1</p><p class="txt">2 quiosques (Saldanha e Príncipe Real) e 1 Hambúrgueres Santos. Número, QR codes, oferta de boas-vindas e ligação ao Sage 100c.</p></div>
+<div class="step rise" style="--i:1"><p class="n">Semana 2</p><p class="txt">Cashback ligado e primeiro pack de bebidas à venda. Os canais anunciam a mudança.</p></div>
+<div class="step rise" style="--i:2"><p class="n">Semana 3</p><p class="txt">Primeira campanha segmentada, num jogo grande, e burger do mês em pré-venda.</p></div>
+<div class="step rise" style="--i:3"><p class="n">Semana 4</p><p class="txt">Relatório: inscritos, clientes que voltaram, packs vendidos e receita das campanhas.</p></div>
+</div>
+<p class="lead">No fim, o Grupo QL decide se alarga aos restantes quiosques e restaurantes.</p>
+<aside>Saldanha pelo futebol, Príncipe Real pelo turismo. Ajustar à escolha do João.</aside>
+</section>
+
+<section id="pontos">
+<div class="head"><p class="eyebrow">Programa de pontos</p><h2>Saldo para gastar, pontos para subir de nível</h2></div>
+<div class="cards two" style="gap:32px">
+<div class="card" style="padding:32px 40px"><h3>Saldo em euros</h3><p class="txt" style="font-size:26px">O cashback de cada compra. Desconta-se ao balcão, em qualquer quiosque.</p></div>
+<div class="card" style="padding:32px 40px"><h3>Pontos</h3><p class="txt" style="font-size:26px">5 por cada euro gasto, mais bónus: quiosque novo +20, semana seguida +30, amigo trazido +50, avaliação no Google +20.</p></div>
+</div>
+<div class="cards"><div class="card"><p class="num">Bronze</p><p class="txt" style="font-weight:700">0 pontos</p><p class="txt" style="font-size:26px">5% de cashback em todas as compras.</p></div><div class="card"><p class="num">Prata</p><p class="txt" style="font-weight:700">300 pontos</p><p class="txt" style="font-size:26px">7% de cashback e uma bebida no dia de anos.</p></div><div class="card"><p class="num">Ouro</p><p class="txt" style="font-weight:700">1000 pontos</p><p class="txt" style="font-size:26px">10% de cashback e acesso antecipado a packs e eventos.</p></div></div>
+<aside>Dois contadores com funções diferentes. O saldo em euros é o cashback que já mostrámos: gasta-se ao balcão. Os pontos não se gastam, servem para subir de nível; assim o único custo do programa é o cashback, e os pontos recompensam o comportamento que interessa ao João (voltar, conhecer outros quiosques, trazer amigos, avaliar). Os níveis contam os pontos dos últimos 12 meses. Percentagens, limites e bónus são exemplos para afinar no piloto.</aside>
+</section>
+
+<section id="jogo" class="dark">
+<div class="head" style="width:1120px"><p class="eyebrow">Gamificação</p><h2>Um motivo para voltar todas as semanas</h2></div>
+<div class="steps" style="grid-template-columns:1fr; gap:14px; width:1060px"><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">1</p><p class="txt" style="font-size:27px"><b>Passaporte dos 8 quiosques.</b> Um carimbo por cada quiosque novo; com os 8 ganha uma imperial.</p></div><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">2</p><p class="txt" style="font-size:27px"><b>Semanas seguidas.</b> Quem volta todas as semanas ganha pontos extra e uma raspadinha.</p></div><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">3</p><p class="txt" style="font-size:27px"><b>Raspadinha e roda da sorte.</b> Prémios pequenos em saldo, jogados dentro do chat.</p></div><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">4</p><p class="txt" style="font-size:27px"><b>Desafios.</b> Um por semana e entre amigos: traz um amigo no dia do jogo e os dois ganham.</p></div><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">5</p><p class="txt" style="font-size:27px"><b>Níveis.</b> Os pontos sobem a cliente de Bronze a Ouro, e o cashback sobe com ela.</p></div></div>
+<iframe class="emb" style="position:absolute; left:1300px; top:96px; width:452px; height:888px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.ph{width:452px;height:888px;border-radius:68px;background:#1C1C1E;padding:13px;box-shadow:0 0 0 2px #3A3A3C,0 30px 60px rgba(0,0,0,.45)}
+.sc{width:100%;height:100%;border-radius:56px;overflow:hidden;background:#EFE7DE;display:flex;flex-direction:column;position:relative}
+.sb{height:54px;background:#F6F5F3;display:flex;align-items:center;justify-content:space-between;padding:0 30px 0 38px;font-weight:600;font-size:16px;color:#111}
+.isl{position:absolute;left:50%;top:11px;width:122px;height:35px;margin-left:-61px;background:#000;border-radius:20px}
+.ic{display:flex;gap:6px;align-items:center;font-size:13px}
+.bat{width:25px;height:12px;border:1.5px solid #111;border-radius:4px;padding:1px}.bat i{display:block;height:100%;width:80%;background:#111;border-radius:2px}
+.hd{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:6px 14px 10px;border-bottom:1px solid #DDD}
+.bk{font-size:34px;line-height:20px;color:#111;font-weight:300;margin-top:-4px}
+.av{width:38px;height:38px;border-radius:50%;background:#17322A;color:#E9B44C;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.nm{font-weight:600;font-size:16px;color:#111;display:flex;align-items:center;gap:5px}
+.vf{width:15px;height:15px;border-radius:50%;background:#25D366;color:#fff;font-size:10px;display:inline-flex;align-items:center;justify-content:center}
+.sub{font-size:12px;color:#667781}
+#c{flex:1;overflow-y:auto;padding:12px 12px 8px;display:flex;flex-direction:column;gap:6px;scrollbar-width:none;background-image:radial-gradient(#E2D8CC 1px,transparent 1px);background-size:18px 18px}
+#c::-webkit-scrollbar{display:none}
+.m{max-width:80%;padding:7px 9px 6px;border-radius:9px;font-size:15.5px;line-height:1.32;color:#111B21;box-shadow:0 1px .5px rgba(11,20,26,.13);animation:p .28s ease-out}
+.i{align-self:flex-start;background:#fff;border-top-left-radius:0}
+.o{align-self:flex-end;background:#D9FDD3;border-top-right-radius:0}
+.t{float:right;margin:7px 0 -5px 10px;font-size:11px;color:#667781;display:inline-flex;gap:3px;align-items:center}
+.s{align-self:center;background:#FFF;color:#54656F;font-size:12.5px;padding:5px 10px;border-radius:8px;box-shadow:0 1px .5px rgba(11,20,26,.13);margin:4px 0;animation:p .28s ease-out}
+.bt{clear:both;margin:8px -9px -6px;border-top:1px solid #E9EDEF;padding:10px;text-align:center;color:#027EB5;font-weight:500;font-size:15px;transition:background .2s}
+.bt.on{background:#E9EDEF}
+.card{background:#17322A;border-radius:10px;padding:14px 16px;color:#CFE0D6;margin-bottom:4px;min-width:230px}
+.ct{font-size:11px;letter-spacing:1.5px;color:#E9B44C;font-weight:700}
+.cv{font-size:32px;font-weight:700;color:#F6F1E7;margin-top:6px}
+.cl{font-size:12px}.cc{font-size:13px;margin-top:10px;padding-top:8px;border-top:1px solid #2E5A4C}
+.g{color:#0A8F4A}.lk{color:#027EB5;text-decoration:underline}.hint{align-self:flex-end;font-size:11.5px;color:#667781;margin:-2px 4px 2px;animation:p .28s ease-out}
+.bar{height:6px;background:#E9EDEF;border-radius:3px;margin:8px 0 4px}.bar i{display:block;height:100%;background:#25D366;border-radius:3px;transition:width 1.2s ease}
+.sm{font-size:12.5px;color:#667781}
+.pk{display:flex;gap:10px;background:#F5F6F6;border-radius:8px;padding:8px;margin-bottom:6px}
+.pi{width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,#E9B44C,#C8862A);display:flex;align-items:center;justify-content:center;font-size:24px}
+.pb{font-size:14px;line-height:1.35}
+.dots{display:inline-flex;gap:4px;padding:4px 2px}.dots b{width:7px;height:7px;border-radius:50%;background:#9AA5AB;animation:d 1s infinite}.dots b:nth-child(2){animation-delay:.15s}.dots b:nth-child(3){animation-delay:.3s}
+.ft{background:#F6F5F3;display:flex;align-items:center;gap:10px;padding:8px 14px 30px}
+.pl{font-size:28px;color:#111;font-weight:300}
+.in{flex:1;height:36px;border-radius:18px;background:#fff;border:1px solid #E1E1E1;padding:0 14px;display:flex;align-items:center;color:#9AA0A6;font-size:15px}
+.mic{width:24px;height:24px;border-radius:12px;border:2px solid #111;opacity:.8}
+.hb{position:absolute;bottom:8px;left:50%;width:140px;height:5px;margin-left:-70px;border-radius:3px;background:#111}
+@keyframes p{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes d{0%,60%,100%{opacity:.35}30%{opacity:1}}
+.pp{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 4px}
+.pp div{border:1.5px dashed #B9C2C7;border-radius:8px;height:46px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;color:#667781;line-height:1.1;text-align:center}
+.pp div.on{border:1.5px solid #0A8F4A;background:#E7F6EC;color:#0A5C30;font-weight:700}
+.pp div.new{animation:st .6s ease-out}
+.pp b{font-size:16px}
+.rs{position:relative;height:96px;border-radius:10px;background:#FFF6E0;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#8A6417;margin:6px 0 4px;overflow:hidden}
+.rs i{position:absolute;top:0;bottom:0;width:20%;background:repeating-linear-gradient(45deg,#B8BEC3,#B8BEC3 6px,#C9CED2 6px,#C9CED2 12px);transition:opacity .25s}
+@keyframes st{0%{transform:scale(1.6) rotate(-12deg);opacity:0}60%{transform:scale(.92)}100%{transform:none;opacity:1}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;ph&quot;&gt;&lt;div class=&quot;sc&quot;&gt;
+&lt;div class=&quot;isl&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;sb&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span class=&quot;ic&quot;&gt;5G &lt;span class=&quot;bat&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;hd&quot;&gt;&lt;span class=&quot;bk&quot;&gt;‹&lt;/span&gt;&lt;div class=&quot;av&quot;&gt;QL&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;nm&quot;&gt;Quiosque Lisboa &lt;span class=&quot;vf&quot;&gt;✓&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;sub&quot;&gt;Conta comercial&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;c&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ft&quot;&gt;&lt;span class=&quot;pl&quot;&gt;+&lt;/span&gt;&lt;div class=&quot;in&quot;&gt;Mensagem&lt;/div&gt;&lt;span class=&quot;mic&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;hb&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;script&gt;
+const C=document.getElementById(&#x27;c&#x27;);
+const tk=&#x27;&lt;svg width=&quot;16&quot; height=&quot;11&quot; viewBox=&quot;0 0 16 11&quot;&gt;&lt;path d=&quot;M1 6l3 3 6-7M6 9l1 1 7-8&quot; fill=&quot;none&quot; stroke=&quot;#53BDEB&quot; stroke-width=&quot;1.6&quot;/&gt;&lt;/svg&gt;&#x27;;
+const w=ms=&gt;new Promise(r=&gt;setTimeout(r,ms));
+const sc=()=&gt;C.scrollTo({top:C.scrollHeight,behavior:&#x27;smooth&#x27;});
+function el(c,h){const d=document.createElement(&#x27;div&#x27;);d.className=c;d.innerHTML=h;C.appendChild(d);sc();return d}
+async function inn(h,t,b){const d=el(&#x27;m i&#x27;,&#x27;&lt;span class=&quot;dots&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/span&gt;&#x27;);await w(1000);d.innerHTML=h+&#x27;&lt;span class=&quot;t&quot;&gt;&#x27;+t+&#x27;&lt;/span&gt;&#x27;+(b||&#x27;&#x27;);sc();return d}
+function out(h,t){el(&#x27;m o&#x27;,h+&#x27;&lt;span class=&quot;t&quot;&gt;&#x27;+t+&#x27; &#x27;+tk+&#x27;&lt;/span&gt;&#x27;)}
+async function tap(id,t,x){const b=document.getElementById(id);if(b){b.classList.add(&#x27;on&#x27;);await w(450)}out(x,t)}
+const K=[&#x27;Saldanha&#x27;,&#x27;Camões&#x27;,&#x27;Príncipe Real&#x27;,&#x27;Flores&#x27;,&#x27;São Paulo&#x27;,&#x27;Sé&#x27;,&#x27;Cais do Sodré&#x27;,&#x27;Campolide&#x27;],F=[0,1,2,4,6];
+function pass(n){return &#x27;&lt;div class=&quot;pp&quot;&gt;&#x27;+K.map((k,i)=&gt;&#x27;&lt;div id=&quot;k&#x27;+i+&#x27;&quot; class=&quot;&#x27;+(F.includes(i)?&#x27;on&#x27;:&#x27;&#x27;)+&#x27;&quot;&gt;&lt;b&gt;&#x27;+(F.includes(i)?&#x27;✓&#x27;:&#x27;·&#x27;)+&#x27;&lt;/b&gt;&#x27;+k+&#x27;&lt;/div&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/div&gt;&#x27;}
+async function run(){C.innerHTML=&#x27;&#x27;;
+el(&#x27;s&#x27;,&#x27;SEXTA-FEIRA · QUIOSQUE DA SÉ&#x27;);await w(700);
+const d=await inn(&#x27;Obrigado pela visita, Ana! 🍻 &lt;b class=&quot;g&quot;&gt;+0,40&amp;nbsp;€&lt;/b&gt; de cashback e &lt;b&gt;+40 pontos&lt;/b&gt;.&lt;br&gt;&lt;b&gt;Passaporte dos Quiosques&lt;/b&gt;: novo carimbo!&#x27;+pass()+&#x27;&lt;span class=&quot;sm&quot; id=&quot;pc&quot;&gt;5 de 8 · faltam 3 para a imperial de oferta&lt;/span&gt;&#x27;,&#x27;18:42&#x27;);
+await w(900);const s=document.getElementById(&#x27;k5&#x27;);s.className=&#x27;on new&#x27;;s.innerHTML=&#x27;&lt;b&gt;✓&lt;/b&gt;Sé&#x27;;document.getElementById(&#x27;pc&#x27;).textContent=&#x27;6 de 8 · +20 pontos · faltam 2 para a imperial 🍺&#x27;;sc();await w(2000);
+await inn(&#x27;🔥 &lt;b&gt;3 semanas seguidas&lt;/b&gt; a visitar-nos!&lt;br&gt;&lt;b&gt;+30 pontos&lt;/b&gt; e uma &lt;b&gt;raspadinha&lt;/b&gt;.&#x27;,&#x27;18:42&#x27;,&#x27;&lt;div class=&quot;bt&quot; id=&quot;r1&quot;&gt;Raspar&lt;/div&gt;&#x27;);await w(1500);
+await tap(&#x27;r1&#x27;,&#x27;18:43&#x27;,&#x27;Raspar&#x27;);await w(300);
+const r=await inn(&#x27;&lt;div class=&quot;rs&quot;&gt;🎉 +1,00&amp;nbsp;€ de saldo&lt;i style=&quot;left:0&quot;&gt;&lt;/i&gt;&lt;i style=&quot;left:20%&quot;&gt;&lt;/i&gt;&lt;i style=&quot;left:40%&quot;&gt;&lt;/i&gt;&lt;i style=&quot;left:60%&quot;&gt;&lt;/i&gt;&lt;i style=&quot;left:80%&quot;&gt;&lt;/i&gt;&lt;/div&gt;Já está no teu saldo: &lt;b&gt;2,58&amp;nbsp;€&lt;/b&gt;&#x27;,&#x27;18:43&#x27;);
+for(const i of r.querySelectorAll(&#x27;.rs i&#x27;)){await w(260);i.style.opacity=0}
+await w(1800);
+await inn(&#x27;&lt;b&gt;Desafio da semana&lt;/b&gt; ⚽&lt;br&gt;Traz um amigo no dia do jogo: os dois ganham &lt;b&gt;uma imperial&lt;/b&gt; e tu &lt;b&gt;+50 pontos&lt;/b&gt;.&lt;div class=&quot;bar&quot;&gt;&lt;i style=&quot;width:0&quot; id=&quot;br&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;span class=&quot;sm&quot;&gt;240 de 300 pontos · na Prata o cashback passa a 7%&lt;/span&gt;&#x27;,&#x27;18:44&#x27;,&#x27;&lt;div class=&quot;bt&quot;&gt;Convidar amigo&lt;/div&gt;&#x27;);
+await w(150);document.getElementById(&#x27;br&#x27;).style.width=&#x27;70%&#x27;;await w(5500);
+run()}
+run();
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+<aside>Tudo acontece dentro do WhatsApp, sem app. O passaporte inspira-se nos desafios do Starbucks Rewards (os membros do programa fazem cerca de 58% da faturação da Starbucks nos EUA). Os 8 quiosques são o tabuleiro: o passaporte leva os clientes a conhecer quiosques novos, o que nenhum canal por quiosque consegue. A raspadinha dá prémios pequenos em saldo, por isso o custo fica controlado. Os valores e pontos da animação são exemplos.</aside>
+</section>
+
+<section id="seguir" class="dark">
+<div class="head"><p class="eyebrow">E a seguir</p><h2>Cinco ideias que já resultam noutras marcas</h2></div>
+<div class="cards five"><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">1</p><h3 style="font-size:28px">Passaporte e desafios</h3><p class="txt" style="font-size:21px; line-height:1.4">Os 8 quiosques como jogo. Os membros do Starbucks Rewards fazem 58% da faturação nos EUA.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">2</p><h3 style="font-size:28px">Assinatura de café ou imperial</h3><p class="txt" style="font-size:21px; line-height:1.4">Mensal, com limite de 1 por dia. No Club Pret os resgates cresceram 31% num ano e 1 em 5 usos traz uma compra extra.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">3</p><h3 style="font-size:28px">Pedido na esplanada</h3><p class="txt" style="font-size:21px; line-height:1.4">Fase 2: QR na mesa, pagamento no telemóvel e aviso no WhatsApp. A Sunday já está em cerca de 200 restaurantes em Lisboa.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">4</p><h3 style="font-size:28px">Turistas</h3><p class="txt" style="font-size:21px; line-height:1.4">Pedido de avaliação no Google depois da compra e menu em inglês, para a Sé, o Cais do Sodré e o Príncipe Real.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">5</p><h3 style="font-size:28px">Ofertas por quiosque e hora</h3><p class="txt" style="font-size:21px; line-height:1.4">Última hora antes de fechar e dias de jogo. A Padaria Portuguesa baixa a caixa de 19,99 € para 9,99 € na última hora.</p></div></div>
+<p class="lead">Por ordem de prioridade. Todas correm no mesmo WhatsApp, sem app nova.</p>
+<aside>Ideias da pesquisa à concorrência, com fontes no estudo que fizemos. A 1 e a 5 podem entrar já no piloto; a 2 depois de ver a adesão; a 3 é uma segunda fase porque mexe na operação da esplanada; a 4 é simples e ajuda logo com os turistas.</aside>
+</section>
+
+<section id="fecho" class="accent" style="justify-content:center">
+<p class="eyebrow">Próximos passos</p>
+<h1>Escolher os 3 locais e arrancar o piloto</h1>
+<div class="cards">
+<div class="card"><h3>Do vosso lado</h3><p class="txt">Seguidores dos canais, clientes registados com NIF e contacto do parceiro Sage 100c.</p></div>
+<div class="card"><h3>Do nosso lado</h3><p class="txt">Configuração, ligação ao Sage 100c, QR codes, campanhas e relatório semanal.</p></div>
+<div class="card"><h3>Investimento</h3><p class="txt">[Piloto de 30 dias: €__ · Depois: €__/mês]</p></div>
+</div>
+<aside>Fechar com uma data: “Podemos arrancar na semana de [data]?” Confirmar quem decide no Grupo QL, já que o João é um dos sócios.</aside>
+</section>
+
+</div><div id="notes"></div><div id="ui"><button id="pv" aria-label="Anterior">‹</button><span id="ct"></span><button id="nx" aria-label="Seguinte">›</button><button id="nt">Notas (N)</button><button id="fs">Ecrã inteiro (F)</button></div><script>const st=document.getElementById('stage'),S=[...st.children];let cur=0;
+function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);st.style.transform='translate(-50%,-50%) scale('+k+')'}
+function go(i){i=Math.max(0,Math.min(S.length-1,i));
+S.forEach((s,j)=>{const on=j===i;s.classList.toggle('cur',on);
+s.querySelectorAll('iframe.emb').forEach(f=>{if(on){f.srcdoc=f.dataset.src}else if(f.hasAttribute('srcdoc')){f.removeAttribute('srcdoc');f.src='about:blank'}});
+s.querySelectorAll('video').forEach(v=>{if(on){try{v.currentTime=0}catch(e){}v.play().catch(()=>{})}else v.pause()});
+if(on&&j!==cur)s.querySelectorAll('.rise').forEach(r=>{r.style.animation='none';void r.offsetWidth;r.style.animation=''})});
+cur=i;document.getElementById('ct').textContent=(i+1)+' / '+S.length;const a=S[i].querySelector('aside');document.getElementById('notes').textContent=a?a.textContent:'';history.replaceState(null,'','#'+(i+1))}
+function tn(){document.getElementById('notes').classList.toggle('on')}
+function tf(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{})}
+addEventListener('keydown',e=>{const k=e.key;if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(k)){e.preventDefault();go(cur+1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(k)){e.preventDefault();go(cur-1)}else if(k==='Home')go(0);else if(k==='End')go(S.length-1);else if(k==='n'||k==='N')tn();else if(k==='f'||k==='F')tf()});
+document.getElementById('pv').onclick=()=>go(cur-1);document.getElementById('nx').onclick=()=>go(cur+1);document.getElementById('nt').onclick=tn;document.getElementById('fs').onclick=tf;
+let tx=null;addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)go(cur+(d<0?1:-1));tx=null});
+addEventListener('resize',fit);fit();cur=-1;go(Math.max(0,(parseInt(location.hash.slice(1))||1)-1));</script></body></html>
