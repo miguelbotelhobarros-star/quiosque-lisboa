@@ -74,6 +74,8 @@ h3 { font-family: 'Oswald', Arial, sans-serif; font-size: 40px; font-weight: 500
 .rise { animation: rise 600ms ease-out both; animation-delay: calc(var(--i, 0) * 120ms); }
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
+.f2 { display:inline-block; margin-left:16px; padding:4px 16px; border-radius:999px; background:#C4532F; color:#fff; font-size:20px; letter-spacing:2px; vertical-align:3px; }
+
 #stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px}
 #stage>section{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;visibility:hidden;opacity:0;transition:opacity .35s}
 #stage>section.cur{visibility:visible;opacity:1}
@@ -157,7 +159,7 @@ aside{display:none}
 <ul>
 <li>Um número, uma marca</li>
 <li>Cada cliente com nome e histórico</li>
-<li>Cashback válido em todos os quiosques</li>
+<li>Cashback válido em todos os quiosques (fase 2)</li>
 <li>Packs, reservas e pagamento na conversa</li>
 <li>Mensagens para todos ou só para um quiosque</li>
 </ul>
@@ -177,7 +179,7 @@ aside{display:none}
 <tr><td>Trabalho</td><td>9 canais para publicar e manter</td><td>Um sítio para gerir, mensagens por quiosque</td></tr>
 <tr><td>Cliente</td><td>Anónimo</td><td>Nome, quiosque preferido e histórico</td></tr>
 <tr><td>Vendas</td><td>O canal só publica</td><td>Packs, cartões, reservas e pagamento</td></tr>
-<tr><td>Fidelização</td><td>Desconto fixo com NIF</td><td>Cashback e níveis em todos os quiosques</td></tr>
+<tr><td>Fidelização</td><td>Desconto fixo com NIF</td><td>Cashback e níveis em todos os quiosques (fase 2)</td></tr>
 <tr><td>Turistas</td><td>Ficam de fora sem NIF</td><td>Basta um número de telemóvel</td></tr>
 </table>
 <aside>Sublinhar a linha dos turistas: o desconto só com NIF já foi notícia na Lisboa Para Pessoas, em outubro, com um advogado a dizer que pode contornar a lei. Um programa por número de telemóvel resolve isso.</aside>
@@ -192,7 +194,7 @@ aside{display:none}
 </div>
 <div class="cards two">
 <div class="card rise" style="--i:0"><h3>Hoje</h3><p class="txt">2 Pedras, 4,90 €, sem NIF e com 0,00 € de desconto. O QR “Seja Cliente” abre uma landing page com 7 campos, incluindo NIF e password, e validação até 1 dia útil. Esta venda ficou anónima.</p></div>
-<div class="card rise" style="--i:1; background:#17322A"><h3 style="color:#F6F1E7">Com um só WhatsApp</h3><p class="txt" style="color:#CFE0D6">O QR abre o WhatsApp com o número do talão já escrito. Uma mensagem e está inscrito. O QR fiscal do talão valida a compra e o cashback entra na hora: +0,25 € neste talão.</p></div>
+<div class="card rise" style="--i:1; background:#17322A"><h3 style="color:#F6F1E7">Com um só WhatsApp</h3><p class="txt" style="color:#CFE0D6">O QR abre o WhatsApp com o número do talão já escrito. Uma mensagem e está inscrito. Na fase 2, o QR fiscal valida a compra e o cashback entra na hora: +0,25 € neste talão.</p></div>
 </div>
 </div>
 <aside>Este talão é real, do Quiosque Saldanha, a 15 de outubro. Repara: sem NIF, desconto zero, e o convite “Seja Cliente” leva a uma landing page de registo (quiosquelisboa.pt/cliente) com nome, data de nascimento, NIF, email, telemóvel, password e quiosque favorito, e a validação demora até 1 dia útil. Quase ninguém faz isto à mesa. A página já envia uma mensagem de boas-vindas por WhatsApp a quem aceita: o WhatsApp já está no processo, só falta passá-lo para a frente. O QR de cima é o fiscal da AT: já traz a fatura, a data e o total, e é isso que nos permite validar a compra e dar o cashback automaticamente. A proposta usa o mesmo espaço no talão para um QR que abre o WhatsApp. O cliente envia uma mensagem e fica inscrito, já com o cashback desta compra. A seguir, a demonstração mostra exatamente isto.</aside>
@@ -203,7 +205,7 @@ aside{display:none}
 <p class="eyebrow">Simulação lado a lado</p>
 <h2>Tornar-se cliente: hoje e com o WhatsApp</h2>
 </div>
-<p class="lead" style="width:560px">O mesmo talão, a mesma cliente. As duas simulações começam ao mesmo tempo.</p>
+<p class="lead" style="width:560px">O mesmo talão, a mesma cliente. As duas simulações começam ao mesmo tempo. O cashback da direita chega com a fase 2.</p>
 <iframe class="emb" style="position:absolute; left:780px; top:80px; width:400px; height:910px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -565,7 +567,7 @@ run();
 </section>
 
 <section id="resgate" class="dark">
-<div class="head" style="width:560px"><p class="eyebrow">Ao balcão</p><h2>A Ana só diz o número de telemóvel</h2></div>
+<div class="head" style="width:560px"><p class="eyebrow">Ao balcão <span class="f2">Fase 2</span></p><h2>A Ana só diz o número de telemóvel</h2></div>
 <div style="display:flex; flex-direction:column; gap:18px; width:560px"><div style="border-top:2px solid #E9B44C; padding-top:10px"><p style="font-weight:700; font-size:23px; color:#F6F1E7; margin:0 0 4px">Acumular: basta dizer o telemóvel</p><p style="font-size:20px; line-height:1.38; color:#CFE0D6; margin:0">O funcionário escreve o número na caixa, o cashback cai na hora e a cliente recebe a confirmação no WhatsApp.</p></div><div style="border-top:2px solid #E9B44C; padding-top:10px"><p style="font-weight:700; font-size:23px; color:#F6F1E7; margin:0 0 4px">Descontar: telemóvel + código</p><p style="font-size:20px; line-height:1.38; color:#CFE0D6; margin:0">Para usar saldo, a cliente recebe no WhatsApp um código de 4 dígitos, válido 2 minutos, e mostra-o ao balcão.</p></div><div style="border-top:2px solid #E9B44C; padding-top:10px"><p style="font-weight:700; font-size:23px; color:#F6F1E7; margin:0 0 4px">Sem QR, sem app, sem cartão</p><p style="font-size:20px; line-height:1.38; color:#CFE0D6; margin:0">Quem disser um número que não é o seu não consegue gastar saldo, e a dona do número é avisada na hora.</p></div></div>
 <iframe class="emb" style="position:absolute; left:780px; top:80px; width:400px; height:910px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;*{box-sizing:border-box;margin:0;padding:0}
 html,body{background:transparent;font-family:-apple-system,&quot;SF Pro Text&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -701,8 +703,8 @@ run();&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
 </div>
 <div class="steps">
 <div class="step rise" style="--i:0"><p class="n">1. Adere</p><p class="txt">Lê o QR no balcão ou no copo e manda “Olá”. Ganha logo uma bebida.</p></div>
-<div class="step rise" style="--i:1"><p class="n">2. Compra</p><p class="txt">Diz o número ou mostra um código ao balcão. A compra fica registada.</p></div>
-<div class="step rise" style="--i:2"><p class="n">3. Acumula</p><p class="txt">Recebe 5% em cashback: “Tens 3,40 € para gastar em qualquer quiosque.”</p></div>
+<div class="step rise" style="--i:1"><p class="n">2. Compra</p><p class="txt">Diz o número de telemóvel ao balcão. Na fase 2, a compra fica registada.</p></div>
+<div class="step rise" style="--i:2"><p class="n">3. Acumula <span class="f2">Fase 2</span></p><p class="txt">Recebe 5% em cashback: “Tens 3,40 € para gastar em qualquer quiosque.”</p></div>
 <div class="step rise" style="--i:3"><p class="n">4. Volta</p><p class="txt">Recebe ofertas à medida e compra packs ou reserva mesa na conversa.</p></div>
 </div>
 <p class="lead">O número de telemóvel passa a ser o cartão de cliente, para portugueses e para turistas.</p>
@@ -715,9 +717,9 @@ run();&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
 <h2>Assim fica o WhatsApp do Quiosque Lisboa</h2>
 </div>
 <div class="steps" style="grid-template-columns:1fr; gap:20px; width:960px">
-<div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">1</p><p class="txt">Lê o QR do talão, aceita os termos e entra no Clube, já com o cashback dessa compra.</p></div>
+<div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">1</p><p class="txt">Lê o QR do talão, aceita os termos e entra no Clube.</p></div>
 <div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">2</p><p class="txt">Recebe o cartão digital e uma imperial de oferta.</p></div>
-<div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">3</p><p class="txt">Cada compra soma cashback e aproxima o nível seguinte.</p></div>
+<div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">3</p><p class="txt">Fase 2: cada compra soma cashback e aproxima o nível seguinte.</p></div>
 <div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">4</p><p class="txt">Recebe o Pack Jogo e paga por MB WAY sem sair da conversa.</p></div>
 <div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:16px"><p class="n" style="width:56px">5</p><p class="txt">Reserva mesa para o jogo com uma mensagem.</p></div>
 </div>
@@ -802,12 +804,12 @@ await inn(&#x27;Feito! Mesa para 4 no &lt;b&gt;Saldanha&lt;/b&gt;, domingo às 1
 run()}
 run();
 &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
-<aside>Deixar a animação correr enquanto se explica. É uma simulação: os nomes, valores e o jogo são exemplos. A animação só corre na apresentação no browser; no PowerPoint e no PDF fica uma imagem parada.</aside>
+<aside>O registo, o cartão digital, os packs e as reservas são fase 1; o cashback e os níveis que a animação mostra são fase 2. Deixar a animação correr enquanto se explica. É uma simulação: os nomes, valores e o jogo são exemplos. A animação só corre na apresentação no browser; no PowerPoint e no PDF fica uma imagem parada.</aside>
 </section>
 
 <section id="numeros" class="accent">
 <div class="head">
-<p class="eyebrow">Conta simples</p>
+<p class="eyebrow">Conta simples <span class="f2">Fase 2</span></p>
 <h2>Uma visita a mais por mês já paga o projeto</h2>
 </div>
 <div class="calc">
@@ -819,25 +821,27 @@ run();
 <p class="op">=</p>
 <div class="box res"><p class="v">3.600 €</p><p class="l">a mais por mês</p></div>
 </div>
-<p class="lead">O Grupo QL tem 46.000 clientes na base, 30.000 com telemóvel. Basta que 1 em cada 5 adira. E isto antes de packs, eventos e Hambúrgueres Santos.</p>
+<p class="lead">Este retorno vem do cashback e dos pontos, que fazem o cliente voltar, e por isso chega com a fase 2. Na fase 1 o ganho é o canal único, a base de contactos e as campanhas.</p>
 <p class="small">Base e talão médio de 6 € indicados pelo Grupo QL. Adesão e regresso são estimativas.</p>
-<aside>A base tem 46.000 clientes, 30.000 com número de telemóvel. Não se pode simplesmente começar a enviar mensagens de WhatsApp a todos: pelo RGPD e pelas regras da Meta, cada cliente tem de aceitar receber mensagens. Por isso a base serve para um convite (SMS ou email, se houver consentimento para isso) com link para o WhatsApp; quem aceita entra no Clube. Com 20% de adesão são 6.000 clientes. Talão médio de 6 € (dado do João). Nos dias fortes há 2.500 a 3.000 compras, nos fracos cerca de 300; menos de metade são de clientes registados.</aside>
+<aside>Porque é fase 2: o que faz o cliente voltar mais uma vez por mês é o incentivo (cashback, pontos, níveis), e isso precisa de saber quem comprou e quanto gastou, ou seja, da ligação ao Sage 100c. Na fase 1 já há canal único, base de contactos e campanhas, que podem gerar vendas, mas não temos forma de as medir com rigor sem a integração. A base tem 46.000 clientes, 30.000 com número de telemóvel. Não se pode simplesmente começar a enviar mensagens de WhatsApp a todos: pelo RGPD e pelas regras da Meta, cada cliente tem de aceitar receber mensagens. Por isso a base serve para um convite (SMS ou email, se houver consentimento para isso) com link para o WhatsApp; quem aceita entra no Clube. Com 20% de adesão são 6.000 clientes. Talão médio de 6 € (dado do João). Nos dias fortes há 2.500 a 3.000 compras, nos fracos cerca de 300; menos de metade são de clientes registados.</aside>
 </section>
 
 <section id="custos">
-<div class="head"><p class="eyebrow">Custos do WhatsApp</p><h2>Cerca de 850 € por mês em taxas da Meta</h2></div>
+<div class="head"><p class="eyebrow">Custos do WhatsApp</p><h2>Cerca de 660 € por mês em taxas da Meta na fase 1</h2></div>
 <table class="cmp" style="font-size:26px">
-<tr><th style="width:30%">Mensagem</th><th style="width:13%">Tipo</th><th style="width:21%">Preço Meta</th><th style="width:17%">Por mês (verão / inverno)</th><th style="width:19%">Custo (verão / inverno)</th></tr>
-<tr><td>Confirmação de compra e cashback</td><td>Utilidade</td><td>0,0142 €</td><td>~20.600 / ~6.600</td><td>293 € / 94 €</td></tr><tr><td>Conversas e adesões (respostas)</td><td>Serviço</td><td>0,0142 € (1.000 grátis/mês)</td><td>~6.000</td><td>71 €</td></tr><tr><td>Campanhas a membros (2 por mês)</td><td>Marketing</td><td>0,0490 €</td><td>12.000</td><td>588 €</td></tr>
+<tr><th style="width:32%">Mensagem</th><th style="width:13%">Tipo</th><th style="width:22%">Preço Meta</th><th style="width:15%">Por mês</th><th style="width:18%">Custo por mês</th></tr>
+<tr><td>Campanhas a membros (2 por mês)</td><td>Marketing</td><td>0,0490 €</td><td>12.000</td><td>588 €</td></tr>
+<tr><td>Conversas, adesões e apoio ao cliente</td><td>Serviço</td><td>0,0142 € (1.000 grátis/mês)</td><td>~6.000</td><td>71 €</td></tr>
 <tr><td>Mensagens enviadas pelos clientes</td><td>Recebidas</td><td>Grátis</td><td>—</td><td>0 €</td></tr>
+<tr style="opacity:.6"><td>Fase 2: confirmação de compra e cashback</td><td>Utilidade</td><td>0,0142 €</td><td>~20.600 / ~6.600</td><td>293 € / 94 € (verão / inverno)</td></tr>
 </table>
 <div class="calc">
-<div class="box"><p class="v">≈ 950 €</p><p class="l">mês de verão</p></div>
-<div class="box"><p class="v">≈ 750 €</p><p class="l">mês de inverno</p></div>
-<div class="box res"><p class="v">≈ 10.200 €</p><p class="l">por ano</p></div>
-<div class="box"><p class="v">0,014 €</p><p class="l">por compra confirmada (0,2% do talão)</p></div>
+<div class="box res"><p class="v">≈ 660 €</p><p class="l">por mês na fase 1</p></div>
+<div class="box"><p class="v">≈ 7.900 €</p><p class="l">por ano na fase 1</p></div>
+<div class="box"><p class="v">+ ≈ 2.300 €</p><p class="l">por ano com a fase 2</p></div>
+<div class="box"><p class="v">≈ 10.200 €</p><p class="l">por ano com as duas fases</p></div>
 </div>
-<aside>Taxas da Meta para Portugal (tabela “Resto da Europa Ocidental”, em vigor desde 1 de outubro de 2026), sem IVA e sem a mensalidade da plataforma. Pressupostos: 6.000 membros (20% dos 30.000 contactos); verão com 2.500 compras/dia e inverno com 800/dia; 25% das compras feitas por membros; 1,1 mensagens de utilidade por compra (cashback e uso de saldo); 1.500 adesões por mês com 4 respostas cada; 2 campanhas por mês a todos os membros. As campanhas são o maior custo e o mais fácil de controlar: segmentar por quiosque reduz o envio. Não se pode enviar WhatsApp à base inteira sem consentimento; o convite inicial vai por SMS ou email. Cada quiosque ou marca extra (Dupe, La Mirenda, cookies) pode usar o mesmo número, sem custo fixo adicional da Meta.</aside>
+<aside>Taxas da Meta para Portugal (tabela “Resto da Europa Ocidental”, em vigor desde 1 de outubro de 2026), sem IVA e sem a mensalidade da plataforma. Fase 1: só campanhas e conversas, sem confirmações de compra, por isso o custo quase não varia entre verão e inverno. Pressupostos: 6.000 membros (20% dos 30.000 contactos); 2 campanhas por mês a todos os membros; 1.500 adesões por mês com 4 respostas cada. Fase 2 acrescenta as confirmações de compra e cashback: verão com 2.500 compras/dia e inverno com 800/dia, 25% das compras feitas por membros, 1,1 mensagens por compra; cerca de 0,014 € por compra confirmada (0,2% do talão). As campanhas são o maior custo e o mais fácil de controlar: segmentar por quiosque reduz o envio. Não se pode enviar WhatsApp à base inteira sem consentimento; o convite inicial vai por SMS ou email. Cada quiosque ou marca extra (Dupe, La Mirenda, cookies) pode usar o mesmo número, sem custo fixo adicional da Meta.</aside>
 </section>
 
 <section id="quiosques">
@@ -929,11 +933,71 @@ run();
 <h2>Passar para um só WhatsApp sem perder seguidores</h2>
 </div>
 <div class="steps" style="grid-template-columns:1fr 1fr 1fr">
-<div class="step rise" style="--i:0"><p class="n">Semanas 1 a 2</p><p class="txt">Os 9 canais anunciam a mudança e os 30.000 contactos com telemóvel recebem um convite para aderir ao novo WhatsApp, com cashback de boas-vindas.</p></div>
+<div class="step rise" style="--i:0"><p class="n">Semanas 1 a 2</p><p class="txt">Os 9 canais anunciam a mudança e os 30.000 contactos com telemóvel recebem um convite para aderir ao novo WhatsApp, com uma oferta de boas-vindas.</p></div>
 <div class="step rise" style="--i:1"><p class="n">Semanas 2 a 4</p><p class="txt">A oferta de boas-vindas dá motivo para mudar. QR codes nos balcões trazem os clientes que não seguiam nenhum canal.</p></div>
 <div class="step rise" style="--i:2"><p class="n">Depois</p><p class="txt">Os canais antigos fecham ou passam a apontar para o novo número. Quem tinha desconto com NIF entra no programa ao dar o telemóvel.</p></div>
 </div>
 <aside>A preocupação natural do João vai ser perder a audiência que já tem. A resposta: a mudança é anunciada nos próprios canais, com um incentivo, e os canais só fecham quando a nova base estiver maior.</aside>
+</section>
+
+<section id="fases">
+<div class="head"><p class="eyebrow">Como avançamos</p><h2>Duas fases: primeiro o canal, depois a fidelização</h2></div>
+<div class="cards two" style="gap:40px">
+<div class="card" style="padding:44px 48px; gap:18px"><p class="num" style="font-size:56px">Fase 1</p><h3>O WhatsApp único a funcionar</h3>
+<ul style="font-size:27px; line-height:1.5; padding-left:30px; margin:0">
+<li>Um número em vez dos 9 canais</li>
+<li>Registo com aceitação de termos e RGPD</li>
+<li>Menus e respostas automáticas</li>
+<li>Campanhas por quiosque e por hábito</li>
+<li>Convite aos 30.000 contactos da base</li>
+<li>Apoio ao cliente e back-office</li>
+</ul>
+<p class="txt" style="font-size:24px; color:#8A6417; font-weight:700">1.900 € de setup + 240 €/mês · sem integração com o Sage</p></div>
+<div class="card" style="padding:44px 48px; gap:18px; background:var(--green); border-top-color:#C4532F"><p class="num" style="font-size:56px; color:var(--mustard)">Fase 2</p><h3 style="color:var(--cream)">Fidelização ligada ao Sage 100c</h3>
+<ul style="font-size:27px; line-height:1.5; padding-left:30px; margin:0; color:var(--mist)">
+<li>Integração com o Sage 100c</li>
+<li>Cashback em todos os quiosques</li>
+<li>Pontos, níveis e gamificação</li>
+<li>Desconto de saldo ao balcão pelo telemóvel</li>
+<li>Retorno estimado de ≈ 3.600 €/mês</li>
+</ul>
+<p class="txt" style="font-size:24px; color:var(--mustard); font-weight:700">Valor a definir após confirmar as APIs do Sage 100c</p></div>
+</div>
+<aside>A fase 1 não depende do Sage: põe o canal único a funcionar, cria a base de contactos com consentimento e permite campanhas. Tudo o que precisa de saber quem comprou e quanto gastou (cashback, pontos, níveis, desconto de saldo) fica para a fase 2, depois de confirmarmos as APIs do Sage 100c com o parceiro. Os slides marcados “Fase 2” mostram o que vem a seguir.</aside>
+</section>
+
+<section id="ganhos" style="gap:40px">
+<div class="head"><p class="eyebrow">O que o Grupo QL ganha já na fase 1</p><h2>De 9 WhatsApps para 1, com a Chatomate</h2></div>
+<table class="cmp" style="font-size:25px">
+<tr><th style="width:17%"></th><th style="width:36%">Hoje: 8 canais + 1 número</th><th style="width:47%">Fase 1: um só WhatsApp</th></tr>
+<tr><td>Clientes</td><td>Seguidores anónimos, repartidos por 9 sítios</td><td>Uma só base com nome, quiosque preferido e consentimento RGPD; convite aos 30.000 contactos</td></tr>
+<tr><td>Campanhas</td><td>A mesma novidade publicada 8 vezes</td><td>Um só envio, segmentado por quiosque, zona ou marca (Be Perfect, Dupe, La Mirenda, cookies)</td></tr>
+<tr><td>Conversa</td><td>Os canais só publicam; perguntas num número à parte</td><td>Respostas automáticas 24/7: horários, menus, localização, eventos; a equipa só entra quando é preciso</td></tr>
+<tr><td>Número</td><td>Ligado a telemóveis e a quem os gere</td><td>Número oficial da marca Quiosque Lisboa, que não se perde se um funcionário sai ou um telemóvel avaria</td></tr>
+<tr><td>Dados</td><td>Pouco mais do que o número de seguidores</td><td>Quem fala, quando e de que quiosque, e que campanhas resultam</td></tr>
+<tr><td>Futuro</td><td>Fidelização só com NIF e site</td><td>Base pronta para a fase 2 (cashback e pontos), sem recomeçar</td></tr>
+</table>
+<aside>Resposta à pergunta “o que ganho sem cashback?”. Hoje há 8 canais e 1 número: os canais só enviam, não se sabe quem os segue e cada novidade tem de ser publicada em vários sítios. Na fase 1 passa a haver uma base própria de clientes com consentimento, que é do Grupo QL e cresce com o convite aos 30.000 contactos; campanhas feitas uma vez e enviadas só a quem interessa; respostas automáticas a qualquer hora; um número oficial da marca (pode pedir-se à Meta o selo de conta verificada); e relatórios do back-office. Tudo isto é a base sobre a qual a fase 2 liga o cashback, sem migrar nada outra vez.</aside>
+</section>
+
+<section id="retorno1" class="accent" style="gap:44px">
+<div class="head"><p class="eyebrow">Retorno da fase 1 · estimativa</p><h2>Paga-se com 5 compras a mais por dia, nos 9 quiosques</h2></div>
+<div class="calc">
+<div class="box"><p class="v">≈ 900 €</p><p class="l">por mês (240 € plataforma + ≈ 660 € Meta)</p></div>
+<p class="op">÷</p>
+<div class="box"><p class="v">6 €</p><p class="l">talão médio</p></div>
+<p class="op">=</p>
+<div class="box res"><p class="v">150</p><p class="l">compras a mais por mês</p></div>
+<p class="op">≈</p>
+<div class="box res"><p class="v">5 / dia</p><p class="l">em dias de 2.500 a 3.000 compras</p></div>
+</div>
+<div class="cards">
+<div class="card" style="padding:36px 40px"><h3>Com o setup incluído</h3><p class="txt" style="font-size:25px">1.º ano ≈ 12.700 € ÷ 6 € ≈ 2.100 compras, cerca de 6 por dia. Menos de 1 por quiosque.</p></div>
+<div class="card" style="padding:36px 40px"><h3>Tempo da equipa</h3><p class="txt" style="font-size:25px">Deixa de publicar em 8 canais e de responder num número à parte. As perguntas repetidas têm resposta automática.</p></div>
+<div class="card" style="padding:36px 40px"><h3>Um ativo que fica</h3><p class="txt" style="font-size:25px">Uma base própria de clientes com consentimento, que serve para tudo o que vier, incluindo a fase 2.</p></div>
+</div>
+<p style="margin:0; font-size:22px">Estimativa sobre vendas, não sobre margem. Talão médio e volume de compras indicados pelo Grupo QL.</p>
+<aside>Resposta à pergunta “e na fase 1, qual é o retorno?”. Sem cashback não medimos com rigor cada venda que o WhatsApp traz, por isso mostramos o ponto de equilíbrio: o custo mensal da fase 1 (240 € da plataforma e cerca de 660 € de taxas da Meta, com 2 campanhas por mês a 6.000 membros) dividido pelo talão médio de 6 € dá 150 compras a mais por mês, cerca de 5 por dia somando os 9 quiosques, em dias de 2.500 a 3.000 compras (0,2%). Com o setup no primeiro ano são cerca de 6 por dia. Uma só campanha bem feita, por exemplo num dia de jogo, chega para isto. É uma conta sobre vendas: sobre margem o número de compras sobe na proporção da margem. Se fizermos só 1 campanha por mês, as taxas da Meta descem para cerca de 370 € e o ponto de equilíbrio para cerca de 100 compras por mês. Os ganhos indiretos (tempo da equipa, base de dados própria) não entram na conta.</aside>
 </section>
 
 <section id="piloto" class="dark">
@@ -942,17 +1006,17 @@ run();
 <h2>Começar pequeno e decidir com números</h2>
 </div>
 <div class="steps">
-<div class="step rise" style="--i:0"><p class="n">Semana 1</p><p class="txt">2 quiosques (Saldanha e Príncipe Real) e 1 Hambúrgueres Santos. Número, QR codes, oferta de boas-vindas e formação da equipa.</p></div>
-<div class="step rise" style="--i:1"><p class="n">Semana 2</p><p class="txt">Cashback ligado e primeiro pack de bebidas à venda. Os canais anunciam a mudança.</p></div>
-<div class="step rise" style="--i:2"><p class="n">Semana 3</p><p class="txt">Primeira campanha segmentada, num jogo grande, e burger do mês em pré-venda.</p></div>
-<div class="step rise" style="--i:3"><p class="n">Semana 4</p><p class="txt">Relatório: inscritos, clientes que voltaram, packs vendidos e receita das campanhas.</p></div>
+<div class="step rise" style="--i:0"><p class="n">Semana 1</p><p class="txt">2 quiosques (Saldanha e Príncipe Real) e 1 Hambúrgueres Santos. Número único, QR codes, registo com RGPD e oferta de boas-vindas.</p></div>
+<div class="step rise" style="--i:1"><p class="n">Semana 2</p><p class="txt">Convite aos 30.000 contactos e os canais anunciam a mudança. Menus e respostas automáticas afinados.</p></div>
+<div class="step rise" style="--i:2"><p class="n">Semana 3</p><p class="txt">Primeira campanha segmentada, num jogo grande, e primeiro pack de bebidas à venda.</p></div>
+<div class="step rise" style="--i:3"><p class="n">Semana 4</p><p class="txt">Relatório: inscritos, conversas, resultado das campanhas e packs vendidos.</p></div>
 </div>
-<p class="lead">No fim, o Grupo QL decide se alarga aos restantes quiosques e restaurantes.</p>
-<aside>Saldanha pelo futebol, Príncipe Real pelo turismo. Ajustar à escolha do João. O piloto corre sem integração com o Sage 100c: o funcionário regista o telemóvel e o valor no telemóvel do quiosque. A integração com o Sage fica para uma fase 2, opcional.</aside>
+<p class="lead">No fim, o Grupo QL decide se alarga aos restantes quiosques e se avança para a fase 2.</p>
+<aside>O piloto é da fase 1: sem integração com o Sage 100c, sem cashback e sem pontos. Saldanha pelo futebol, Príncipe Real pelo turismo. Ajustar à escolha do João. Durante o piloto pedimos o contacto do parceiro Sage para confirmar as APIs da fase 2.</aside>
 </section>
 
 <section id="pontos">
-<div class="head"><p class="eyebrow">Programa de pontos</p><h2>Saldo para gastar, pontos para subir de nível</h2></div>
+<div class="head"><p class="eyebrow">Programa de pontos <span class="f2">Fase 2</span></p><h2>Saldo para gastar, pontos para subir de nível</h2></div>
 <div class="cards two" style="gap:32px">
 <div class="card" style="padding:32px 40px"><h3>Saldo em euros</h3><p class="txt" style="font-size:26px">O cashback de cada compra. Desconta-se ao balcão, em qualquer quiosque.</p></div>
 <div class="card" style="padding:32px 40px"><h3>Pontos</h3><p class="txt" style="font-size:26px">5 por cada euro gasto, mais bónus: quiosque novo +20, semana seguida +30, amigo trazido +50, avaliação no Google +20.</p></div>
@@ -962,7 +1026,7 @@ run();
 </section>
 
 <section id="jogo" class="dark">
-<div class="head" style="width:1120px"><p class="eyebrow">Gamificação</p><h2>Um motivo para voltar todas as semanas</h2></div>
+<div class="head" style="width:1120px"><p class="eyebrow">Gamificação <span class="f2">Fase 2</span></p><h2>Um motivo para voltar todas as semanas</h2></div>
 <div class="steps" style="grid-template-columns:1fr; gap:14px; width:1060px"><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">1</p><p class="txt" style="font-size:27px"><b>Passaporte dos 8 quiosques.</b> Um carimbo por cada quiosque novo; com os 8 ganha uma imperial.</p></div><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">2</p><p class="txt" style="font-size:27px"><b>Semanas seguidas.</b> Quem volta todas as semanas ganha pontos extra e uma raspadinha.</p></div><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">3</p><p class="txt" style="font-size:27px"><b>Raspadinha e roda da sorte.</b> Prémios pequenos em saldo, jogados dentro do chat.</p></div><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">4</p><p class="txt" style="font-size:27px"><b>Desafios.</b> Um por semana e entre amigos: traz um amigo no dia do jogo e os dois ganham.</p></div><div class="step" style="flex-direction:row; gap:24px; align-items:baseline; padding-top:12px"><p class="n" style="width:56px">5</p><p class="txt" style="font-size:27px"><b>Níveis.</b> Os pontos sobem a cliente de Bronze a Ouro, e o cashback sobe com ela.</p></div></div>
 <iframe class="emb" style="position:absolute; left:1300px; top:96px; width:452px; height:888px; border:0; background:transparent" data-src="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;
 *{box-sizing:border-box;margin:0;padding:0}
@@ -1053,27 +1117,27 @@ run();
 
 <section id="seguir" class="dark">
 <div class="head"><p class="eyebrow">E a seguir</p><h2>Cinco ideias que já resultam noutras marcas</h2></div>
-<div class="cards five"><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">1</p><h3 style="font-size:28px">Passaporte e desafios</h3><p class="txt" style="font-size:21px; line-height:1.4">Os 8 quiosques como jogo. Os membros do Starbucks Rewards fazem 58% da faturação nos EUA.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">2</p><h3 style="font-size:28px">Assinatura de café ou imperial</h3><p class="txt" style="font-size:21px; line-height:1.4">Mensal, com limite de 1 por dia. No Club Pret os resgates cresceram 31% num ano e 1 em 5 usos traz uma compra extra.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">3</p><h3 style="font-size:28px">Pedido na esplanada</h3><p class="txt" style="font-size:21px; line-height:1.4">Fase 2: QR na mesa, pagamento no telemóvel e aviso no WhatsApp. A Sunday já está em cerca de 200 restaurantes em Lisboa.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">4</p><h3 style="font-size:28px">Turistas</h3><p class="txt" style="font-size:21px; line-height:1.4">Pedido de avaliação no Google depois da compra e menu em inglês, para a Sé, o Cais do Sodré e o Príncipe Real.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">5</p><h3 style="font-size:28px">Ofertas por quiosque e hora</h3><p class="txt" style="font-size:21px; line-height:1.4">Última hora antes de fechar e dias de jogo. A Padaria Portuguesa baixa a caixa de 19,99 € para 9,99 € na última hora.</p></div></div>
+<div class="cards five"><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">1</p><h3 style="font-size:28px">Passaporte e desafios</h3><p class="txt" style="font-size:21px; line-height:1.4">Os 8 quiosques como jogo. Os membros do Starbucks Rewards fazem 58% da faturação nos EUA.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">2</p><h3 style="font-size:28px">Assinatura de café ou imperial</h3><p class="txt" style="font-size:21px; line-height:1.4">Mensal, com limite de 1 por dia. No Club Pret os resgates cresceram 31% num ano e 1 em 5 usos traz uma compra extra.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">3</p><h3 style="font-size:28px">Pedido na esplanada</h3><p class="txt" style="font-size:21px; line-height:1.4">Mais tarde: QR na mesa, pagamento no telemóvel e aviso no WhatsApp. A Sunday já está em cerca de 200 restaurantes em Lisboa.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">4</p><h3 style="font-size:28px">Turistas</h3><p class="txt" style="font-size:21px; line-height:1.4">Pedido de avaliação no Google depois da compra e menu em inglês, para a Sé, o Cais do Sodré e o Príncipe Real.</p></div><div class="card" style="padding:32px 28px; gap:12px"><p class="num" style="font-size:56px">5</p><h3 style="font-size:28px">Ofertas por quiosque e hora</h3><p class="txt" style="font-size:21px; line-height:1.4">Última hora antes de fechar e dias de jogo. A Padaria Portuguesa baixa a caixa de 19,99 € para 9,99 € na última hora.</p></div></div>
 <p class="lead">Por ordem de prioridade. Todas correm no mesmo WhatsApp, sem app nova.</p>
-<aside>Ideias da pesquisa à concorrência, com fontes no estudo que fizemos. A 1 e a 5 podem entrar já no piloto; a 2 depois de ver a adesão; a 3 é uma segunda fase porque mexe na operação da esplanada; a 4 é simples e ajuda logo com os turistas.</aside>
+<aside>Ideias da pesquisa à concorrência, com fontes no estudo que fizemos. A 4 e a 5 podem entrar já na fase 1 (são campanhas e mensagens); a 1 entra com a fase 2, porque precisa de saber onde o cliente comprou; a 2 depois de ver a adesão; a 3 fica para mais tarde porque mexe na operação da esplanada.</aside>
 </section>
 
-<section id="comercial" class="accent">
-<div class="head"><p class="eyebrow">Proposta comercial</p><h2>Plataforma Chatomate para o Grupo QL</h2></div>
+<section id="comercial" class="accent" style="gap:40px">
+<div class="head"><p class="eyebrow">Proposta comercial</p><h2>Fase 1: o canal único a funcionar</h2></div>
 <div class="cards">
-<div class="card"><p class="num">1.900 €</p><h3>Setup, uma vez</h3><p class="txt" style="font-size:24px">Número WhatsApp único, migração dos 9 canais, fluxos de registo e cashback, modelos de mensagens e formação das equipas.</p></div>
-<div class="card"><p class="num">240 €<span style="font-size:36px">/mês</span></p><h3>Plataforma Chatomate</h3><p class="txt" style="font-size:24px">Back-office, painel, ficha de cliente, campanhas, construtor de fluxos e relatórios.</p></div>
-<div class="card"><p class="num">≈ 850 €<span style="font-size:36px">/mês</span></p><h3>Taxas da Meta, à parte</h3><p class="txt" style="font-size:24px">Pagas por mensagem, conforme o uso. Estimativa do slide de custos.</p></div>
+<div class="card" style="padding:40px 44px"><p class="num">1.900 €</p><h3>Setup, uma vez</h3><p class="txt" style="font-size:24px">Número WhatsApp único, migração dos 9 canais, registo com RGPD, menus e respostas automáticas, modelos de mensagens e formação das equipas.</p></div>
+<div class="card" style="padding:40px 44px"><p class="num">240 €<span style="font-size:36px">/mês</span></p><h3>Plataforma Chatomate</h3><p class="txt" style="font-size:24px">Back-office, painel, ficha de cliente, campanhas, apoio ao cliente e relatórios.</p></div>
+<div class="card" style="padding:40px 44px"><p class="num">≈ 660 €<span style="font-size:36px">/mês</span></p><h3>Taxas da Meta, à parte</h3><p class="txt" style="font-size:24px">Campanhas e conversas, pagas por mensagem conforme o uso.</p></div>
 </div>
 <div class="calc">
 <div class="box"><p class="v">4.780 €</p><p class="l">plataforma no 1.º ano (1.900 + 12 × 240)</p></div>
 <p class="op">+</p>
-<div class="box"><p class="v">≈ 10.200 €</p><p class="l">taxas da Meta no 1.º ano</p></div>
+<div class="box"><p class="v">≈ 7.900 €</p><p class="l">taxas da Meta no 1.º ano</p></div>
 <p class="op">=</p>
-<div class="box res"><p class="v">≈ 15.000 €</p><p class="l">1.º ano, contra ≈ 43.200 € de vendas a mais</p></div>
+<div class="box res"><p class="v">≈ 12.700 €</p><p class="l">1.º ano da fase 1</p></div>
 </div>
-<p style="margin:28px 0 0; font-size:24px; color:inherit; opacity:.85"><b>Fase 2, opcional:</b> integração com o Sage 100c. Valor a definir após confirmar as APIs do Sage 100c.</p>
-<aside>Setup 1.900 € e mensalidade 240 € pela plataforma Chatomate. As taxas da Meta são pagas à parte e dependem do uso; o valor é a estimativa do slide de custos (cerca de 850 €/mês). O retorno é o do slide da conta simples: 3.600 € por mês de vendas a mais × 12 = 43.200 € no primeiro ano. São vendas, não margem, e não incluem o custo do cashback. A integração com o Sage 100c não está incluída no setup: fica para uma fase 2, opcional, com valor a definir depois de confirmarmos as APIs do Sage 100c. Na fase 1 o funcionário regista o número e o valor no telemóvel do quiosque, sem tocar no Sage. Confirmar se os valores levam IVA.</aside>
+<p style="margin:0; font-size:26px; line-height:1.4; max-width:1600px"><b>Fase 2, opcional:</b> integração com o Sage 100c, cashback, pontos, níveis, gamificação e desconto de saldo ao balcão. Valor a definir após confirmar as APIs do Sage 100c. Retorno estimado de ≈ 3.600 €/mês em vendas.</p>
+<aside>Fase 1: setup 1.900 € e mensalidade 240 € pela plataforma Chatomate, mais as taxas da Meta (cerca de 660 €/mês, só campanhas e conversas). O ganho da fase 1 é o canal único em vez de 9, a base de contactos com nome e consentimento, e as campanhas segmentadas por quiosque; ainda não pomos um número de vendas porque, sem a ligação ao Sage, não conseguimos medir com rigor quem comprou. A fase 2 traz o cashback e os pontos, que fazem o cliente voltar: é daí que vem a conta simples de 3.600 € por mês (43.200 € por ano em vendas, não margem, sem o custo do cashback). O valor da fase 2 só se define depois de confirmar as APIs do Sage 100c com o parceiro. Confirmar se os valores levam IVA.</aside>
 </section>
 
 <section id="fecho" class="accent" style="justify-content:center">
@@ -1082,7 +1146,7 @@ run();
 <div class="cards">
 <div class="card"><h3>Do vosso lado</h3><p class="txt">Seguidores dos canais, clientes registados com NIF e escolha dos 3 locais do piloto.</p></div>
 <div class="card"><h3>Do nosso lado</h3><p class="txt">Configuração, QR codes, formação da equipa, campanhas e relatório semanal.</p></div>
-<div class="card"><h3>Investimento</h3><p class="txt">Setup de 1.900 € e 240 €/mês pela plataforma Chatomate. Taxas da Meta à parte. Integração com o Sage 100c em fase 2, valor a definir.</p></div>
+<div class="card"><h3>Investimento</h3><p class="txt">Fase 1: setup de 1.900 € e 240 €/mês pela plataforma Chatomate, taxas da Meta à parte. Fase 2 (Sage 100c, cashback e pontos): valor a definir.</p></div>
 </div>
 <aside>Fechar com uma data: “Podemos arrancar na semana de [data]?” Confirmar quem decide no Grupo QL, já que o João é um dos sócios. Pedir o contacto do parceiro Sage 100c para confirmarmos as APIs da fase 2.</aside>
 </section>
