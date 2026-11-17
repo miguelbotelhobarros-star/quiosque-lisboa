@@ -113,33 +113,22 @@ aside{display:none}
 <aside>No portal de cliente, o separador Canais lista 8 canais e o cliente tem de escolher qual seguir; o número +351 934 991 465 é o nono contacto, para conversas. Começar pelo elogio: já fizeram o mais difícil, que é ter gente a seguir. Perguntar quantas pessoas seguem os canais e quantas estão registadas com NIF.</aside>
 </section>
 
-<section id="balcao" class="dark">
-<div class="head">
-<p class="eyebrow">Todos os dias, em 8 quiosques</p>
-<h2>O cliente já está ao balcão. Hoje, sai sem deixar contacto</h2>
-</div>
-<div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:24px">
-<img class="rise" src="assets/b3943bf909b1aafcc9b7511e54bf0b8b.jpg" alt="Noite cheia no Quiosque Cais do Sodré, pessoas com cervejas na mão" style="--i:0; width:398px; height:540px; object-fit:cover; border-radius:16px">
-<img class="rise" src="assets/2f019edb55488fc6588ab9489b90c7e4.jpg" alt="Cliente de mochila a pedir ao balcão do Quiosque Largo da Sé" style="--i:1; width:398px; height:540px; object-fit:cover; border-radius:16px">
-<img class="rise" src="assets/190158b4004f1425cbafcfddf05e809a.jpg" alt="Cliente sorridente ao balcão do Quiosque Cais do Sodré" style="--i:2; width:398px; height:540px; object-fit:cover; border-radius:16px">
-<img class="rise" src="assets/37286f9cc79bf9b0eda54510f96dc6b9.jpg" alt="Dois clientes ao balcão do Quiosque Camões à noite" style="--i:3; width:398px; height:540px; object-fit:cover; border-radius:16px">
-</div>
-<aside>Fotos do Instagram @quiosque_lisboa_oficial: Cais do Sodré, Largo da Sé, Cais do Sodré e Camões. A ideia: o movimento já existe e é muito. O que falta é transformar cada pessoa ao balcão num contacto que volta.</aside>
-</section>
-
-<section id="megafone" class="dark">
+<section id="megafone" class="dark" style="flex-direction:row; gap:64px; align-items:center">
+<div style="display:flex; flex-direction:column; gap:40px; flex:1; min-width:0">
 <div class="head">
 <p class="eyebrow">O limite dos canais</p>
 <h2>Um canal WhatsApp é um megafone: só fala para fora</h2>
 </div>
-<div class="cards four">
-<div class="card rise" style="--i:0"><h3>Não sabe quem lê</h3><p class="txt">Os seguidores são anónimos. Não há nomes nem contactos.</p></div>
-<div class="card rise" style="--i:1"><h3>Não sabe quem compra</h3><p class="txt">Nenhuma ligação entre a mensagem e a venda ao balcão.</p></div>
-<div class="card rise" style="--i:2"><h3>Não vende</h3><p class="txt">O cliente não pode responder, encomendar nem pagar.</p></div>
-<div class="card rise" style="--i:3"><h3>Não fideliza</h3><p class="txt">Não há saldo, pontos nem níveis que façam voltar.</p></div>
+<div class="cards two" style="gap:24px">
+<div class="card rise" style="padding:30px 36px; gap:10px; --i:0"><h3>Não sabe quem lê</h3><p class="txt" style="font-size:26px">Os seguidores são anónimos. Não há nomes nem contactos.</p></div>
+<div class="card rise" style="padding:30px 36px; gap:10px; --i:1"><h3>Não sabe quem compra</h3><p class="txt" style="font-size:26px">Nenhuma ligação entre a mensagem e a venda ao balcão.</p></div>
+<div class="card rise" style="padding:30px 36px; gap:10px; --i:2"><h3>Não vende</h3><p class="txt" style="font-size:26px">O cliente não pode responder, encomendar nem pagar.</p></div>
+<div class="card rise" style="padding:30px 36px; gap:10px; --i:3"><h3>Não fideliza</h3><p class="txt" style="font-size:26px">Não há saldo, pontos nem níveis que façam voltar.</p></div>
 </div>
-<p class="lead">E com 9 canais, tudo isto se multiplica por 9: 9 audiências pequenas, 9 sítios para publicar.</p>
-<aside>Este é o ponto central. O canal é ótimo para anunciar, mas não deixa construir relação nem vender. Com 9 canais separados, o cliente do Saldanha nunca ouve falar da Sé.</aside>
+<p class="lead" style="font-size:28px">E com 9 canais, tudo isto se multiplica por 9: 9 audiências pequenas, 9 sítios para publicar.</p>
+</div>
+<img src="assets/b3943bf909b1aafcc9b7511e54bf0b8b.jpg" alt="Noite cheia no Quiosque Cais do Sodré, pessoas com cervejas na mão" style="width:520px; height:824px; object-fit:cover; border-radius:16px; flex:none">
+<aside>Foto: noite no Quiosque Cais do Sodré (Instagram @quiosque_lisboa_oficial). O movimento existe e é muito; o canal não sabe quem são estas pessoas. Este é o ponto central. O canal é ótimo para anunciar, mas não deixa construir relação nem vender. Com 9 canais separados, o cliente do Saldanha nunca ouve falar da Sé.</aside>
 </section>
 
 <section id="proposta">
@@ -696,19 +685,22 @@ run();&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
 <aside>Pedido do João: o cliente identifica-se dizendo o número de telemóvel ao funcionário, sem QR. À esquerda, acumular: o funcionário escreve o número na caixa (na fase 1 é o telemóvel do quiosque; a ligação ao Sage 100c fica para a fase 2), aparece o nome abreviado e o nível para confirmar, e o cashback é creditado. A cliente recebe logo a mensagem no WhatsApp; se alguém der o número errado, a dona do número vê e pode responder “não fui eu”. À direita, descontar: aqui é preciso uma proteção, porque qualquer pessoa pode dizer um número que não é o seu. O sistema envia um código novo de 4 dígitos para o WhatsApp da cliente, válido 2 minutos e de uso único; o funcionário escreve-o e o desconto fica feito. O ecrã mostra só os 3 últimos dígitos do número. O QR do WhatsApp (como na Quinta da Abelheira) pode ficar como opção para quem preferir, mas não é preciso. Podemos pôr limites diários por cliente e por funcionário e alertas para usos fora do normal. As regras do saldo (valor mínimo, validade, uso parcial) decide-as o João.</aside>
 </section>
 
-<section id="jornada" class="dark">
+<section id="jornada" class="dark" style="flex-direction:row; gap:64px; align-items:center">
+<div style="display:flex; flex-direction:column; gap:40px; flex:1; min-width:0">
 <div class="head">
 <p class="eyebrow">Como funciona para o cliente</p>
 <h2>Do QR code à compra repetida, sem instalar nada</h2>
 </div>
-<div class="steps">
-<div class="step rise" style="--i:0"><p class="n">1. Adere</p><p class="txt">Lê o QR no balcão ou no copo e manda “Olá”. Ganha logo uma bebida.</p></div>
-<div class="step rise" style="--i:1"><p class="n">2. Compra</p><p class="txt">Diz o número de telemóvel ao balcão. Na fase 2, a compra fica registada.</p></div>
-<div class="step rise" style="--i:2"><p class="n">3. Acumula <span class="f2">Fase 2</span></p><p class="txt">Recebe 5% em cashback: “Tens 3,40 € para gastar em qualquer quiosque.”</p></div>
-<div class="step rise" style="--i:3"><p class="n">4. Volta</p><p class="txt">Recebe ofertas à medida e compra packs ou reserva mesa na conversa.</p></div>
+<div class="steps" style="grid-template-columns:1fr 1fr; gap:36px 32px">
+<div class="step rise" style="--i:0"><p class="n">1. Adere</p><p class="txt" style="font-size:27px">Lê o QR no balcão ou no copo e manda “Olá”. Ganha logo uma bebida.</p></div>
+<div class="step rise" style="--i:1"><p class="n">2. Compra</p><p class="txt" style="font-size:27px">Diz o número de telemóvel ao balcão. Na fase 2, a compra fica registada.</p></div>
+<div class="step rise" style="--i:2"><p class="n">3. Acumula <span class="f2">Fase 2</span></p><p class="txt" style="font-size:27px">Recebe 5% em cashback: “Tens 3,40 € para gastar em qualquer quiosque.”</p></div>
+<div class="step rise" style="--i:3"><p class="n">4. Volta</p><p class="txt" style="font-size:27px">Recebe ofertas à medida e compra packs ou reserva mesa na conversa.</p></div>
 </div>
-<p class="lead">O número de telemóvel passa a ser o cartão de cliente, para portugueses e para turistas.</p>
-<aside>Mostrar aqui a demo no telemóvel, se a tivermos. Os 5% de cashback são um exemplo; a percentagem e a validade do saldo definem-se com o João.</aside>
+<p class="lead" style="font-size:30px">O número de telemóvel passa a ser o cartão de cliente, para portugueses e para turistas.</p>
+</div>
+<img src="assets/2f019edb55488fc6588ab9489b90c7e4.jpg" alt="Cliente de mochila a pedir ao balcão do Quiosque Largo da Sé" style="width:520px; height:824px; object-fit:cover; border-radius:16px; flex:none">
+<aside>Foto: cliente ao balcão do Largo da Sé (Instagram @quiosque_lisboa_oficial). Mostrar aqui a demo no telemóvel, se a tivermos. Os 5% de cashback são um exemplo; a percentagem e a validade do saldo definem-se com o João.</aside>
 </section>
 
 <section id="demo" class="dark">
@@ -981,19 +973,22 @@ run();
 <aside>Resposta à pergunta “e na fase 1, qual é o retorno?”. Sem cashback não medimos com rigor cada venda que o WhatsApp traz, por isso mostramos o ponto de equilíbrio: o custo mensal da fase 1 (240 € da plataforma e cerca de 660 € de taxas da Meta, com 2 campanhas por mês a 6.000 membros) dividido pelo talão médio de 6 € dá 150 compras a mais por mês, cerca de 5 por dia somando os 9 quiosques, em dias de 2.500 a 3.000 compras (0,2%). Com o setup no primeiro ano são cerca de 6 por dia. Uma só campanha bem feita, por exemplo num dia de jogo, chega para isto. É uma conta sobre vendas: sobre margem o número de compras sobe na proporção da margem. Se fizermos só 1 campanha por mês, as taxas da Meta descem para cerca de 370 € e o ponto de equilíbrio para cerca de 100 compras por mês. Os ganhos indiretos (tempo da equipa, base de dados própria) não entram na conta.</aside>
 </section>
 
-<section id="piloto" class="dark">
+<section id="piloto" class="dark" style="flex-direction:row; gap:64px; align-items:center">
+<div style="display:flex; flex-direction:column; gap:40px; flex:1; min-width:0">
 <div class="head">
 <p class="eyebrow">Arranque · sem piloto</p>
 <h2>Tudo testado antes, todos os quiosques no mesmo dia</h2>
 </div>
-<div class="steps">
-<div class="step rise" style="--i:0"><p class="n">Semana 0</p><p class="txt">Testes internos: número, registo com RGPD, menus, respostas e campanhas testados por nós e pela equipa. Formação curta.</p></div>
-<div class="step rise" style="--i:1"><p class="n">Dia 1</p><p class="txt">Todos os quiosques e os Hambúrgueres Santos passam ao mesmo tempo. QR codes nos balcões e os canais anunciam o novo número.</p></div>
-<div class="step rise" style="--i:2"><p class="n">Semanas 1 a 4</p><p class="txt">Convite aos 30.000 contactos, primeira campanha segmentada e relatório semanal.</p></div>
-<div class="step rise" style="--i:3"><p class="n">Fase 2</p><p class="txt">Com o Sage ligado e testado, cashback e pontos abrem em todos os quiosques no mesmo dia, com formação curta à equipa.</p></div>
+<div class="steps" style="grid-template-columns:1fr 1fr; gap:32px 32px">
+<div class="step rise" style="--i:0"><p class="n">Semana 0</p><p class="txt" style="font-size:26px">Testes internos: número, registo com RGPD, menus, respostas e campanhas testados por nós e pela equipa. Formação curta.</p></div>
+<div class="step rise" style="--i:1"><p class="n">Dia 1</p><p class="txt" style="font-size:26px">Todos os quiosques e os Hambúrgueres Santos passam ao mesmo tempo. QR codes nos balcões e os canais anunciam o novo número.</p></div>
+<div class="step rise" style="--i:2"><p class="n">Semanas 1 a 4</p><p class="txt" style="font-size:26px">Convite aos 30.000 contactos, primeira campanha segmentada e relatório semanal.</p></div>
+<div class="step rise" style="--i:3"><p class="n">Fase 2</p><p class="txt" style="font-size:26px">Com o Sage ligado e testado, cashback e pontos abrem em todos os quiosques no mesmo dia, com formação curta à equipa.</p></div>
 </div>
-<p class="lead">Sem piloto: um só arranque e uma só formação. O mesmo modelo já funciona na Quinta da Abelheira.</p>
-<aside>O Miguel propõe arrancar sem piloto. Na fase 1 não há nada ligado à caixa, por isso o risco é baixo: uma semana de testes internos chega, e no dia 1 entram todos os quiosques. O convite aos 30.000 contactos pode ir em lotes ao longo de algumas semanas, para a equipa conseguir responder e para proteger a qualidade do número junto da Meta. Na fase 2, depois de ligarmos e testarmos o Sage 100c, o cashback e os pontos abrem também em todos os quiosques no mesmo dia, com uma formação curta a cada equipa (dizer o telemóvel para acumular, código de 4 dígitos para descontar). Durante a fase 1 pedimos o contacto do parceiro Sage para confirmar as APIs.</aside>
+<p class="lead" style="font-size:28px">Sem piloto: um só arranque e uma só formação. O mesmo modelo já funciona na Quinta da Abelheira.</p>
+</div>
+<img src="assets/37286f9cc79bf9b0eda54510f96dc6b9.jpg" alt="Dois clientes ao balcão do Quiosque Camões à noite" style="width:500px; height:824px; object-fit:cover; border-radius:16px; flex:none">
+<aside>Foto: Quiosque Camões à noite (Instagram @quiosque_lisboa_oficial). O Miguel propõe arrancar sem piloto. Na fase 1 não há nada ligado à caixa, por isso o risco é baixo: uma semana de testes internos chega, e no dia 1 entram todos os quiosques. O convite aos 30.000 contactos pode ir em lotes ao longo de algumas semanas, para a equipa conseguir responder e para proteger a qualidade do número junto da Meta. Na fase 2, depois de ligarmos e testarmos o Sage 100c, o cashback e os pontos abrem também em todos os quiosques no mesmo dia, com uma formação curta a cada equipa (dizer o telemóvel para acumular, código de 4 dígitos para descontar). Durante a fase 1 pedimos o contacto do parceiro Sage para confirmar as APIs.</aside>
 </section>
 
 <section id="pontos">
@@ -1121,15 +1116,16 @@ run();
 <aside>Fase 1: setup 1.900 € e mensalidade 240 € pela plataforma Chatomate, mais as taxas da Meta (cerca de 660 €/mês, só campanhas e conversas). O ganho da fase 1 é o canal único em vez de 9, a base de contactos com nome e consentimento, e as campanhas segmentadas por quiosque; ainda não pomos um número de vendas porque, sem a ligação ao Sage, não conseguimos medir com rigor quem comprou. A fase 2 traz o cashback e os pontos, que fazem o cliente voltar: é daí que vem a conta simples de 3.600 € por mês (43.200 € por ano em vendas, não margem, sem o custo do cashback). O valor da fase 2 só se define depois de confirmar as APIs do Sage 100c com o parceiro. Confirmar se os valores levam IVA.</aside>
 </section>
 
-<section id="fecho" class="accent" style="justify-content:center">
+<section id="fecho" class="accent" style="justify-content:center; gap:36px">
+<img src="assets/190158b4004f1425cbafcfddf05e809a.jpg" alt="Cliente sorridente ao balcão do Quiosque Cais do Sodré" style="position:absolute; left:1100px; top:0px; width:820px; height:1080px; object-fit:cover">
 <p class="eyebrow">Próximos passos</p>
-<h1>Marcar a data de arranque</h1>
-<div class="cards">
-<div class="card"><h3>Do vosso lado</h3><p class="txt">Seguidores dos canais, clientes registados com NIF e data de arranque dos quiosques.</p></div>
-<div class="card"><h3>Do nosso lado</h3><p class="txt">Configuração, QR codes, formação da equipa, campanhas e relatório semanal.</p></div>
-<div class="card"><h3>Investimento</h3><p class="txt">Fase 1: setup de 1.900 € e 240 €/mês pela plataforma Chatomate, taxas da Meta à parte. Fase 2 (Sage 100c, cashback e pontos): valor a definir.</p></div>
+<h1 style="width:880px; font-size:104px">Marcar a data de arranque</h1>
+<div class="cards" style="grid-template-columns:1fr; gap:16px; width:880px">
+<div class="card" style="padding:24px 32px; gap:6px; border-top:0; border-left:8px solid var(--green)"><h3>Do vosso lado</h3><p class="txt" style="font-size:24px">Seguidores dos canais, clientes registados com NIF e data de arranque dos quiosques.</p></div>
+<div class="card" style="padding:24px 32px; gap:6px; border-top:0; border-left:8px solid var(--green)"><h3>Do nosso lado</h3><p class="txt" style="font-size:24px">Configuração, QR codes, formação da equipa, campanhas e relatório semanal.</p></div>
+<div class="card" style="padding:24px 32px; gap:6px; border-top:0; border-left:8px solid var(--green)"><h3>Investimento</h3><p class="txt" style="font-size:24px">Fase 1: setup de 1.900 € e 240 €/mês pela plataforma Chatomate, taxas da Meta à parte. Fase 2 (Sage 100c, cashback e pontos): valor a definir.</p></div>
 </div>
-<aside>Fechar com uma data: “Podemos arrancar na semana de [data]?” Confirmar quem decide no Grupo QL, já que o João é um dos sócios. Pedir o contacto do parceiro Sage 100c para confirmarmos as APIs da fase 2.</aside>
+<aside>Foto: cliente ao balcão do Cais do Sodré (Instagram @quiosque_lisboa_oficial). Fechar com uma data: “Podemos arrancar na semana de [data]?” Confirmar quem decide no Grupo QL, já que o João é um dos sócios. Pedir o contacto do parceiro Sage 100c para confirmarmos as APIs da fase 2.</aside>
 </section>
 
 </div><div id="notes"></div><div id="ui"><button id="pv" aria-label="Anterior">‹</button><span id="ct"></span><button id="nx" aria-label="Seguinte">›</button><button id="nt">Notas (N)</button><button id="fs">Ecrã inteiro (F)</button></div><script>const st=document.getElementById('stage'),S=[...st.children];let cur=0;
