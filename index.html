@@ -182,11 +182,11 @@ aside{display:none}
 <h2>Cada talão já é um convite. Hoje leva a uma landing page</h2>
 </div>
 <div class="cards two">
-<div class="card rise" style="--i:0"><h3>Hoje</h3><p class="txt">2 Pedras, 4,90 €, sem NIF e com 0,00 € de desconto. O QR “Seja Cliente” abre uma landing page com 7 campos, incluindo NIF e password, e validação até 1 dia útil. Esta venda ficou anónima.</p></div>
+<div class="card rise" style="--i:0"><h3>Hoje</h3><p class="txt">2 Pedras, 4,90 €, sem NIF e com 0,00 € de desconto. O QR “Seja Cliente” abre uma landing page com 7 campos, incluindo NIF e password, e validação só mais tarde no dia. Esta venda ficou anónima.</p></div>
 <div class="card rise" style="--i:1; background:#17322A"><h3 style="color:#F6F1E7">Com um só WhatsApp</h3><p class="txt" style="color:#CFE0D6">O QR abre o WhatsApp com o número do talão já escrito. Uma mensagem e está inscrito. Na fase 2, o QR fiscal valida a compra e o cashback entra na hora: +0,25 € neste talão.</p></div>
 </div>
 </div>
-<aside>Este talão é real, do Quiosque Saldanha, a 15 de outubro. Repara: sem NIF, desconto zero, e o convite “Seja Cliente” leva a uma landing page de registo (quiosquelisboa.pt/cliente) com nome, data de nascimento, NIF, email, telemóvel, password e quiosque favorito, e a validação demora até 1 dia útil. Quase ninguém faz isto à mesa. A página já envia uma mensagem de boas-vindas por WhatsApp a quem aceita: o WhatsApp já está no processo, só falta passá-lo para a frente. O QR de cima é o fiscal da AT: já traz a fatura, a data e o total, e é isso que nos permite validar a compra e dar o cashback automaticamente. A proposta usa o mesmo espaço no talão para um QR que abre o WhatsApp. O cliente envia uma mensagem e fica inscrito, já com o cashback desta compra. A seguir, a demonstração mostra exatamente isto.</aside>
+<aside>Este talão é real, do Quiosque Saldanha, a 15 de outubro. Repara: sem NIF, desconto zero, e o convite “Seja Cliente” leva a uma landing page de registo (quiosquelisboa.pt/cliente) com nome, data de nascimento, NIF, email, telemóvel, password e quiosque favorito, e a validação é feita no mesmo dia (confirmado na reunião), mas já depois de a cliente sair. Quase ninguém faz isto à mesa. A página já envia uma mensagem de boas-vindas por WhatsApp a quem aceita: o WhatsApp já está no processo, só falta passá-lo para a frente. O QR de cima é o fiscal da AT: já traz a fatura, a data e o total, e é isso que nos permite validar a compra e dar o cashback automaticamente. A proposta usa o mesmo espaço no talão para um QR que abre o WhatsApp. O cliente envia uma mensagem e fica inscrito, já com o cashback desta compra. A seguir, a demonstração mostra exatamente isto.</aside>
 </section>
 
 <section id="duelo" class="dark">
@@ -249,8 +249,8 @@ html,body{background:transparent;font-family:-apple-system,&quot;SF Pro Text&quo
 &lt;div class=&quot;fm&quot; id=&quot;fm&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 &lt;div class=&quot;kb&quot; id=&quot;kb&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;ov&quot; id=&quot;ok&quot;&gt;&lt;div class=&quot;ic&quot;&gt;✓&lt;/div&gt;&lt;h2&gt;Registo recebido&lt;/h2&gt;&lt;p&gt;A validação pode demorar&lt;br&gt;até 1 dia útil.&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&quot;ov&quot; id=&quot;wt&quot;&gt;&lt;div class=&quot;e&quot;&gt;⏳&lt;/div&gt;&lt;h2&gt;1 dia útil depois…&lt;/h2&gt;&lt;p&gt;A cliente já saiu do quiosque.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ov&quot; id=&quot;ok&quot;&gt;&lt;div class=&quot;ic&quot;&gt;✓&lt;/div&gt;&lt;h2&gt;Registo recebido&lt;/h2&gt;&lt;p&gt;A validação é feita&lt;br&gt;ao longo do dia.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ov&quot; id=&quot;wt&quot;&gt;&lt;div class=&quot;e&quot;&gt;⏳&lt;/div&gt;&lt;h2&gt;Horas depois…&lt;/h2&gt;&lt;p&gt;A cliente já saiu do quiosque.&lt;/p&gt;&lt;/div&gt;
 &lt;div class=&quot;ov&quot; id=&quot;wa&quot;&gt;&lt;div class=&quot;hd&quot;&gt;&lt;div class=&quot;av&quot;&gt;QL&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;nm&quot;&gt;Quiosque Lisboa&lt;/div&gt;&lt;div class=&quot;sub&quot;&gt;Conta comercial&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ch&quot; id=&quot;ch&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;div class=&quot;hb&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
@@ -273,11 +273,11 @@ $(&#x27;kb&#x27;).classList.remove(&#x27;up&#x27;);$(&#x27;pg&#x27;).style.trans
 $(&#x27;cb&#x27;).classList.add(&#x27;on&#x27;);$(&#x27;cb&#x27;).textContent=&#x27;✓&#x27;;sim+=3;await w(500);$(&#x27;bt&#x27;).classList.add(&#x27;on&#x27;);$(&#x27;bt&#x27;).textContent=&#x27;A enviar…&#x27;;sim+=4;
 cap(&#x27;A preencher o registo: &lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt;&#x27;);await w(1200);
 $(&#x27;ok&#x27;).classList.add(&#x27;on&#x27;);cap(&#x27;Registo enviado em &lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt;&lt;br&gt;À espera de validação&#x27;);await w(2400);
-$(&#x27;wt&#x27;).classList.add(&#x27;on&#x27;);cap(&#x27;&lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt; + &lt;b&gt;1 dia útil&lt;/b&gt; à espera&#x27;);await w(2400);
+$(&#x27;wt&#x27;).classList.add(&#x27;on&#x27;);cap(&#x27;&lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt; + &lt;b&gt;horas&lt;/b&gt; à espera&#x27;);await w(2400);
 $(&#x27;wa&#x27;).classList.add(&#x27;on&#x27;);await w(700);
-$(&#x27;ch&#x27;).innerHTML=&#x27;&lt;div class=&quot;m&quot;&gt;Olá! O seu registo no Quiosque Lisboa foi validado. 🎉 Indique o seu NIF no quiosque para ter desconto.&lt;span class=&quot;t&quot;&gt;10:12&lt;/span&gt;&lt;/div&gt;&#x27;;await w(900);
+$(&#x27;ch&#x27;).innerHTML=&#x27;&lt;div class=&quot;m&quot;&gt;Olá! O seu registo no Quiosque Lisboa foi validado. 🎉 Indique o seu NIF no quiosque para ter desconto.&lt;span class=&quot;t&quot;&gt;21:30&lt;/span&gt;&lt;/div&gt;&#x27;;await w(900);
 $(&#x27;ch&#x27;).insertAdjacentHTML(&#x27;beforeend&#x27;,&#x27;&lt;div class=&quot;s&quot;&gt;A compra de 4,90&amp;nbsp;€ de ontem não conta&lt;/div&gt;&#x27;);
-cap(&#x27;&lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt; + &lt;b&gt;1 dia útil&lt;/b&gt;&lt;br&gt;7 campos · &lt;b&gt;0&amp;nbsp;€&lt;/b&gt; de cashback&#x27;);
+cap(&#x27;&lt;b&gt;&#x27;+fmt(sim)+&#x27;&lt;/b&gt; + validação &lt;b&gt;no mesmo dia&lt;/b&gt;&lt;br&gt;7 campos · &lt;b&gt;0&amp;nbsp;€&lt;/b&gt; de cashback&#x27;);
 await w(Math.max(0,32000-(Date.now()-T0)));run()}
 run();
 &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
@@ -368,7 +368,7 @@ await w(Math.max(0,32000-(Date.now()-T0)));run()}
 run();
 &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
 "></iframe>
-<aside>Deixar correr as duas em simultâneo. À esquerda, o registo atual em quiosquelisboa.pt/cliente: 7 campos com NIF e password e validação até 1 dia útil, sem cashback para a compra que a cliente acabou de fazer. À direita, o mesmo QR abre o WhatsApp: a mensagem de boas-vindas trata a cliente pelo nome do perfil (Maria Silva), resume o que passa a ter no WhatsApp (cashback, packs, ofertas e eventos, saldo) e pede a aceitação dos Termos e Condições e da Política de Privacidade (RGPD), um toque em “Aceito” cria a conta e o cashback fica logo creditado. O consentimento fica registado com data e hora. Os tempos à esquerda são estimados para quem preenche no telemóvel.</aside>
+<aside>Deixar correr as duas em simultâneo. À esquerda, o registo atual em quiosquelisboa.pt/cliente: 7 campos com NIF e password e validação no mesmo dia (confirmado pelo Grupo QL na reunião), sem cashback para a compra que a cliente acabou de fazer. À direita, o mesmo QR abre o WhatsApp: a mensagem de boas-vindas trata a cliente pelo nome do perfil (Maria Silva), resume o que passa a ter no WhatsApp (cashback, packs, ofertas e eventos, saldo) e pede a aceitação dos Termos e Condições e da Política de Privacidade (RGPD), um toque em “Aceito” cria a conta e o cashback fica logo creditado. O consentimento fica registado com data e hora. Os tempos à esquerda são estimados para quem preenche no telemóvel.</aside>
 </section>
 
 <section id="duelo2" class="dark">
